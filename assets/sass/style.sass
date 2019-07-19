@@ -1,3 +1,4 @@
+@import normalize
 @import variables
 @import color-pallette
 .size-debug
@@ -105,22 +106,66 @@ body
 		margin: 2rem auto
 		@media screen and ($medium-screens)
 			margin: 4rem auto
+		@media screen and ($small-screens)
+				padding: 0 30px
 		.main-title
 			width: 100%
 			margin: 2rem 0 0 0
 			font-size: 4rem
 			font-weight: 800
+			@media screen and ($small-screens)
+				font-size: 3rem
 		.main-description
 			font-size: 1.5rem
 			font-weight: 600
 			margin: 1rem 0
+			@media screen and ($small-screens)
+				font-size: 1.2rem
 		.further-description
 			line-height: 1.6
 			font-size: 1.1rem
 			font-weight: 500
 			max-width: 500px
 			margin: 0
+			@media screen and ($small-screens)
+				font-size: 1rem
+.content-wrapper
+	display: flex
+	flex-flow: row wrap
+	max-width: 900px
+	margin: auto
+	width: 90%
+	justify-content: center
+	display: grid
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+	grid-column-gap: 25px
+	grid-row-gap: 50px
+	padding: 50px 0
+	.main-title
+		font-size: 2.5rem
+		color: $dark-80
+		text-align: center
+		width: 100%
+		grid-column: 1/-1
+.portfolio-card
+	flex-basis: 200px
+	margin: 25px 10px
+	transition: flex-basis .3s ease-in-out, width .3s ease-in-out
+	@supports (display: grid)
+		margin: 0
+	@media screen and ($small-screens)
+		flex-basis: 350px
+		// max-width: 350px
+.portfolio-pic
+  width: 100%
+  margin: auto
+.portfolio-title
+  margin: 8px 0 0 0 
+  font-size: 1rem
 .main-footer
 	text-align: center
 	width: 100%
 	bottom: 0
+
+
+	
