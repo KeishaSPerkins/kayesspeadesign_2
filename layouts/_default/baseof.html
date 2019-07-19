@@ -3,9 +3,12 @@
 	<div class="size-debug"><span></span></div>
 	<main class='main-wrapper'>
 	   {{ partial "main-header.html" . }}
-		 {{ block "main-block" . }}
+	   <div class="content-wrapper">
+	   	{{ block "content-block" . }}
 		 
-		 {{end}}
+		 	{{end}}
+	   </div>
+		 
 	</main>
 	{{ partial "main-footer.html" . }}
 	{{ partial "svg-sprite.html" .}}
