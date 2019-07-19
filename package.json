@@ -16,7 +16,5 @@
     "url": "https://github.com/KeishaSPerkins/kayesspeadesign_2/issues"
   },
   "homepage": "https://github.com/KeishaSPerkins/kayesspeadesign_2#readme",
-  "dependencies": {
-    "vanilla-modal": "^1.6.5"
-  }
+  "dependencies": {}
 }
