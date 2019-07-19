@@ -1,0 +1,12 @@
+{{ partial "meta.html" . }}
+<body>
+	<div class="size-debug"><span></span></div>
+	<main class='main-wrapper'>
+	   {{ partial "main-header.html" . }}
+		 {{ block "main-block" . }}
+		 
+		 {{end}}
+	</main>
+	{{ partial "main-footer.html" . }}
+	{{ partial "svg-sprite.html" .}}
+</body>
