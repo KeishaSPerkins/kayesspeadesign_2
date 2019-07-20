@@ -1,7 +1,11 @@
-{{ $scripts := resources.Get "js/script.js" | minify }}
-<script src="{{ $scripts.Permalink }}" type="text/javascript"></script>
+{{ $scripts := resources.Get "js/scripts.js"  }}
+{{ $js := slice $scripts | resources.Concat "js/bundle.js" | minify }}
+<script src="{{ $js.Permalink }}" type="text/javascript"></script>
+
 
 <footer class="main-footer">
 	<p class="copyright">Copyright&nbsp;&copy;&nbsp;Keisha S Perkins {{ dateFormat "2006" .Site.LastChange }}</p>
+	<script src="/node_modules/vanilla-modal/dist/index.js"></script>
+<script>var vanillaModal = new VanillaModal.default()</script>
 </footer>
 

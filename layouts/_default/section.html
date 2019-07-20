@@ -1,0 +1,20 @@
+{{ define "content-block"}}
+
+<section class="list-content">
+
+
+	{{ $ss := append .CurrentSection.Pages .CurrentSection.Sections}}
+	{{ $pag := .Paginate $ss 10}}
+			{{ range $pag.Pages.ByDate.Reverse }}
+				{{ if not .Params.ignore }}
+				<a href="{{.Permalink}}">{{.Title}} - {{ .Params.what}}</a><br><br>
+				{{ end }}
+			{{ end }}
+
+	<section class="paginator-wrapper">
+		{{ template "_internal/pagination.html" . }}
+	</section>
+
+
+</section>
+{{ end }}

@@ -3,11 +3,13 @@
 	{{ $portfolioPage := .Site.GetPage "/portfolio"}}
 	{{ $logos := $portfolioPage.Resources.Match "*.svg"}}
 	<h2 class="main-title">My Work</h2>
+	
 	{{ range $portfolioPage.Resources }}
 		{{ partial "portfolio-card.html" .}}
 	{{ end }}
-	
 
+
+        
 {{ end }}
 
 

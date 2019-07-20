@@ -3,7 +3,7 @@
 	<div class="size-debug"><span></span></div>
 	<main class='main-wrapper'>
 	   {{ partial "main-header.html" . }}
-	   <div class="content-wrapper">
+	   <div class="content-wrapper {{.Kind}}">
 	   	{{ block "content-block" . }}
 		 
 		 	{{end}}
