@@ -18,7 +18,7 @@
 		@media screen and ($large-screens)
 			content: 'large'
 body
-	background: $teal-5
+	background: #3E4A59
 	padding: 0
 	font-family: $sans-serif
 	color: $dark-80
@@ -26,7 +26,7 @@ body
 	@media screen and ($medium-small-screens)
 		padding: 50px 20px 0 20px
 .main-wrapper
-	background: white
+	background: $light-30
 	width: 100%
 	// height: 100%
 	margin: auto
@@ -35,7 +35,8 @@ body
 .main-header
 	display: flex
 	flex-direction: column
-	border-bottom: 1px $light-80 solid
+	border-bottom: 1px $light-60 solid
+	background: white
 	@media screen and ($medium-screens)
 			padding: 3rem
 	.main-nav
@@ -152,7 +153,14 @@ body
 .portfolio-card
 	flex-basis: 200px
 	margin: 25px 10px
-	transition: flex-basis .3s ease-in-out, width .3s ease-in-out
+	transition: flex-basis .2s ease-in-out, width .2s ease-in-out
+	box-shadow: 0px 1px 2px rgba($light-80, .5)
+	padding: 8px
+	overflow: hidden
+	background: white
+	transition: padding .2s ease-in-out
+	&:hover
+		padding: 3px
 	@supports (display: grid)
 		margin: 0
 	@media screen and ($small-screens)
@@ -160,14 +168,24 @@ body
 		// max-width: 350px
 .portfolio-pic
   width: 100%
+  height: auto
   margin: auto
+  display: inline
+  vertical-align: bottom
+  object-fit: cover
+  object-position: 50% 50%
 .portfolio-title
   margin: 8px 0 0 0 
   font-size: 1rem
 .main-footer
 	text-align: center
+	color: white
+	font-weight: 500
 	width: 100%
+	font-size: .8rem
+	text-transform: uppercase
 	bottom: 0
+	margin: 1.5rem 0 2rem 0 
 
 
 	

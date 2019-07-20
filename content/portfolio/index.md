@@ -4,8 +4,8 @@
 	"date": "2017-03-08T11:08:21-06:00",
 	"resources": [
     {
-       "name": "Bolton Finance Solutions",
-       "src": "Bolton_Logo.svg"
+       "name": "Buoveo",
+       "src": "Buoveo_Logo.svg"
     },
     {
        "name": "Forms Made Digital",
@@ -28,8 +28,8 @@
        "src": "KTI_Logo.svg"
     },
     {
-       "name": "Love Beyond Borders",
-       "src": "LoveBeyondBordersAlt_Logo.svg"
+       "name": "Hop Skip Jump",
+       "src": "HopSkipJump_Logo.svg"
     },
     {
        "name": "Open Mic Tech",
