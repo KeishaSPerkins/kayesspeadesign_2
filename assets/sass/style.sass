@@ -25,6 +25,11 @@ body
 	height: 100vh
 	@media screen and ($medium-small-screens)
 		padding: 50px 20px 0 20px
+a
+	color: $teal-70
+.button
+	padding: .5rem .7rem
+	border-radius: 20px
 .main-wrapper
 	background: $light-30
 	width: 100%
@@ -32,106 +37,6 @@ body
 	margin: auto
 	display: flex
 	flex-direction: column
-.main-header
-	display: flex
-	flex-direction: column
-	border-bottom: 1px $light-60 solid
-	background: white
-	@media screen and ($medium-screens)
-			padding: 3rem
-	.main-nav
-		display: flex
-		flex-direction: column
-		position: fixed
-		width: 100%
-		background: white
-		background: rgba(white, .8)
-		margin: 0
-		bottom: -100vh
-		align-items: center
-		margin: 0
-		max-width: 100%
-		transition: bottom .2s ease-in-out
-		z-index: 5
-		&.open
-			bottom: 0
-		@media screen and ($medium-small-screens)
-			flex-direction: row
-			position: static
-			background: none
-			display: grid
-			grid-template-columns: 5fr 1fr 1fr 1fr 1fr
-			margin: 1rem 0		
-		.nav-link
-			margin: 1.5rem 0
-			text-transform: uppercase
-			color: $dark-80
-			text-decoration: none
-			font-weight: 700
-			transition: color .2s ease
-			text-align: center
-			@media screen and ($medium-small-screens)
-				margin: .3rem 1rem
-				font-size: .8rem
-			&:hover
-				color: $teal-80
-			&.home
-				font-size: 1.1rem
-				font-weight: 800
-				text-align: left
-	.nav-toggle
-		background: white
-		height: 2.5rem
-		width: 2.5rem
-		border: 1px solid $dark-80
-		color: $dark-80
-		font-size: .8rem
-		font-weight: 700
-		transition: color .2s ease
-		display: flex
-		justify-content: center
-		align-items: center
-		position: fixed
-		bottom: 20px
-		right: 20px
-		z-index: 10
-		display: none
-		@media screen and ($small-screens)
-			display: inline
-		svg
-			height: 1rem
-			width: 1rem
-		
-	.main-page-info
-		max-width: 700px
-		margin: auto
-		text-align: center
-		margin: 2rem auto
-		@media screen and ($medium-screens)
-			margin: 4rem auto
-		@media screen and ($small-screens)
-				padding: 0 30px
-		.main-title
-			width: 100%
-			margin: 2rem 0 0 0
-			font-size: 4rem
-			font-weight: 800
-			@media screen and ($small-screens)
-				font-size: 3rem
-		.main-description
-			font-size: 1.5rem
-			font-weight: 600
-			margin: 1rem 0
-			@media screen and ($small-screens)
-				font-size: 1.2rem
-		.further-description
-			line-height: 1.6
-			font-size: 1.1rem
-			font-weight: 500
-			max-width: 500px
-			margin: 0
-			@media screen and ($small-screens)
-				font-size: 1rem
 .content-wrapper
 	display: flex
 	flex-flow: row wrap
@@ -150,33 +55,6 @@ body
 		text-align: center
 		width: 100%
 		grid-column: 1/-1
-.portfolio-card
-	flex-basis: 200px
-	margin: 25px 10px
-	transition: flex-basis .2s ease-in-out, width .2s ease-in-out
-	box-shadow: 0px 1px 2px rgba($light-80, .5)
-	padding: 8px
-	overflow: hidden
-	background: white
-	transition: padding .2s ease-in-out
-	&:hover
-		padding: 3px
-	@supports (display: grid)
-		margin: 0
-	@media screen and ($small-screens)
-		flex-basis: 350px
-		// max-width: 350px
-.portfolio-pic
-  width: 100%
-  height: auto
-  margin: auto
-  display: inline
-  vertical-align: bottom
-  object-fit: cover
-  object-position: 50% 50%
-.portfolio-title
-  margin: 8px 0 0 0 
-  font-size: 1rem
 .main-footer
 	text-align: center
 	color: white
@@ -187,5 +65,7 @@ body
 	bottom: 0
 	margin: 1.5rem 0 2rem 0 
 
-
-	
+@import main-header
+@import portfolio-card
+@import blog-card
+@import single

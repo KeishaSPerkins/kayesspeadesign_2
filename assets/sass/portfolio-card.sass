@@ -1,0 +1,27 @@
+.portfolio-card
+	flex-basis: 200px
+	margin: 25px 10px
+	transition: flex-basis .2s ease-in-out, width .2s ease-in-out
+	box-shadow: 0px 1px 2px rgba($light-80, .5)
+	padding: 8px
+	overflow: hidden
+	background: white
+	transition: padding .2s ease-in-out
+	&:hover
+		padding: 3px
+	@supports (display: grid)
+		margin: 0
+	@media screen and ($small-screens)
+		flex-basis: 350px
+		// max-width: 350px
+.portfolio-pic
+  width: 100%
+  height: auto
+  margin: auto
+  display: inline
+  vertical-align: bottom
+  object-fit: cover
+  object-position: 50% 50%
+.portfolio-title
+  margin: 8px 0 0 0 
+  font-size: 1rem

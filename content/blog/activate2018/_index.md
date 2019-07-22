@@ -17,11 +17,11 @@ categories:
 - coding
 authors: ["Keisha S Perkins"]
 ---
-
 <iframe src="//slides.com/kayesspea/deck-2/embed" style="width: 100%; min-height:500px" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 This talk is about using JavaScript to create games on the [HTML5 canvas](https://www.w3schools.com/html/html5_canvas.asp). Though you won’t create the next Halo, you’ll learn so much about JavaScript and programming as a whole when you create games with it. In this talk, I’ll introduce you to a library that’s perfect for beginners and “non-coders” alike called [p5.js.](https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js)
 
+s
 ## Why JavaScript?
 
 JavaScript is everywhere. If you use the internet, you’ve almost certainly encountered JavaScript. You’ve seen it move objects across the screen, fetch information to a webpage, or maybe drive the logic behind a fun game you’ve played.

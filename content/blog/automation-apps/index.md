@@ -5,16 +5,16 @@ draft: false
 authors: ["Keisha S Perkins"]
 what: "Blog Post"
 ---
-<iframe src="//slides.com/kayesspea/deck-3/embed" style="width: 100%; min-height:500px" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 We're in the age of STEM right now and everyone is screaming that "Everyone should learn to code" when what they really mean is that more people should learn how to program. Programming is a skill that will help most of us, as most of us deal with computers on a daily basis. _Programmatic Thinking_ is a skill that will help almost anyone, because programmitic thinking is just problem solving in a systematic way. This post is about how I learned to program years before I every learned to code and how programmatic thinking has changed the way I solve problems.
 
-<blockquote>Programmatic Thinking is a skill that will help almost anyone, because programmitic thinking is just problem solving in a systematic way.</blockquote>
-
+<iframe src="//slides.com/kayesspea/deck-3/embed" style="width: 100%; min-height:500px" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Should You Learn to Code? _...Maybe_
 
 Coding is not programming, even though people often think of programming and coding as being one and the same. Coding is just one means by which we program. There are plenty of programming languages out there, however learning any one of them will not teach you how to think like a programmer anymore than learning how to use a screwdriver teaches you how to fix a dryer. 
+
+<blockquote>Programmatic Thinking is a skill that will help almost anyone, because programmitic thinking is just problem solving in a systematic way.</blockquote>
 
 ## Should You Learn to Program? _Definitely!_
 

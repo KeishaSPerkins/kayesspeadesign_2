@@ -1,0 +1,60 @@
+.content-wrapper.blog.section
+	grid-row-gap: 25px
+	display: flex
+	flex-flow: row wrap
+	display: grid
+.blog-card
+	background: $light-90
+	padding: 20px
+	color: white
+	border-radius: 2px
+	flex-grow: 1
+	flex-basis: 25%
+	margin: 10px
+	display: flex
+	flex-flow: column
+	justify-content: space-between
+	box-shadow: 0px 1px 2px rgba($dark-5, .5)
+	@supports (display: grid)
+		margin: 0
+	a 
+		font-weight: 700
+		color: white
+		text-decoration: none
+	.blog-title
+		font-size: 1.1rem
+		margin-top: 0
+		opacity: .8
+		&:hover
+			opacity: 1
+	.blog-description
+		font-size: .85rem
+		line-height: 1.5
+		letter-spacing: .3px
+		font-weight: 500
+		margin: 
+	.read-more
+		margin: .5rem 0 1rem 0
+		background: rgba(white, .15)
+		color: white
+		font-size: .7rem
+		font-weight: 800
+		text-transform: uppercase
+		display: inline-block
+		text-decoration: none
+		max-width: 10ch
+		transition: background .2s ease-in-out, color .2s ease-in-out
+		&:hover
+			background: rgba(white, .9)
+			color: #333;
+	.blog-meta-data
+		font-size: .7rem
+		display: flex
+		margin: 0
+
+		.blog-publish-date,.blog-author
+			margin: 0
+			flex-grow: 1
+			line-height: 1.7
+		.blog-author
+			margin-left: 1rem
