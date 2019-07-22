@@ -2,6 +2,7 @@
 	"authors": ["Keisha S Perkins"],
 	"title": "IT Girls: Build a JavaScript Infinite Runner",
 	"what": "workshop",
+	"layout": "page",
 	"date": "2017-03-08T11:08:21-06:00",
 	"resources": [
 	      {

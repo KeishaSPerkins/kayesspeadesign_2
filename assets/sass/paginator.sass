@@ -1,0 +1,39 @@
+.paginator-wrapper
+	width: 100%
+	display: flex
+	justify-content: center
+	grid-column: 1/-1
+	.pagination
+		list-style: none
+		display: flex
+		justify-content: center
+		.page-item
+			height: 2rem
+			width: 2rem
+			display: flex
+			text-align: center
+			justify-content: center
+			align-items: center
+			margin: .5rem
+			border: 2px solid transparent
+			transition: background .2s ease-in-out
+			border-radius: 1px
+			background: $light-50
+			a
+				color: $dark-50
+				font-weight: 700
+				text-decoration: none
+			&:hover, &.active:hover
+				background: #ffae00
+				a
+					color: white
+				&.disabled
+					background: $light-40
+			&.active
+				background: $teal-80
+				a
+					color: white
+			&.disabled
+				background: $light-40
+				a
+					color: $light-80					
