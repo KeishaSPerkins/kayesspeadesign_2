@@ -3,6 +3,7 @@ title: Up and Running With HUGO
 authors: ["Keisha S Perkins"]
 what: lightning talk
 date: 2018-10-24T11:08:21-06:00
+categories: ['coding']
 ---
 
 

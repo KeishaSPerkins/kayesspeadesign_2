@@ -2,11 +2,13 @@
 
 	{{ $portfolioPage := .Site.GetPage "/portfolio"}}
 	{{ $logos := $portfolioPage.Resources.Match "*.svg"}}
-<!-- 	<h2 class="main-title">My Work</h2> -->
+	<h2 class="main-title">My Work</h2>
 	
-	{{ range $portfolioPage.Resources }}
+	{{ range first 10 $portfolioPage.Resources }}
 		{{ partial "portfolio-card.html" .}}
 	{{ end }}
+	<div class="see-more-wrap"><a href='{{ "/portfolio/" | relURL }}' class="button see-more">See More</a></div>
+
 
 
         

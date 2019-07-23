@@ -30,6 +30,15 @@ a
 .button
 	padding: .5rem .7rem
 	border-radius: 20px
+	background: #555555
+	width: fit-content
+	font-size: .7rem
+	font-weight: 800
+	text-transform: uppercase
+	display: inline-block
+	text-decoration: none
+	max-width: 10ch
+	transition: background .2s ease-in-out, color .2s ease-in-out
 .main-wrapper
 	background: $light-30
 	width: 100%
@@ -49,6 +58,15 @@ a
 	grid-column-gap: 25px
 	grid-row-gap: 50px
 	padding: 50px 0
+	.see-more-wrap
+		grid-column: 1/-1
+		display: flex
+		justify-content: center
+		a.see-more
+			align-self: center
+			grid-column: 1/-1
+			color: white
+			text-align: center
 	.main-title
 		font-size: 2.5rem
 		color: $dark-80
@@ -65,8 +83,11 @@ a
 	bottom: 0
 	margin: 1.5rem 0 2rem 0 
 
+
+
 @import main-header
 @import portfolio-card
 @import blog-card
 @import single
 @import paginator
+@import share-style

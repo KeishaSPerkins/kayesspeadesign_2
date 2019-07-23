@@ -1,4 +1,9 @@
 {{ define "content-block" }}
 
 {{.Content}}
+
+{{ partial "share-buttons.html"}}
+{{ if not .Params.nodisqus }}
+			{{ template "_internal/disqus.html" . }}
+		{{end}}
 {{end }}

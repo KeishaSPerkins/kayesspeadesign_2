@@ -6,7 +6,9 @@
 	padding: 8px
 	overflow: hidden
 	background: white
-	transition: padding .2s ease-in-out
+	transition: padding .2s ease
+	-webkit-transform: translateZ(0) scale(1.0, 1.0)
+	-webkit-backface-visibility: hidden
 	&:hover
 		padding: 3px
 	@supports (display: grid)

@@ -5,16 +5,8 @@ draft: false
 what: notes
 layout: single
 layout-override: true
-tags:
-- JavaScript
-- coding
-- games
-- p5.js
-- conference
-- HTML5
-- HTML canvas
-categories:
-- coding
+tags: ["JavaScript", "coding", "games", "p5.js", "conference", "HTML5", "HTML canvas"]
+categories: ["coding"]
 authors: ["Keisha S Perkins"]
 ---
 <iframe src="//slides.com/kayesspea/deck-2/embed" style="width: 100%; min-height:500px" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

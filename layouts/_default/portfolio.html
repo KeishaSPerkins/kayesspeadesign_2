@@ -1,0 +1,12 @@
+{{ define "content-block"}}
+
+	{{ $pag := .Paginate .CurrentSection.Pages 10}}
+			{{ range  .Resources }}
+				{{.Title}}
+				{{ end }}
+
+	<section class="paginator-wrapper">
+		{{ template "_internal/pagination.html" . }}
+	</section>
+
+{{ end }}

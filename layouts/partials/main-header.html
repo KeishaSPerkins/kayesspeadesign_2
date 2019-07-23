@@ -4,9 +4,32 @@
 	
 
 	<div class="main-page-info">
-		<h1 class="main-title">Main Title</h1>
-		<p class="main-description">Lorem ipsum dolor sit amet.</p>
-		<p class="further-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus officiis illo rerum totam expedita adipisci, suscipit doloribus temporibus ullam obcaecati!</p>
+		<h1 class="main-title">{{ .Title }}</h1>
+		<p class="main-description">{{ .Description }}</p>
+		<p class="further-description">{{ .Params.furtherdescription }}</p>
+		{{ if eq .Kind "page"}}
+
+						<time>{{ .PublishDate.Format "Jan 2, 2006" }}</time>
+						 
+						{{if isset .Params "authors"}}
+						&#8226; 
+							{{ with .Params.authors }}
+								{{range .}}
+									<a href="/authors/{{ . | urlize }}">{{.}}</a>
+								{{end}}
+							{{end}}
+						{{end}}
+						  
+						{{if isset .Params "categories"}}
+						&#8226;
+							{{ with .Params.categories }}
+							{{ range .}}
+								<a href="/categories/{{ . | urlize }}">{{.}}</a>
+							{{end}}
+						{{end}}
+						{{end}}
+
+		{{end }}
 	</div>
 
 
