@@ -1,34 +1,49 @@
 <header class="main-header">
-	
 	{{ partial "main-nav.html" . }}
-	
-
 	<div class="main-page-info">
+		{{if isset .Params "categories"}}
+			{{ with .Params.categories }}
+				{{ range .}}
+					<a class="taxonomy-link category-name {{.}}"href="/categories/{{ . | urlize }}">{{humanize  .}}</a>
+				{{end}}
+			{{end}}
+		{{end}}
 		<h1 class="main-title">{{ .Title }}</h1>
-		<p class="main-description">{{ .Description }}</p>
-		<p class="further-description">{{ .Params.furtherdescription }}</p>
-		{{ if eq .Kind "page"}}
+		{{if isset .Params "description"}}
+			<p class="main-description">
+				{{ .Description }}
+			</p>
+		{{end}}
+		{{if isset .Params "furtherdescription"}}
+			<p class="further-description">
+				{{ .Params.furtherdescription }}
+			</p>	
+		{{end}}
 
-						<time>{{ .PublishDate.Format "Jan 2, 2006" }}</time>
-						 
-						{{if isset .Params "authors"}}
-						&#8226; 
-							{{ with .Params.authors }}
-								{{range .}}
-									<a href="/authors/{{ . | urlize }}">{{.}}</a>
+		{{ if eq .Kind "page"}}
+		<br>					
+						{{if isset .Params "tags"}}
+							{{ with .Params.tags}}
+								{{range . }}
+									<a class="taxonomy-link tag-name" href="/tags/{{ . | urlize }}">{{.}}</a>
 								{{end}}
 							{{end}}
-						{{end}}
-						  
-						{{if isset .Params "categories"}}
-						&#8226;
-							{{ with .Params.categories }}
-							{{ range .}}
-								<a href="/categories/{{ . | urlize }}">{{.}}</a>
-							{{end}}
-						{{end}}
-						{{end}}
+						{{end}} 
 
+						<br><br>
+
+						{{if isset .Params "authors"}}
+							by
+							{{ with .Params.authors }}
+								{{range .}}
+									<a class="taxonomy-link author-name" href="/authors/{{ . | urlize }}">{{.}}</a>
+								{{end}}
+							{{end}}
+						{{end}} 
+
+						on
+
+						<time class="blog-when">{{ .PublishDate.Format "Jan 2, 2006" }}</time>
 		{{end }}
 	</div>
 

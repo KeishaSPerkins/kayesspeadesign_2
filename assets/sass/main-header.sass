@@ -79,7 +79,7 @@
 				padding: 0 30px
 		.main-title
 			width: 100%
-			margin: 2rem 0 0 0
+			margin: 1.2rem 0 0 0
 			font-size: 4rem
 			font-weight: 800
 			@media screen and ($small-screens)
@@ -95,6 +95,41 @@
 			font-size: 1.1rem
 			font-weight: 500
 			max-width: 500px
+			text-align: center
 			margin: 0
 			@media screen and ($small-screens)
 				font-size: 1rem
+		.taxonomy-link
+			text-decoration: none
+			transition: background .2s ease-in-out
+		.tag-name, .category-name
+			background: $light-80
+			margin: 0 4px
+			padding: 5px 10px
+			border-radius: 1px
+			color: white
+			font-weight: 600
+			font-size: .8rem
+			text-transform: uppercase
+			&:hover
+				background: #3E4A59
+		.category-name
+			background: $light-80
+			font-size: 1.1rem
+			color: white
+			display: inline-block
+			min-width: 150px
+			font-weight: 700
+			&.workshop
+				background: $gold-50
+			&.talk
+				background: $teal-90
+			&.blog-post
+				background: $darkpurple-40
+			&.quicktip
+				background: $green-50
+			&:hover
+				background: #3E4A59				
+
+		.blog-when
+			font-weight: 500

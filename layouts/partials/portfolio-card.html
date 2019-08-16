@@ -1,7 +1,8 @@
 <div class="portfolio-card">
   <a href="#{{ anchorize .Name }}">
-  	<img class="portfolio-pic" src='{{ .RelPermalink }}' alt="Logo for {{ .Name }}">
+  	<img class="portfolio-pic" src='{{ range first 1 (.Resources.ByType "image") }}{{.Permalink}}{{end}}' alt="Logo for {{ .Title }}">
   </a>
+  <h2 class="portfolio-title">{{.Title}}</h2>
 </div>
 
 <div id="{{ anchorize .Name }}" class="modal" role="dialog" aria-labelledby="Modal title" aria-describedby="Modal description">
@@ -18,8 +19,8 @@
 
 			</div>
 			<div class="copy">
-				<img class="portfolio-modal-content-image" src='{{ .RelPermalink }}' alt="Logo for {{ .Name }}">
-				<!-- <h1 class="portfolio-modal-content-title">{{ .Name }}</h1> -->
+				<img class="portfolio-modal-content-image" src='{{ range first 1 (.Resources.ByType "image") }}{{.Permalink}}{{end}}' alt="Logo for {{ .Name }}">
+				<!-- <h1 class="portfolio-modal-content-title">{{ .Title }}</h1> -->
             </div>
 		</div>
 <a href="#"><div class="overlay"></div></a>

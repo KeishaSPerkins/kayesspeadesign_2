@@ -1,10 +1,10 @@
 {{ define "content-block"}}
 
 	{{ $portfolioPage := .Site.GetPage "/portfolio"}}
-	{{ $logos := $portfolioPage.Resources.Match "*.svg"}}
-	<h2 class="main-title">My Work</h2>
+	{{ $logos := $portfolioPage.Pages}}
+	<h2 class="main-title">Recent Work</h2>
 	
-	{{ range first 10 $portfolioPage.Resources }}
+	{{ range first 6 $portfolioPage.Pages.ByWeight }}
 		{{ partial "portfolio-card.html" .}}
 	{{ end }}
 	<div class="see-more-wrap"><a href='{{ "/portfolio/" | relURL }}' class="button see-more">See More</a></div>

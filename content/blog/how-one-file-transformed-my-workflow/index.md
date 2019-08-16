@@ -2,7 +2,7 @@
 title: How One .PSD File Transformed My Workflow
 date: 2018-04-03 02:17:22 +0000
 tags: ["design", "tips & tricks", "Photoshop", "Adobe"]
-categories: ["design"]
+categories: ["talk"]
 authors: ["Keisha S Perkins"]
 draft: false
 ---

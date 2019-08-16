@@ -11,6 +11,8 @@
 	-webkit-backface-visibility: hidden
 	&:hover
 		padding: 3px
+		.portfolio-title
+			padding: 0 0 5px 5px
 	@supports (display: grid)
 		margin: 0
 	@media screen and ($small-screens)
@@ -24,6 +26,9 @@
   vertical-align: bottom
   object-fit: cover
   object-position: 50% 50%
+1
 .portfolio-title
-  margin: 8px 0 0 0 
-  font-size: 1rem
+  margin: 5px 0 0 0
+  font-size: .8rem
+  padding: 0
+  transition: padding .2s ease

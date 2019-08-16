@@ -1,0 +1,19 @@
+{
+	"baseURL": "https://keishasperkins.com/",
+	"languageCode": "en-us",
+	"title": "Keisha S Perkins",
+	"disqusShortname": "keishasperkins",
+	"publishDir": "docs",
+	"taxonomies":{
+	  "category": "categories",
+	  "tag": "tags",
+	  "author": "authors"	
+	},
+	"blackfriday": {
+	   
+	},
+	"description": "I'm a freelance designer based in Baton Rouge, LA."
+}
+
+
+

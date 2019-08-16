@@ -1,4 +1,4 @@
-<article class="blog-card">
+<article class='blog-card {{ range .Params.categories  }}{{.}}{{end}}'>
 	<h1 class="blog-title"><a href="{{.Permalink}}">{{.Title}}</a></h1>
 	<section class="blog-description">
 				<!-- Content with iframes removed, htmlUnescaped, HTML tags rendered, and truncated to 150 characters -->

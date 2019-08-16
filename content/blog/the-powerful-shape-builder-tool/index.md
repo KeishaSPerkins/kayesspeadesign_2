@@ -2,8 +2,8 @@
 title: "The Powerful Illustrator Shape Builder Tool"
 date: 2018-04-02T10:34:10-05:00
 draft: false
-tags: ['illustrator', 'tips & tricks', 'software', 'adobe']
-categories: ["design"]
+tags: ['illustrator', 'tips & tricks', 'software', 'adobe', 'design']
+categories: ["blog-post"]
 authors: ["Keisha S Perkins"]
 ---
 

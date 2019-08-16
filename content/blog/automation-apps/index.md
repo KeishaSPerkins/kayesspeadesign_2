@@ -4,7 +4,8 @@ date: 2019-01-05
 draft: false
 authors: ["Keisha S Perkins"]
 what: "Blog Post"
-categories: ["Automation"]
+categories: ["talk"]
+tags: ["automation","mobile apps","apps"]
 ---
 
 We're in the age of STEM right now and everyone is screaming that "Everyone should learn to code" when what they really mean is that more people should learn how to program. Programming is a skill that will help most of us, as most of us deal with computers on a daily basis. _Programmatic Thinking_ is a skill that will help almost anyone, because programmitic thinking is just problem solving in a systematic way. This post is about how I learned to program years before I every learned to code and how programmatic thinking has changed the way I solve problems.

@@ -1,11 +1,10 @@
 {{ partial "meta.html" . }}
-<body>
+<body class='{{.Layout}} {{.Section}} {{.Kind}}'>
 	<div class="size-debug"><span></span></div>
 	<main class='main-wrapper'>
 	   {{ partial "main-header.html" . }}
-	   <div class="content-wrapper {{.Layout}} {{.Section}} {{.Kind}}">
+	   <div class='content-wrapper'>
 	   	{{ block "content-block" . }}
-		 
 		 	{{end}}
 	   </div>
 		 
