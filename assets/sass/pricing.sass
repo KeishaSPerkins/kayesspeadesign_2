@@ -1,0 +1,114 @@
+.pricing
+  .content-wrapper
+    display: flex
+    flex-flow: column nowrap
+    grid-template-columns: 1fr !important
+    *
+      grid-row: 1 / -1
+
+.pricing-chart
+  text-align: center
+  // font-size: 16px
+  width: 100%
+  // max-width: 1000px
+  // margin: 40px 10px
+  .package
+    margin: 1rem
+    width: 100%
+    position: relative
+    float: left
+    background-color: #ffffff
+    border: 4px solid #f4f4f4
+    padding: 0
+    width: 100%
+    @media screen and ($medium-screens)
+      width: 25%
+      margin: 0
+  *
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+  header
+    position: relative
+  .package-title
+    position: relative
+    top: 0
+    font-weight: 800
+    padding: 5px 15px
+    margin: 0 auto
+    -webkit-transform: translateY(-50%)
+    transform: translateY(-50%)
+    margin: 0
+    display: inline-block
+    background-color: $darkpurple-80
+    color: #ffffff
+    text-transform: uppercase
+    @media screen and ($small-screens)
+      width: 30ch
+  .package-cost
+    padding: 0px 10px 20px
+    @media screen and ($small-screens)
+      padding: 20px 10px 20px
+  .package-price
+    font-family: 'Montserrat', Arial, sans-serif
+    font-weight: 800
+    font-size: 2.4em
+    color: $darkpurple-50
+  .package-type
+    opacity: 0.6
+  .package-features
+    padding: 0
+    margin: 0
+    text-align: center
+    list-style: outside none none
+    font-size: 0.8em
+    li
+      border-top: 1px solid #d2d7e2
+      padding: 10px 5%
+      &:nth-child(even)
+        background: rgba(0, 0, 0, 0.2)
+    i
+      margin-right: 8px
+      opacity: 0.4
+  .package-select
+    border-top: 1px solid #d2d7e2
+    padding: 10px 10px 0
+    a
+      background-color: $darkpurple-80
+      color: #ffffff
+      text-decoration: none
+      padding: 0.5em 1em
+      -webkit-transform: translateY(50%)
+      transform: translateY(50%)
+      font-weight: 800
+      text-transform: uppercase
+      display: inline-block
+      &:hover
+        background-color: $purple-30
+  .featured
+    margin-top: -10px
+    background-color: $darkpurple-30
+    color: #ffffff
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4)
+    z-index: 1
+    border: none
+    @media screen and ($small-screens)
+      margin-top: 0
+
+    .package-title, .package-price
+      color: #ffffff
+    .package-cost
+      padding: 10px 10px 20px
+      @media screen and ($small-screens)
+        padding: 20px 10px 20px
+    .package-features li
+      
+    .package-select
+      padding: 20px 10px 0
+.cta
+  text-align: center 
+  padding-top: 1.5rem
+  .get-started
+    min-width: 12ch  
+
+
+

@@ -1,0 +1,75 @@
+{{ define "content-block" }}
+
+
+
+<section class="pricing-chart">
+  <article class="package">
+    <h3 class="package-title">
+      Bronze
+    </h3>
+    <div class="package-cost"><span class="package-price">$250</span></div>
+    <ul class="package-features">
+    	<li><i class="ion-checkmark"> </i>2 Design Concepts</li>
+    	<li><i class="ion-checkmark"> </i>1 Round of Revisions</li>
+      <li><i class="ion-checkmark"> </i>Full Color logo</li>
+      <li><i class="ion-checkmark"> </i>JPG and PNG Format</li>
+      <li><i class="ion-checkmark"> </i>Color Info Document</li>
+      <li><i class="ion-checkmark"> </i><br></li>
+    </ul>
+    <!-- <div class="package-select"><a href="">Select package</a></div> -->
+  </article>
+  <article class="package">
+    <h3 class="package-title">
+      Silver
+    </h3>
+    <div class="package-cost"><span class="package-price">$550</span></div>
+    <ul class="package-features">
+    	<li><i class="ion-checkmark"> </i>3 Design Concepts</li>
+    	<li><i class="ion-checkmark"> </i>2 Rounds of Revisions</li>
+      <li><i class="ion-checkmark"> </i>All Bronze Package Features</li>
+      <li><i class="ion-checkmark"> </i>EPS and SVG Format</li>
+      <li><i class="ion-checkmark"> </i>Black and White Version</li>
+      <li><i class="ion-checkmark"> </i><br></li>
+
+    </ul>
+    <!-- <div class="package-select"><a href="">Select package</a></div> -->
+  </article>
+  <article class="package featured">
+    <h3 class="package-title">
+      Gold
+    </h3>
+    <div class="package-cost"><span class="package-price">$700</span></div>
+    <ul class="package-features">
+    	<li><i class="ion-checkmark"> </i>5 Design Concepts</li>
+    	<li><i class="ion-checkmark"> </i>3 Rounds of Revisions</li>
+      <li><i class="ion-checkmark"> </i>All Silver Package Features</li>
+      <li><i class="ion-checkmark"> </i>Branded single-color formats</li>
+      <li><i class="ion-checkmark"> </i>Vertical and Horizontal Formats</li>
+      <li><i class="ion-checkmark"> </i>Favicon Package</li>
+
+    </ul>
+    <!-- <div class="package-select"><a href="">Select package</a></div> -->
+  </article>
+  <article class="package">
+    <h3 class="package-title">
+      Platinum
+    </h3>
+    <div class="package-cost"><span class="package-price">$1,000</span></div>
+    <ul class="package-features">
+    	<li><i class="ion-checkmark"> </i>8 Design Concepts</li>
+    	<li><i class="ion-checkmark"> </i>4 Rounds of Revisions</li>
+      <li><i class="ion-checkmark"> </i>All Gold Package Features</li>
+      <li><i class="ion-checkmark"> </i>Color Typography Document</li>
+      <li><i class="ion-checkmark"> </i>Social Media Headers</li>
+      <li><i class="ion-checkmark"> </i>Graphic Elements</li>
+    </ul>
+    <!-- <div class="package-select"><a href="">Select package</a></div> -->
+  </article>
+</section>
+<section class="cta">
+	<h1>See a package you like?</h1>
+	<p>Drop me a line so we can get started!</p>
+	<a href='{{ "./contact/" | relURL }}' class="button get-started">Get Started!</a>
+</section>
+
+{{end}}

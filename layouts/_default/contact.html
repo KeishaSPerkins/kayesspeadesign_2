@@ -5,7 +5,7 @@
    - The Mandatory check script can modified as to suit your business needs. 
    - It is important that you test the modified form before going live.
    - Do not remove captcha and other form elements that are necessary for the form to work.  -->
-<div id='crmWebToEntityForm' style='width:600px;margin:auto;'>
+<div id='crmWebToEntityForm'>
    <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>
    <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads2839904000001219008 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory2839904000001219008()' accept-charset='UTF-8'>
  <input type='text' style='display:none;' name='xnQsjsdp' value='ecf974c34017af3b65344291f5120bc36ecd35d68d5f1a95bd7b6b6d3e8c6156'></input> 
@@ -14,58 +14,67 @@
  <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='></input>
  <input type='text' style='display:none;' name='returnURL' value='https://www.keishasperkins.com' > </input><br></br>
 	 <!-- Do not remove this code. -->
-	<style>
-		#crmWebToEntityForm tr , #crmWebToEntityForm td { 
-			padding:6px;
-			border-spacing:0px;
-			border-width:0px;
-			}
-	</style>
-	<table style='width:600px;background-color:#ffffff;background-color:white;color:black'>
-   <tr>
-      <td  style='word-break: break-word;text-align:left;font-size:12px;font-family:Arial;width:30%;'>First Name</td>
-      <td style='width:40%;' ><input type='text' style='width:100%;box-sizing:border-box;'  maxlength='40' name='First Name' /></td>
-      <td style='width:30%;'></td>
-   </tr>
-   <tr>
-      <td  style='word-break: break-word;text-align:left;font-size:12px;font-family:Arial;width:30%;'>Last Name<span style='color:red;'>*</span></td>
-      <td style='width:40%;' ><input type='text' style='width:100%;box-sizing:border-box;'  maxlength='80' name='Last Name' /></td>
-      <td style='width:30%;'></td>
-   </tr>
-   <tr>
-      <td  style='word-break: break-word;text-align:left;font-size:12px;font-family:Arial;width:30%;'>Email Address<span style='color:red;'>*</span></td>
-      <td style='width:40%;' ><input type='text' style='width:100%;box-sizing:border-box;'  maxlength='100' name='Email' /></td>
-      <td style='width:30%;'></td>
-   </tr>
-   <tr>
-      <td  style='word-break: break-word;text-align:left;font-size:12px;font-family:Arial;width:30%;'>Company</td>
-      <td style='width:40%;' ><input type='text' style='width:100%;box-sizing:border-box;'  maxlength='100' name='Company' /></td>
-      <td style='width:30%;'></td>
-   </tr>
-   <tr>
-      <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:30%;box-sizing:border-box;'>Enter the Captcha</td>
-      <td style='width:40%;box-sizing:border-box;'><input type='text' style='width:100%;box-sizing:border-box;' maxlength='10' name='enterdigest' /></td>
-      <td style='width:30%;'></td>
-   </tr>
-   <tr>
-      <td style='width:30%;'></td>
-      <!-- Do not remove this code. -->
-      <td style='width:40%;box-sizing:border-box;'><img id='imgid' src='https://crm.zoho.com/crm/CaptchaServlet?formId=09bf2436878f8cab0fee5fc5da6caabce96fbd13c917a766fb6379f7f7f8f0d9&grpid=ecf974c34017af3b65344291f5120bc36ecd35d68d5f1a95bd7b6b6d3e8c6156'>
-         <a href='javascript:;' onclick='reloadImg()'>Reload</a>
-      </td>
-      <td style='30%;'></td>
-   </tr>
-   <tr>
-      <td colspan='2' style='text-align:center; padding-top:15px;font-size:12px;'>
-         <input style='margin-right: 5px;cursor: pointer;font-size:12px;color:black' id='formsubmit' type='submit' value='Submit' ></input> <input type='reset' name='reset' style='cursor: pointer;font-size:12px;color:black' value='Reset' ></input> 
-      </td>
-   </tr>
-</table>
+
+			<section class="section-inner-wrapper">
+				<p class="required-note"><span style="color:red;">* </span>Denotes a required feild.</p>
+			</section>
+      <section class="form-inner-wrapper">
+	      <section class="form-section name-section first-name">
+	      	<label for="firstname">First name:</label>
+	      	<input id='firstname' type='text' style='width:100%;box-sizing:border-box;'  maxlength='40' name='First Name' />
+	      </section>
+
+				<section class="form-section name-section last-name">
+					<label for="lastname">Last name:<span style="color:red;">*</span></label>
+	      	<input id="lastname" type='text' style='width:100%;box-sizing:border-box;'  maxlength='80' name='Last Name' />
+				</section>
+
+	      <section class="form-section email-address">
+	      	<label for="emailaddress">Email address:<span style="color:red;">*</span></label>
+	      	<input id="emailaddress" type='text' style='width:100%;box-sizing:border-box;'  maxlength='100' name='Email' />
+	      </section>
+
+				<section class="form-section phone-number">
+					<label for="phone">Phone number:</label>
+		      <input id="phone" type='text' style='width:100%;box-sizing:border-box;'  maxlength='30' name='Phone' />
+				</section>
+
+	      <section class="form-section company-name">
+	      	<label for="companyname">Company Name:</label>
+	      	<input id="companyname" type='text' style='width:100%;box-sizing:border-box;'  maxlength='100' name='Company' />
+	      </section>
+
+	      <section class="form-section message">
+	      	<label for="message">Tell me about your project:<span style="color:red;">*</span></label>
+	      	<textarea name="Description" id="message" maxlength='32000' style='width:100%;box-sizing:border-box;' rows="10">&nbsp;</textarea>
+	      </section>
+	    
+
+	      <section class="form-section captcha-outer-wrapper">
+	      	
+	      	<div id="captcha-wrapper"><img id='imgid' src='https://crm.zoho.com/crm/CaptchaServlet?formId=09bf2436878f8cab0fee5fc5da6caabce96fbd13c917a766fb6379f7f7f8f0d9&grpid=ecf974c34017af3b65344291f5120bc36ecd35d68d5f1a95bd7b6b6d3e8c6156'>
+	      	   <a id="captcha-reload" href='javascript:;' onclick='reloadImg()'>Reload&nbsp;Captcha</a>
+	      	</div>
+	      	<div class="form-inner-section">
+	      		<label for="captcha">Please enter the text in the image below</label>
+	      		<input id="captcha" type='text' style='width:100%;box-sizing:border-box;' maxlength='10' name='enterdigest' />
+	      	</div>
+	      </section>
+
+	      <section class="form-section">
+	      	<input style='margin-right: 5px;font-size:12px;color:black' id='formsubmit' type='submit' value='Submit' ></input> 
+	      	<input type='reset' name='reset' style='cursor: pointer;font-size:12px;color:black' value='Reset' ></input> 
+	      </section>
+      </section>
+
+
+
 <script>
    var mndFileds=new Array('Last Name','Email');
    var fldLangVal=new Array('Last Name','Email Address'); 
    var name='';
    var email='';
+   var message ='';
    
    /* Do not remove this code. */
    function reloadImg() {

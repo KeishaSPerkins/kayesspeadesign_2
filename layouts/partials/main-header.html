@@ -9,6 +9,14 @@
 			{{end}}
 		{{end}}
 		<h1 class="main-title">{{ .Title }}</h1>
+		{{ if eq .Kind "home" }}
+			<p class="main-description">
+				
+				{{ .Site.Params.description }}
+				
+			</p>
+		{{end }}
+
 		{{if isset .Params "description"}}
 			<p class="main-description">
 				{{ .Description }}

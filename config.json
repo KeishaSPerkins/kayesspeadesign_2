@@ -12,7 +12,10 @@
 	"blackfriday": {
 	   
 	},
-	"description": "I'm a freelance designer based in Baton Rouge, LA."
+	"params": {
+      "author": "Keisha S Perkins",
+      "description": "I make logos. I can make one for you!"
+   }
 }
 
 

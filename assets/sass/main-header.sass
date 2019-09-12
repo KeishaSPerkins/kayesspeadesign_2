@@ -2,7 +2,8 @@
 	display: flex
 	flex-direction: column
 	border-bottom: 1px $light-60 solid
-	background: white
+	background: $darkpurple-50
+	color: white
 	@media screen and ($medium-screens)
 			padding: 3rem
 	.main-nav
@@ -10,8 +11,8 @@
 		flex-direction: column
 		position: fixed
 		width: 100%
-		background: white
-		background: rgba(white, .8)
+		background: $purple-80
+		background: rgba($purple-80, .9)
 		margin: 0
 		bottom: -100vh
 		align-items: center
@@ -19,6 +20,8 @@
 		max-width: 100%
 		transition: bottom .2s ease-in-out
 		z-index: 5
+		a.nav-link
+		 color: white
 		&.open
 			bottom: 0
 		@media screen and ($medium-small-screens)
@@ -31,20 +34,25 @@
 		.nav-link
 			margin: 1.5rem 0
 			text-transform: uppercase
-			color: $dark-80
+			color: white
 			text-decoration: none
 			font-weight: 700
-			transition: color .2s ease
+			transition: background .2s ease, color .2s ease
+			border-radius: 50px
 			text-align: center
+			padding: .5rem
 			@media screen and ($medium-small-screens)
 				margin: .3rem 1rem
 				font-size: .8rem
 			&:hover
-				color: $teal-80
+				background: $teal-90
 			&.home
 				font-size: 1.1rem
 				font-weight: 800
 				text-align: left
+				&:hover
+					background: none
+					color: $teal-80
 	.nav-toggle
 		background: white
 		height: 2.5rem
@@ -102,8 +110,12 @@
 		.taxonomy-link
 			text-decoration: none
 			transition: background .2s ease-in-out
+		.author-name
+			font-weight: bold
+			&:hover
+				text-decoration: underline
 		.tag-name, .category-name
-			background: $light-80
+			background: $gold-50
 			margin: 0 4px
 			padding: 5px 10px
 			border-radius: 1px
@@ -112,7 +124,7 @@
 			font-size: .8rem
 			text-transform: uppercase
 			&:hover
-				background: #3E4A59
+				background: $teal-80
 		.category-name
 			background: $light-80
 			font-size: 1.1rem
@@ -120,16 +132,19 @@
 			display: inline-block
 			min-width: 150px
 			font-weight: 700
+			border: 2px solid transparent
+			transition: border .2s ease-in-out
 			&.workshop
-				background: $gold-50
+				background: $pink-50
 			&.talk
 				background: $teal-90
 			&.blog-post
-				background: $darkpurple-40
+				background: $gold-40
 			&.quicktip
 				background: $green-50
 			&:hover
-				background: #3E4A59				
+				border: 2px solid white 			
+
 
 		.blog-when
 			font-weight: 500
