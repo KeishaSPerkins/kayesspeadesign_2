@@ -24,13 +24,14 @@
 		 color: white
 		&.open
 			bottom: 0
-		@media screen and ($medium-small-screens)
+		@media screen and ($medium-screens)
 			flex-direction: row
 			position: static
 			background: none
 			display: grid
 			grid-template-columns: 5fr 1fr 1fr 1fr 1fr 1fr
-			margin: 1rem 0		
+			margin: 1rem 0
+			width: 100%		
 		.nav-link
 			margin: 1.5rem 0
 			text-transform: uppercase
@@ -54,28 +55,31 @@
 					background: none
 					color: $teal-80
 	.nav-toggle
+		align-items: center
 		background: white
-		height: 2.5rem
-		width: 2.5rem
 		border: 1px solid $dark-80
+		bottom: 20px
 		color: $dark-80
+		display: flex
+		display: inline
 		font-size: .8rem
 		font-weight: 700
-		transition: color .2s ease
-		display: flex
+		height: 2.5rem
 		justify-content: center
-		align-items: center
+		padding: none
 		position: fixed
-		bottom: 20px
 		right: 20px
+		text-align: center
+		transition: color .2s ease
+		width: 2.5rem
 		z-index: 10
-		display: none
-		@media screen and ($small-screens)
-			display: inline
+		@media screen and ($medium-screens)
+			display: none
 		svg
 			height: 1rem
 			width: 1rem
-		
+			margin: auto
+	
 	.main-page-info
 		max-width: 700px
 		margin: auto

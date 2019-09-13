@@ -29,6 +29,10 @@
 		{{end}}
 
 		{{ if eq .Kind "page"}}
+			{{ if .Params.specialpage }}
+				<a href='{{ "./" | relURL }}' class="button-dark button">Go Back Home</a>
+			{{end}}
+			{{ if not .Params.specialpage }}
 		<br>					
 						{{if isset .Params "tags"}}
 							{{ with .Params.tags}}
@@ -50,8 +54,9 @@
 						{{end}} 
 
 						on
-
-						<time class="blog-when">{{ .PublishDate.Format "Jan 2, 2006" }}</time>
+						
+						<time class="blog-when">{{ .Date.Format "Jan 2, 2006" }}</time>
+			{{ end }}
 		{{end }}
 	</div>
 

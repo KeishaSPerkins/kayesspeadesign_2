@@ -2,7 +2,7 @@
 
 	{{ $portfolioPage := .Site.GetPage "/portfolio"}}
 	{{ $logos := $portfolioPage.Pages}}
-	<h2 class="main-title">Recent Work</h2>
+	<h2 style="margin: 0;" class="main-title">Recent Work</h2>
 	
 	{{ range first 6 $portfolioPage.Pages.ByWeight }}
 		{{ partial "portfolio-card.html" .}}
