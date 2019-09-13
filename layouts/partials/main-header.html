@@ -8,7 +8,17 @@
 				{{end}}
 			{{end}}
 		{{end}}
-		<h1 class="main-title">{{ .Title }}</h1>
+		<h1 class="main-title">
+			{{ if eq .Type "categories"}}
+				Results for the {{.Title}} Category
+			{{ else if eq .Type "authors"}}
+				Posts by {{.Title}}
+			{{ else if eq .Type "tags"}}
+				Posts tagged {{.Title}}
+			{{else}}
+				{{.Title}}
+			{{end}}
+		</h1>
 		{{ if eq .Kind "home" }}
 			<p class="main-description">
 				
@@ -33,7 +43,9 @@
 				<a href='{{ "./" | relURL }}' class="button-dark button">Go Back Home</a>
 			{{end}}
 			{{ if not .Params.specialpage }}
-		<br>					
+				
+		{{ if not .Params.notags }}		
+		<br>	
 						{{if isset .Params "tags"}}
 							{{ with .Params.tags}}
 								{{range . }}
@@ -41,9 +53,10 @@
 								{{end}}
 							{{end}}
 						{{end}} 
-
-						<br><br>
-
+		{{end}}
+						
+		{{ if not .Params.noauthor }}
+		<br><br>
 						{{if isset .Params "authors"}}
 							by
 							{{ with .Params.authors }}
@@ -52,11 +65,14 @@
 								{{end}}
 							{{end}}
 						{{end}} 
-
+					{{end }}
+{{ if not .Params.nodate }}
 						on
 						
 						<time class="blog-when">{{ .Date.Format "Jan 2, 2006" }}</time>
+						{{end }}
 			{{ end }}
+
 		{{end }}
 	</div>
 

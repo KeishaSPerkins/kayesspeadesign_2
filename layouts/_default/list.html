@@ -1,0 +1,18 @@
+{{define "content-block"}}
+
+	{{ range .Pages}}
+	 <article class="list-result">
+	 	<a href="{{.Permalink}}">
+	 		<h1 class="list-title">
+	 			{{.Title}}
+	 		</h1>
+	 	</a>
+
+	 	<img class="portfolio-pic" src='{{ range first 1 (.Resources.ByType "image") }}{{.Permalink}}{{end}}' alt="{{ .Title }}">
+
+	 	<p class="list-description">{{ .Content | replaceRE "<iframe.*?/iframe>" " " | htmlUnescape | safeHTML | truncate 100 }}</p>
+	 </article>
+		
+	{{end}}
+
+{{end}}

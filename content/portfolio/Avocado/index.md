@@ -9,7 +9,7 @@
 	"resources": [
 	      {
 	         "name": "logo",
-	         "src": "BontonAssociates_Logo.svg"
+	         "src": "Acocado_Logo.svg"
 	      }
 	    ]
 }

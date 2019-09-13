@@ -1,9 +1,17 @@
 {{ define "content-block" }}
 
-{{.Content}}
+	{{ if eq .Section "portfolio"}}
+		{{ $logo := .Resources.GetMatch "logo" }}
+		<img class="project-image" alt="Logo for {{.Page.Title}}" src='{{ $logo.Permalink }}'>
+	{{end}}
 
-{{ partial "share-buttons.html"}}
-{{ if not .Params.nodisqus }}
-			{{ template "_internal/disqus.html" . }}
-		{{end}}
+	{{.Content}}
+
+	{{ if not .Params.noshare }}
+		{{ partial "share-buttons.html"}}
+	{{end}}	
+
+	{{ if not .Params.nodisqus }}
+		{{ template "_internal/disqus.html" . }}
+	{{end}}	
 {{end }}

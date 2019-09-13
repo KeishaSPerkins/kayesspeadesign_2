@@ -1,0 +1,9 @@
+{{ $altText := .Get "alt"}}
+{{ $caption := .Get "caption"}}
+{{ $class := .Get "class" }}
+{{ $name := .Get "name" }}
+{{ with $name }}
+
+<img src='{{ (.Resize "600x").RelPermalink }}' alt="{{$altText}}" class={{$class}}>
+{{ . }}
+{{end}}
