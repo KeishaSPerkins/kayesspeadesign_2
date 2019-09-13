@@ -2,15 +2,17 @@
 
 	{{ range .Pages}}
 	 <article class="list-result">
-	 	<a href="{{.Permalink}}">
-	 		<h1 class="list-title">
+	 	<h1 class="list-title" >
+	 		<a class="list-title-link" href="{{.Permalink}}">
 	 			{{.Title}}
-	 		</h1>
-	 	</a>
+	 		</a>
+	 	</h1>
 
-	 	<img class="portfolio-pic" src='{{ range first 1 (.Resources.ByType "image") }}{{.Permalink}}{{end}}' alt="{{ .Title }}">
+	 	<div class="list-pic-wrapper">
+	 		<img class="list-result-pic" src='{{ range first 1 (.Resources.ByType "image") }}{{.Permalink}}{{end}}' alt="{{ .Title }}">
+	 	</div>
 
-	 	<p class="list-description">{{ .Content | replaceRE "<iframe.*?/iframe>" " " | htmlUnescape | safeHTML | truncate 100 }}</p>
+	 	<section class="list-description">{{ .Content | replaceRE "<iframe.*?/iframe>" " " | htmlUnescape | safeHTML | truncate 100 }}</section>
 	 </article>
 		
 	{{end}}

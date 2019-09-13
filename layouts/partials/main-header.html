@@ -12,7 +12,7 @@
 			{{ if eq .Type "categories"}}
 				Results for the {{.Title}} Category
 			{{ else if eq .Type "authors"}}
-				Posts by {{.Title}}
+				Posts by<br>{{.Title}}
 			{{ else if eq .Type "tags"}}
 				Posts tagged {{.Title}}
 			{{else}}

@@ -1,0 +1,37 @@
+.taxonomy
+	.content-wrapper
+		grid-template-columns: 1fr
+		grid-gap: 10px 30px
+		@media screen and ($medium-small-screens)
+			grid-template-columns: 1fr 1fr
+		.list-result
+			border: 1px solid $darkpurple-50
+			padding: 10px
+			display: flex
+			display: grid
+			grid-gap: 10px
+			width: 100%
+			grid-template-columns: 3rem 1fr
+			grid-template-rows: min-content min-content
+		.list-title
+			grid-column: 1 / -1
+			grid-row: 1 / 2
+			margin: 0
+			font-size: 1.1rem
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+		.list-pic-wrapper
+			grid-column: 1 / 2
+			grid-row: 2 /-1
+			height: 3rem
+			width: 3rem
+			overflow: hidden
+			.list-result-pic
+				height: 100%
+				object-fit: scale-down
+		.list-description
+			grid-column: 2 / -1
+			grid-row: 2 /-1
+			p
+				margin: 5px 0
