@@ -1,8 +1,13 @@
 {{ define "content-block" }}
 
 	{{ if eq .Type "portfolio" }}
-		{{ $logo := .Resources.GetMatch "logo" }}
-		<img class="project-image" alt="Logo for {{.Page.Title}}" src='{{ $logo.Permalink }}'>
+
+		{{$pageTitle := .Page.Title }}
+		{{ range first 1 (.Resources.ByType "image") }}
+
+			<img class="project-image" alt="Logo for {{$pageTitle}}" src='{{ .Permalink }}'>
+		{{end}}
+		<br> 
 	{{end}}
 
 	{{.Content}}
@@ -20,3 +25,6 @@
 	{{end}}	
 	
 {{end }}
+
+
+

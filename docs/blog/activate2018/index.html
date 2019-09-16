@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <link rel="stylesheet" href="https://keishasperkins.com/sass/style.min.css" type="text/css" media="screen">
+  <title>
+  	
+  		An Introduction to P5.js for Game Development | Keisha S Perkins
+  	
+  </title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800|IBM+Plex+Serif:300,500,700" rel="stylesheet">
+</head> 
+<body class='single blog blog section'>
+	<div class="size-debug"><span></span></div>
+	
+		<main class='main-wrapper'>
+	   <header class="main-header">
+	<nav id="main-nav" class="main-nav">
+	<a href='/' class="nav-link home">Keisha S Perkins</a>
+	
+	<a href='/about/' class="nav-link about">About</a>
+	<a href='/portfolio/' class="nav-link portfolio">Portfolio</a>
+	<a href='/blog/' class="nav-link blog">Blog</a>
+	<a href='/pricing/' class="nav-link pricing">Pricing</a>
+	<a href='/contact/' class="nav-link contact">Contact</a>
+</nav>
+<button id="nav-toggle" class="nav-toggle">
+	<svg>
+		<use href="#menu" />
+	</svg>
+</button>
+
+	<div class="main-page-info">
+		
+			
+				
+					<a class="taxonomy-link category-name talk"href="/categories/talk">Talk</a>
+				
+			
+		
+		<h1 class="main-title">
+			
+				An Introduction to P5.js for Game Development
+			
+		</h1>
+		
+
+		
+		
+
+		
+	</div>
+
+
+</header>
+		   
+			   <div class='content-wrapper'>
+			   	
+
+	
+
+	
+
+<iframe src="//slides.com/kayesspea/deck-2/embed" style="width: 100%; min-height:500px" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<p>This talk is about using JavaScript to create games on the <a href="https://www.w3schools.com/html/html5_canvas.asp">HTML5 canvas</a>. Though you won’t create the next Halo, you’ll learn so much about JavaScript and programming as a whole when you create games with it. In this talk, I’ll introduce you to a library that’s perfect for beginners and “non-coders” alike called <a href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js">p5.js.</a></p>
+
+<h2 id="why-javascript">Why JavaScript?</h2>
+
+<p>JavaScript is everywhere. If you use the internet, you’ve almost certainly encountered JavaScript. You’ve seen it move objects across the screen, fetch information to a webpage, or maybe drive the logic behind a fun game you’ve played.</p>
+
+<p>With JavaScript’s ubiquity comes career opportunity and a huge community of developers. Rest assured, if you want to learn JavaScript, you’ll be learning a tool that is used across the internet by millions every day.</p>
+
+<h2 id="why-p5-js">Why p5.js</h2>
+
+<p>P5.js is the perfect place to begin your foray into programming with JavaScript as it is designed with the beginner, the artist, the poet, and the educator in mind. If you&rsquo;re anything like me, you want to see a results quickly. P5.js gets you up and running right away. With just a few lines of code, you can have interativity.</p>
+
+<p>With p5, you can add and remove functionality as you need it with p5’s <a href="https://p5js.org/libraries/">extender libraries</a>. Want to make a speech analysis tool? Use <a href="http://abilitylab.nyu.edu/p5.js-speech/">p5.speech</a>. Want to make music in the browser? How about <a href="http://charlie-roberts.com/gibber/p5-gibber/">p5.gibber</a>? Interested in physical computing? Try <a href="https://github.com/sarahgp/p5bots">p5.bots</a>.</p>
+
+<p>And don’t worry if you’re just starting out. You’ll see how easy it can be when the p5 library helps to do some of the work for you!</p>
+
+<h3 id="what-is-p5-js">What is p5.js?</h3>
+
+<p>P5.js is “a JavaScript library that starts with the original goal of <a href="http://processing.org/">Processing</a>, to make coding accessible for artists, designers, educators, and beginners, and reinterprets this for today&rsquo;s web,” according to the <a href="https://p5js.org/">official p5.js website</a>. What this means is that p5 was first developed in order to make it easier to start programming no matter your background or skill level.</p>
+
+<h2 id="using-p5-js">Using P5.js</h2>
+
+<p>The first thing we need to know about p5.js is that there are two main functions built into it: the <code>setup()</code> function and the <code>draw()</code> function. The <code>setup()</code> function is where we want to put things that we only want the computer to do once at the start of our program. The <code>draw()</code> function is where we put things we want the computer to do many time every second. The default is 60 executions every second.</p>
+
+<h3 id="creating-the-canvas">Creating the Canvas</h3>
+
+<p>So let’s start by creating the canvas we want to draw on. We’ll tell the computer we want the canvas to be 800 pixels wide and 300 pixels tall. We’ll also tell it that we want the canvas to be black. Here&rsquo;s the code:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+	<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">800</span>, <span style="color:#ae81ff">300</span>);
+	<span style="color:#a6e22e">background</span>(<span style="color:#e6db74">&#39;black&#39;</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+
+}
+</code></pre></div></p>
+
+<p><a href="./blankcanvas">Here&rsquo;s the result</a></p>
+
+<h3 id="adding-some-interest">Adding Some Interest</h3>
+
+<p>Not terribly impressive. But let’s draw on that canvas. In the draw function, let’s add an ellipse that is 80 pixels in from the left and 50 pixels down from the top. We’ll also make it 20 pixels wide and 60 pixels tall.</p>
+
+<p>Here&rsquo;s the code:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+	<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">800</span>, <span style="color:#ae81ff">300</span>);
+	<span style="color:#a6e22e">background</span>(<span style="color:#e6db74">&#39;black&#39;</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+	<span style="color:#a6e22e">ellipse</span>(<span style="color:#ae81ff">80</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">60</span>)
+
+}
+</code></pre></div></p>
+
+<p><a href="./blankcanvaswithellipse">Here&rsquo;s the result</a></p>
+
+<p>Though this ellipse appears to be still, it is being drawn 60 times each second. Let&rsquo;s add some movement so we can see why the <code>draw()</code> function is so important.</p>
+
+<h3 id="adding-more-interactivity">Adding More Interactivity</h3>
+
+<p>Now let’s add some movement. We can use a set of p5.js variables called <code>mouseX</code> and <code>mouseY</code> to make the ellipse follow our mouse instead of telling the computer a specific location. At the start of every draw function, the computer will look to see where our mouse cursor is and draw our ellipse right underneath.</p>
+
+<p>Here&rsquo;s the code:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+	<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">800</span>, <span style="color:#ae81ff">300</span>);
+	<span style="color:#a6e22e">background</span>(<span style="color:#e6db74">&#39;black&#39;</span>);
+}
+
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+	<span style="color:#a6e22e">ellipse</span>(<span style="color:#a6e22e">mouseX</span>, <span style="color:#a6e22e">mouseY</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">50</span>);
+}
+</code></pre></div></p>
+
+<p><a href="./ellipsefollowsmousewithpath">Here&rsquo;s the result</a></p>
+
+<h3 id="get-rid-of-that-tail">Get Rid of that Tail</h3>
+
+<p>Remember that we said things in the <code>setup()</code> function only happen once? What if we put our instructions for our background in the <code>draw()</code> function so that it is draw at the start of every frame?</p>
+
+<p>The result is that the ellipse’s “tail” has gone away because the background is draw at the start of each frame, covering the ellipse from the last frame. This simple loop allows us to simulate the real-world look of movement on our 2D canvas</p>
+
+<p>Here&rsquo;s the code:<br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+	<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">800</span>, <span style="color:#ae81ff">300</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+	<span style="color:#a6e22e">background</span>(<span style="color:#e6db74">&#39;black&#39;</span>);
+	<span style="color:#a6e22e">ellipse</span>(<span style="color:#a6e22e">mouseX</span>, <span style="color:#a6e22e">mouseY</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">50</span>);
+}
+</code></pre></div></p>
+
+<p><a href="./ellipsefollowsmousenopath">Here&rsquo;s the result</a></p>
+
+<p>This is just a small introduction to the library, but have a look at some of the things others have built with p5.js! Perhaps it will inspire to you build something, too.</p>
+
+<ul>
+<li><a href="https://codepen.io/noisefactor/pen/rezrQW">Noisefactor’s Pen “Simple paint program”</a></li>
+<li><a href="https://codepen.io/pizza3/pen/rjaPNY">Yugam’s Pen “Card’s Rotation”</a></li>
+<li><a href="https://p5js.org/interaction-reach-1">P5.js Example: Reach 1</a></li>
+<li><a href="https://codepen.io/sha99y8oy/pen/KrbPzx">shaggy’s Pen “Wave Gen – p5.js”</a></li>
+</ul>
+
+<h2 id="but-where-are-the-games">But Where Are the Games?!</h2>
+
+<p>P5.js is great for building games all by itself. But with the help of extender libraries, making games is even easier. Let’s have a look at the <a href="http://p5play.molleindustria.org/">p5.play</a> and <a href="https://p5js.org/reference/#/libraries/p5.sound">p5.sound</a> extender libraries.</p>
+
+<h3 id="p5-play">P5.play</h3>
+
+<p>P5.play is a library “for the creation of games and playthings” written Paolo Pedercini. P5.play provides sprites, animations, input and collision functions for games and game-like applications. It’s built for accessibility over performance.</p>
+
+<h4 id="what-is-a-sprite">What Is a Sprite?</h4>
+
+<p>The main building block of p5.play, a sprite is an element able to store images or animations with a set of properties such as position and visibility. Sprites can have a collider that defines the active area to detect collisions or overlappings with other sprites and mouse interactions. This means that you use sprites to represent things in your game environment and p5.play will keep up with where they are, what they overlap, and how they should be moving.</p>
+
+<h4 id="let-s-add-a-sprite">Let’s Add a Sprite!</h4>
+
+<p>Adding a sprite is pretty simple, we just need a variable for our sprite to live in. We use the <code>CreateSprite()</code> function to make a sprite that is 150 pixels down from the top and 150 pixels down from the bottom. The sprite will be 50 pixels wide and 160 pixels tall. In our <code>draw()</code> function, we use <code>drawSprites()</code> to let the computer know that we want to see our sprites.</p>
+
+<p>Here&rsquo;s the code:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">robot</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+	<span style="color:#a6e22e">robot</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createSprite</span>(<span style="color:#ae81ff">150</span>,<span style="color:#ae81ff">150</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">160</span>);
+	<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">800</span>, <span style="color:#ae81ff">300</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+	<span style="color:#a6e22e">background</span>(<span style="color:#e6db74">&#39;black&#39;</span>);
+	<span style="color:#a6e22e">drawSprites</span>();
+}
+</code></pre></div></p>
+
+<p><a href="./addourfirstsprite">Here&rsquo;s the result</a></p>
+
+<p>Though it may not look like it, that rectangle has velocity, space, depth, collision, and lots of other properties already built in. It’s ready for us to start manipulating it. First, let’s add an animation to the sprite!</p>
+
+<h4 id="adding-an-animation-to-our-sprite">Adding an Animation to Our Sprite</h4>
+
+<p>Sprites can take on several animations, and animations can be in the form of a series of pictures or a spritesheet. Here, we’ll tell the computer that our sprite should have an animation that we’ll call “idle” and that the animation should consist of all images from “idle01.png” to “idle09.png” from our files.</p>
+
+<p>P5.play very conveniently keeps track of these for us. We just need to name the images according to the order they appear in our animation. P5.play will read the titles and do the rest.</p>
+
+<p><strong>Note:</strong> The files referenced here are saved in the same folder as the p5.js sketch. In order for your animations to work, you will need images to assign. A great place to find free sprites is <a href="http://opengameart.org">opengameart.com</a></p>
+
+<p>Here&rsquo;s the code:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">robot</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+	<span style="color:#a6e22e">robot</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createSprite</span>(<span style="color:#ae81ff">150</span>,<span style="color:#ae81ff">150</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">160</span>);
+	<span style="color:#a6e22e">robot</span>.<span style="color:#a6e22e">addAnimation</span>(<span style="color:#e6db74">&#34;idle&#34;</span>, <span style="color:#e6db74">&#34;../images/Idle02.png&#34;</span>, <span style="color:#e6db74">&#34;../images/Idle09.png&#34;</span>);
+	<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">800</span>, <span style="color:#ae81ff">300</span>);
+}    
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+	<span style="color:#a6e22e">background</span>(<span style="color:#e6db74">&#39;black&#39;</span>);
+	<span style="color:#a6e22e">drawSprites</span>();
+}
+</code></pre></div></p>
+
+<p><a href="./animateoursprite">Here&rsquo;s the result</a></p>
+
+<p>And there she is! Our little robot!</p>
+
+<h4 id="adding-interactivity-to-our-sprite">Adding Interactivity to our sprite</h4>
+
+<p>What if we want to add some interaction? Let’s give the computer some instructions on what to do when we press a certain key. In our setup function we’ll add another animation called “run” with similar syntax as before.</p>
+
+<p>Then, in our draw function, we’ll put a bit of logic that first checks to see if someone is pressing the right arrow key, and then changes the robot’s velocity so that she moves to the right. The robot will also change animations when the key is pressed, creating the effect of running.</p>
+
+<p>Here&rsquo;s the code:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">robot</span>;
+
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+	<span style="color:#a6e22e">robot</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createSprite</span>(<span style="color:#ae81ff">150</span>,<span style="color:#ae81ff">150</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">160</span>);
+	<span style="color:#a6e22e">robot</span>.<span style="color:#a6e22e">addAnimation</span>(<span style="color:#e6db74">&#34;idle&#34;</span>, <span style="color:#e6db74">&#34;../images/Idle01.png&#34;</span>, <span style="color:#e6db74">&#34;../images/Idle09.png&#34;</span>);
+	<span style="color:#a6e22e">robot</span>.<span style="color:#a6e22e">addAnimation</span>(<span style="color:#e6db74">&#34;run&#34;</span>, <span style="color:#e6db74">&#34;images/Run01.png&#34;</span>, <span style="color:#e6db74">&#34;images/Run08.png&#34;</span>);
+	<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">800</span>, <span style="color:#ae81ff">300</span>);			
+}
+
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+	<span style="color:#a6e22e">background</span>(<span style="color:#e6db74">&#39;black&#39;</span>);			
+	<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">keyIsDown</span>(<span style="color:#ae81ff">32</span>)){
+		<span style="color:#a6e22e">robot</span>.<span style="color:#a6e22e">changeAnimation</span>(<span style="color:#e6db74">&#34;run&#34;</span>);
+		<span style="color:#a6e22e">robot</span>.<span style="color:#a6e22e">velocity</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+	} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">keyIsDown</span>(<span style="color:#ae81ff">32</span>)) {
+		<span style="color:#a6e22e">robot</span>.<span style="color:#a6e22e">changeAnimation</span>(<span style="color:#e6db74">&#34;idle&#34;</span>);
+		<span style="color:#a6e22e">robot</span>.<span style="color:#a6e22e">velocity</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	}
+	<span style="color:#a6e22e">drawSprites</span>();
+}
+</code></pre></div></p>
+
+<p><a href="./keypressspriteaction">Here&rsquo;s the result</a></p>
+
+<p>Using functions like the ones we’ve used above, we can make games that are simple and fun to play. <a href="./gameexamplesilent">This game</a> was built with less than 200 lines of code using these libraries.</p>
+
+<p><strong>Note:</strong> A great little resource I like to use is <a href="http://keycode.info">Keycode.info</a> by Wes Bos. This nifty little website gives you keycodes for the keys on your keyboard. It&rsquo;s very helpful when writing in keyboard event handlers.</p>
+
+<p>Check out some of these other things built with this wonderful library:</p>
+
+<ul>
+<li><a href="https://codepen.io/seil/pen/LxzZxM">Yuki Kayashima’s Pen “p5.js_breakout”</a></li>
+<li><a href="https://codepen.io/matedemorphy/pen/bREMZJ">Joseph Palmezano’s Pen “Angry PacMan p5.js”</a></li>
+<li><a href="https://codepen.io/SetupDraw/pen/yoXZbR">Setup Draw’s Pen “ASTEROIDS”</a></li>
+</ul>
+
+<h3 id="but-where-is-the-sound">But Where Is the Sound?</h3>
+
+<p>Notice how all of these examples have been silent. To add sound to our game, we will use the p5.sound extender library. p5.sound extends p5 with Web Audio functionality including audio input, playback, analysis and synthesis.</p>
+
+<p>It will allow us to trigger songs and sounds at certain parts in the game. For instance, let’s add a song at the start of the game we saw earlier.</p>
+
+<p>We&rsquo;ll add this code into our <code>setup()</code> function and introduce a new function, <code>preload()</code>.</p>
+
+<p>Here&rsquo;s the code:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">gameMusic</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">preload</span>(){
+	<span style="color:#a6e22e">gameMusic</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadSound</span>(<span style="color:#e6db74">&#39;gameMusic.mp3&#39;</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>(){
+	<span style="color:#a6e22e">gameMusic</span>.<span style="color:#a6e22e">play</span>();
+}
+</code></pre></div></p>
+
+<p><a href="./gameexample">Here&rsquo;s the result</a></p>
+
+<p>The <code>preload()</code> function allows us to load all of our assets before the program begins. This is very useful for when we have large files or have many files to load. In the <code>preload()</code> function, we will load our sound to a variable called “gameMusic”. At the start of the <code>setup()</code> function, we can play the song.</p>
+
+<p>We don&rsquo;t want to put our <code>play()</code> call in the <code>draw()</code> function because that would cause a new instance of our song to start playing, overlapping 60 times in one second!</p>
+
+<p>With a bit more coding, we can trigger sounds for when the game is being played, when the game is over and even when a certain action occurs in the game.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I hope this quick introduction to p5.js and its extender libraries p5.play and p5.sound helped to inspire your creativity. I encourage you to continue learning about the libraries. There is so much you can do with them.</p>
+
+<p>Here is a list of resources that may help you in learning a bit more</p>
+
+<ul>
+<li><a href="http://p5js.org">p5.js Website</a></li>
+<li><a href="http://p5play.molleindustria.org/">p5.play Website</a></li>
+<li><a href="https://www.youtube.com/watch?v=8j0UDiN7my4">Daniel Shiffman: The Coding Train</a></li>
+<li><a href="http://www.amazon.com/Make-Interactive-Graphics-JavaScript-Processing/dp/1457186772">Book: <em>Getting Started with P5.js</em></a></li>
+</ul>
+
+<p>Here is a list of resources that may help you in creating games.</p>
+
+<ul>
+<li><a href="http://opengameart.org">Open Game Art</a></li>
+<li><a href="http://keycode.info">KeyCode.info</a></li>
+<li><a href="https://codepen.io">CodePen</a></li>
+<li><a href="http://freesound.org">Free Sound</a></li>
+</ul>
+
+<p>The <a href="../slides">slides for this talk</a> are also available. If you like that robot game. You can see how it&rsquo;s built on <a href="https://la-wit.github.io/build-an-infinite-runner">its accompanying tutorial site</a>.</p>
+
+<p>If you&rsquo;d like to jump right into making with p5.js, you can fork <a href="https://codepen.io/KeishaSPerkins/pen/eQdzJb">this pen</a> start right away. The pen already has p5.js, p5.play, p5.sound, and another extender library, <a href="https://p5js.org/reference/#/libraries/p5.dom">p5.dom</a> linked.</p>
+
+<p>Have fun!</p>
+
+
+	
+	
+	
+		<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "keishasperkins" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+	
+
+			   </div>
+		   
+		</main>
+	
+
+<script src="https://keishasperkins.com/js/bundle.min.js" type="text/javascript"></script>
+
+
+<footer class="main-footer">
+	<p class="copyright">Copyright&nbsp;&copy;&nbsp;Keisha S Perkins 2019</p>
+
+</footer>
+
+
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="menu" viewBox="0 0 92.833 92.833">
+    <title>menu</title>
+    <path d="M89.834,1.75H3c-1.654,0-3,1.346-3,3v13.334c0,1.654,1.346,3,3,3h86.833c1.653,0,3-1.346,3-3V4.75 C92.834,3.096,91.488,1.75,89.834,1.75z"/>
+    <path d="M89.834,36.75H3c-1.654,0-3,1.346-3,3v13.334c0,1.654,1.346,3,3,3h86.833c1.653,0,3-1.346,3-3V39.75 C92.834,38.096,91.488,36.75,89.834,36.75z"/>
+    <path d="M89.834,71.75H3c-1.654,0-3,1.346-3,3v13.334c0,1.654,1.346,3,3,3h86.833c1.653,0,3-1.346,3-3V74.75 C92.834,73.095,91.488,71.75,89.834,71.75z"/>
+  </symbol>
+  <symbol id="cross" viewBox="0 0 95.939 95.939">
+    <title>cross</title>
+    <path d="M62.819,47.97l32.533-32.534c0.781-0.781,0.781-2.047,0-2.828L83.333,0.586C82.958,0.211,82.448,0,81.919,0 c-0.53,0-1.039,0.211-1.414,0.586L47.97,33.121L15.435,0.586c-0.75-0.75-2.078-0.75-2.828,0L0.587,12.608 c-0.781,0.781-0.781,2.047,0,2.828L33.121,47.97L0.587,80.504c-0.781,0.781-0.781,2.047,0,2.828l12.02,12.021 c0.375,0.375,0.884,0.586,1.414,0.586c0.53,0,1.039-0.211,1.414-0.586L47.97,62.818l32.535,32.535 c0.375,0.375,0.884,0.586,1.414,0.586c0.529,0,1.039-0.211,1.414-0.586l12.02-12.021c0.781-0.781,0.781-2.048,0-2.828L62.819,47.97 z"/>
+  </symbol>
+  <symbol id="window" viewBox="0 0 48 48">
+    <title>window</title>
+    <g transform="matrix(-1 0 0 -1 48 48)">
+      <g transform="matrix(-1 0 0 1 48 0)">
+        <g> 
+          <path d="M42.185,15H34.5V5.453C34.5,2.676,32.52,0,29.743,0H5.971C3.194,0,0.5,2.676,0.5,5.453v22.901 C0.5,31.131,3.194,33,5.971,33H13.5v10.059c0,2.777,2.137,4.941,4.914,4.941h23.772c2.776,0,5.314-2.164,5.314-4.941V20.158 C47.5,17.381,44.962,15,42.185,15z M44.5,36h-28v-3h13.243c2.777,0,4.757-1.869,4.757-4.646V18h7.685 c1.125,0,2.315,1.033,2.315,2.158V36z M5.971,3H29.5h0.243C30.867,3,31.5,4.328,31.5,5.453V15v2v1v2H16.514h-1.96h-1.039H3.5V5.453 C3.5,4.328,4.847,3,5.971,3z"/> 
+        </g>
+      </g>
+    </g>
+  </symbol>
+</svg>
+</body>

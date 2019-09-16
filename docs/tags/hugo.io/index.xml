@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HUGO.io on Keisha S Perkins</title>
+    <link>https://keishasperkins.com/tags/hugo.io/</link>
+    <description>Recent content in HUGO.io on Keisha S Perkins</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Oct 2018 11:08:21 -0600</lastBuildDate>
+    
+	<atom:link href="https://keishasperkins.com/tags/hugo.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Up and Running With HUGO</title>
+      <link>https://keishasperkins.com/blog/upandrunningwithhugo/</link>
+      <pubDate>Wed, 24 Oct 2018 11:08:21 -0600</pubDate>
+      
+      <guid>https://keishasperkins.com/blog/upandrunningwithhugo/</guid>
+      <description>I spoke at Baton Rouge Hack Night about my favorite static site generator, HUGO.
+ Hugo is a great static site generator that&#39;s super fast and lightweight. This talk demos the steps for getting a site up and running, adding a few posts, and choosing a theme. I really recommend digging into the HUGO docs as well as the HUGO Community Forum for more in-depth explanations of how to use HUGO for your own site.</description>
+    </item>
+    
+  </channel>
+</rss>
