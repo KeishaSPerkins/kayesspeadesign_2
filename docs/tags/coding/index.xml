@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>coding on Keisha S Perkins</title>
-    <link>https://keishasperkins.com/tags/coding/</link>
+    <link>https://keishasperkins.github.io/kayesspeadesign_2/tags/coding/</link>
     <description>Recent content in coding on Keisha S Perkins</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 24 Oct 2018 11:08:21 -0600</lastBuildDate>
     
-	<atom:link href="https://keishasperkins.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://keishasperkins.github.io/kayesspeadesign_2/tags/coding/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Up and Running With HUGO</title>
-      <link>https://keishasperkins.com/blog/upandrunningwithhugo/</link>
+      <link>https://keishasperkins.github.io/kayesspeadesign_2/blog/upandrunningwithhugo/</link>
       <pubDate>Wed, 24 Oct 2018 11:08:21 -0600</pubDate>
       
-      <guid>https://keishasperkins.com/blog/upandrunningwithhugo/</guid>
+      <guid>https://keishasperkins.github.io/kayesspeadesign_2/blog/upandrunningwithhugo/</guid>
       <description>I spoke at Baton Rouge Hack Night about my favorite static site generator, HUGO.
  Hugo is a great static site generator that&#39;s super fast and lightweight. This talk demos the steps for getting a site up and running, adding a few posts, and choosing a theme. I really recommend digging into the HUGO docs as well as the HUGO Community Forum for more in-depth explanations of how to use HUGO for your own site.</description>
     </item>
     
     <item>
       <title>IT Girls: Build a JavaScript Infinite Runner</title>
-      <link>https://keishasperkins.com/blog/itgirls/</link>
+      <link>https://keishasperkins.github.io/kayesspeadesign_2/blog/itgirls/</link>
       <pubDate>Wed, 08 Mar 2017 11:08:21 -0600</pubDate>
       
-      <guid>https://keishasperkins.com/blog/itgirls/</guid>
+      <guid>https://keishasperkins.github.io/kayesspeadesign_2/blog/itgirls/</guid>
       <description>I developed this workshop for La-WIT annual IT Girls program. The workshop was meant to introduce area middle school girls to JavaScript using the p5.js library.
 The workshop has a workbookas well as an accompanying website. By the workbook&amp;rsquo;s end, you&amp;rsquo;ll have built a working game with JavaScript!
 .</description>

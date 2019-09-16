@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JavaScript on Keisha S Perkins</title>
-    <link>https://keishasperkins.com/tags/javascript/</link>
+    <link>https://keishasperkins.github.io/kayesspeadesign_2/tags/javascript/</link>
     <description>Recent content in JavaScript on Keisha S Perkins</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Mar 2017 11:08:21 -0600</lastBuildDate>
     
-	<atom:link href="https://keishasperkins.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://keishasperkins.github.io/kayesspeadesign_2/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>IT Girls: Build a JavaScript Infinite Runner</title>
-      <link>https://keishasperkins.com/blog/itgirls/</link>
+      <link>https://keishasperkins.github.io/kayesspeadesign_2/blog/itgirls/</link>
       <pubDate>Wed, 08 Mar 2017 11:08:21 -0600</pubDate>
       
-      <guid>https://keishasperkins.com/blog/itgirls/</guid>
+      <guid>https://keishasperkins.github.io/kayesspeadesign_2/blog/itgirls/</guid>
       <description>I developed this workshop for La-WIT annual IT Girls program. The workshop was meant to introduce area middle school girls to JavaScript using the p5.js library.
 The workshop has a workbookas well as an accompanying website. By the workbook&amp;rsquo;s end, you&amp;rsquo;ll have built a working game with JavaScript!
 .</description>
