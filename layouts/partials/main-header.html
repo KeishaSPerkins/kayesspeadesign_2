@@ -10,11 +10,11 @@
 		{{end}}
 		<h1 class="main-title">
 			{{ if eq .Type "categories"}}
-				Results for the {{.Title}} Category
+				Results for the <span class="addition-to-title">"{{.Title}}"</span> Category
 			{{ else if eq .Type "authors"}}
-				Posts by<br>{{.Title}}
+				Posts by<br><span class="addition-to-title">{{.Title}}</span>
 			{{ else if eq .Type "tags"}}
-				Posts tagged {{.Title}}
+				Posts tagged <span class="addition-to-title">"{{.Title}}"</span>
 			{{else}}
 				{{.Title}}
 			{{end}}

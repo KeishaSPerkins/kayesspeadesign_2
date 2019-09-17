@@ -1,6 +1,6 @@
 {{define "content-block"}}
 
-	{{ range .Pages}}
+	{{ range (.Paginator 12).Pages}}
 	 <article class="list-result">
 	 	<h1 class="list-title" >
 	 		<a class="list-title-link" href="{{.Permalink}}">
@@ -16,5 +16,8 @@
 	 </article>
 		
 	{{end}}
+	<section class="paginator-wrapper">
+		{{ template "_internal/pagination.html" . }}
+	</section>
 
 {{end}}
