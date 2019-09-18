@@ -1,6 +1,6 @@
 ---
-title: "Test Post
-"
+title: "Test Post"
+weight: 2
 date: 2018-01-05
 draft: true
 authors: ["Keisha S Perkins", "Joan Collins"]

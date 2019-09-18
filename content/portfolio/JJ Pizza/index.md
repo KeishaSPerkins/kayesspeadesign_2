@@ -3,10 +3,10 @@
 	"title": "JJ Pizza",
 	"what": "logo",
 	"categories": ["design"],
+	"weight": "1",
+	"what": "logo",
 	"tags": ["branding","logo","identity"],
-	"layout": "logo",
-	"weight": 2,
-	"date": "2018-08-08T11:08:21-06:00",
+	"date": "2018-03-08T11:08:21-06:00",
 	"resources": [
 	      {
 	         "name": "logo",

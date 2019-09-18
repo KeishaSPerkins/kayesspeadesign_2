@@ -5,6 +5,7 @@ tags: ["design", "tips & tricks", "Photoshop", "Adobe"]
 categories: ["talk"]
 authors: ["Keisha S Perkins"]
 draft: false
+weight: 2
 ---
 
 <iframe src="//slides.com/kayesspea/deck/embed" style="width: 100%; min-height:500px" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

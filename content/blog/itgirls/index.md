@@ -4,6 +4,7 @@
 	"what": "workshop",
 	"categories": ["workshop"],
 	"tags": ["JavaScript","coding","games","p5.js"],
+	"weight": "2",
 	"layout": "page",
 	"date": "2017-03-08T11:08:21-06:00",
 	"resources": [

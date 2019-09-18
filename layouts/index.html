@@ -4,7 +4,7 @@
 	{{ $logos := $portfolioPage.Pages}}
 	<h2 style="margin: 0;" class="main-title">Recent Work</h2>
 	
-	{{ range first 6 $portfolioPage.Pages.ByWeight }}
+	{{ range first 6 $portfolioPage.Pages.ByDate }}
 		{{ partial "index-portfolio-card.html" .}}
 	{{ end }}
 	<div class="see-more-wrap"><a href='{{ "/portfolio/" | relURL }}' class="button see-more">See More</a></div>

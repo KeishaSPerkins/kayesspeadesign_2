@@ -4,6 +4,7 @@ date: 2019-01-05
 draft: false
 authors: ["Keisha S Perkins"]
 what: "Blog Post"
+weight: 2
 categories: ["talk"]
 tags: ["automation","mobile apps","apps"]
 ---

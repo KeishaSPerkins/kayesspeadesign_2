@@ -1,6 +1,7 @@
 ---
 title: "The Powerful Illustrator Shape Builder Tool"
 date: 2018-04-02T10:34:10-05:00
+weight: 2
 draft: false
 tags: ['illustrator', 'tips & tricks', 'software', 'adobe', 'design']
 categories: ["blog-post"]

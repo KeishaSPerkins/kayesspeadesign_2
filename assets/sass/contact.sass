@@ -24,11 +24,24 @@
 			@extend .button
 			color: white !important
 			border: none
+			border: 2px solid transparent
+			a
+				color: white
+		input[type="reset"]
+			background: none
+			border: 2px solid $darkpurple-80
+			color: $darkpurple-80 !important
+			transition: border-color .2s ease-in-out
+			&:hover
+				border: 2px solid transparent
+				color: white !important
 		.form-inner-section
 			width: 48%
 			margin-right: 4%
 		#captcha-wrapper 
 			margin-bottom: 1rem
+			img
+				border: 1px solid #888
 	.required-note
 		font-size: .9rem
 		font-style: italic			

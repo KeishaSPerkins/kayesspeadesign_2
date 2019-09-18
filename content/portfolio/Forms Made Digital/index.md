@@ -5,8 +5,9 @@
 	"categories": ["design"],
 	"tags": ["branding","logo","identity"],
 	"layout": "page",
-	"date": "2018-08-08T11:08:21-06:00",
-	"weight": 1,
+	"weight": "1",
+	"what": "logo",
+	"date": "2018-01-08T11:08:21-06:00",
 	"resources": [
 	      {
 	         "name": "logo",

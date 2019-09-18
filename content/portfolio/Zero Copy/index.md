@@ -4,8 +4,10 @@
 	"what": "logo",
 	"categories": ["design"],
 	"tags": ["branding","logo","identity"],
+	"weight": "1",
 	"layout": "logo",
-	"date": "2018-08-08T11:08:21-06:00",
+	"what": "logo",
+	"date": "2018-06-08T11:08:21-06:00",
 	"resources": [
 	      {
 	         "name": "logo",

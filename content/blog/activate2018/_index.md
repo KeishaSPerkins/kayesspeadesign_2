@@ -4,6 +4,7 @@ date: 2018-02-24T14:07:29-05:00
 draft: false
 what: notes
 layout: single
+weight: 2
 layout-override: true
 tags: ["JavaScript", "coding", "games", "p5.js", "conference", "HTML5", "HTML canvas"]
 categories: ["talk"]
