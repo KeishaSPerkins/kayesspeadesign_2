@@ -26,17 +26,17 @@
 
 				<section class="form-section name-section last-name">
 					<label for="lastname">Last name:<span style="color:red;">*</span></label>
-	      	<input id="lastname" type='text' style='width:100%;box-sizing:border-box;'  maxlength='80' name='Last Name' />
+	      	<input required id="lastname" type='text' style='width:100%;box-sizing:border-box;'  maxlength='80' name='Last Name' />
 				</section>
 
 	      <section class="form-section email-address">
 	      	<label for="emailaddress">Email address:<span style="color:red;">*</span></label>
-	      	<input id="emailaddress" type='text' style='width:100%;box-sizing:border-box;'  maxlength='100' name='Email' />
+	      	<input required id="emailaddress" required pattern="^\S+@\S+\.\S+$" title="example@mail.com" type='text' style='width:100%;box-sizing:border-box;'  maxlength='100' name='Email' />
 	      </section>
 
 				<section class="form-section phone-number">
-					<label for="phone">Phone number:</label>
-		      <input id="phone" type='text' style='width:100%;box-sizing:border-box;'  maxlength='30' name='Phone' />
+					<label for="phone" >Phone number:</label>
+		      <input id="phone" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" title="555-555-5555" type='text' style='width:100%;box-sizing:border-box;'  maxlength='30' name='Phone' />
 				</section>
 
 	      <section class="form-section company-name">
@@ -46,7 +46,7 @@
 
 	      <section class="form-section message">
 	      	<label for="message">Tell me about your project:<span style="color:red;">*</span></label>
-	      	<textarea name="Description" id="message" maxlength='32000' style='width:100%;box-sizing:border-box;' rows="10">&nbsp;</textarea>
+	      	<textarea  name="Description" id="message" maxlength='32000' style='width:100%;box-sizing:border-box;' rows="10" required></textarea>
 	      </section>
 	    
 

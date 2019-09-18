@@ -55,23 +55,28 @@
 						{{end}} 
 		{{end}}
 						
-		{{ if not .Params.noauthor }}
-		<br><br>
-						{{if isset .Params "authors"}}
-							by
-							{{ with .Params.authors }}
-								{{range .}}
-									<a class="taxonomy-link author-name" href="/authors/{{ . | urlize }}">{{.}}</a>
-								{{end}}
-							{{end}}
-						{{end}} 
-					{{end }}
-{{ if not .Params.nodate }}
-						on
-						
-						<time class="blog-when">{{ .Date.Format "Jan 2, 2006" }}</time>
-						{{end }}
-			{{ end }}
+		<section class="metadata">
+					{{ if not .Params.noauthor }}
+					<br><br>
+									{{if isset .Params "authors"}}
+										by
+										{{ with .Params.authors }}
+											<span class="authors-list">
+												{{range .}}
+													<a class="taxonomy-link author-name" href="/authors/{{ . | urlize }}">{{.}}</a>
+												{{end}}
+											</span>
+										{{end}}
+									{{end}} 
+								{{end }}
+			{{ if not .Params.nodate }}
+									on
+									
+									<time class="blog-when">{{ .Date.Format "Jan 2, 2006" }}</time>
+									{{end }}
+
+		</section>
+					{{ end }}
 
 		{{end }}
 	</div>

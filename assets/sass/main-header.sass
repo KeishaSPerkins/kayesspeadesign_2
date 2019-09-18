@@ -126,10 +126,15 @@
 		.taxonomy-link
 			text-decoration: none
 			transition: background .2s ease-in-out
+		.metadata
+			background: rgb(72,24,110)
+			background: rgba(72,24,110,.6)
 		.author-name
 			font-weight: bold
 			&:hover
 				text-decoration: underline
+			&:not(:last-child):after 
+				content: ','
 		.tag-name, .category-name
 			background: $gold-50
 			margin: 0 4px
