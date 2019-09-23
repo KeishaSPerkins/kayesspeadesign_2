@@ -23,6 +23,8 @@
 		max-width: 100%
 		transition: bottom .2s ease-in-out
 		z-index: 5
+		right: 0
+		left: 0
 		a.nav-link
 		 color: white
 		&.open
@@ -32,7 +34,7 @@
 			position: static
 			background: none
 			display: grid
-			grid-template-columns: 5fr 1fr 1fr 1fr 1fr 1fr
+			grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr
 			margin: 1rem 0
 			width: 100%		
 		.nav-link
@@ -46,7 +48,7 @@
 			text-align: center
 			padding: .5rem
 			@media screen and ($medium-small-screens)
-				margin: .3rem 1rem
+				// margin: .3rem 1rem
 				font-size: .8rem
 			&:hover
 				background: $teal-90
@@ -57,6 +59,14 @@
 				&:hover
 					background: none
 					color: $teal-80
+			.home-logo
+				use
+				width: auto
+				height: 3.5rem
+				fill: white
+				transition: fill .2s ease-in-out
+				&:hover	
+					fill: $teal-70
 	.nav-toggle
 		align-items: center
 		background: $teal-80
@@ -100,6 +110,8 @@
 			margin: 1.2rem 0 0 0
 			font-size: 4rem
 			font-weight: 800
+			.home-pre
+				font-size: 3rem
 			.addition-to-title
 				text-transform: capitalize
 			@media screen and ($small-screens)

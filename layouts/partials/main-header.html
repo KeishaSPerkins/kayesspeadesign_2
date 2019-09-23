@@ -8,6 +8,7 @@
 				{{end}}
 			{{end}}
 		{{end}}
+		
 		<h1 class="main-title">
 			{{ if eq .Type "categories"}}
 				Results for the <span class="addition-to-title">"{{.Title}}"</span> Category
@@ -15,6 +16,8 @@
 				Posts by<br><span class="addition-to-title">{{.Title}}</span>
 			{{ else if eq .Type "tags"}}
 				Posts tagged <span class="addition-to-title">"{{.Title}}"</span>
+			{{else if eq .Kind "home"}}
+				<small class="home-pre">Hi, I'm</small><br>{{.Title}}
 			{{else}}
 				{{.Title}}
 			{{end}}
