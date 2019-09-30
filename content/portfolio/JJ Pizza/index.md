@@ -14,3 +14,5 @@
 	      }
 	    ]
 }
+
+{{< image figureWrapper="false" resize="false"  class="project-image" name="JJPIzza_BrandBoard.svg" alt="Brandboard for Buoveo" >}}

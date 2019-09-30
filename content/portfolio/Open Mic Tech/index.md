@@ -15,3 +15,5 @@
 	      }
 	    ]
 }
+
+{{< image figureWrapper="false" resize="false"  class="project-image" name="OMT_BrandBoard.svg" alt="Brandboard for Buoveo" >}}

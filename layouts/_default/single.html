@@ -3,7 +3,7 @@
 	{{ if eq .Type "portfolio" }}
 
 		{{$pageTitle := .Page.Title }}
-		{{ range first 1 (.Resources.ByType "image") }}
+		{{ range first 1 (.Resources.Match "logo") }}
 
 			<img class="project-image" alt="Logo for {{$pageTitle}}" src='{{ .Permalink }}'>
 		{{end}}
@@ -11,6 +11,7 @@
 	{{end}}
 
 	{{.Content}}
+	<br><br><br>
 
 	{{/* 
 
