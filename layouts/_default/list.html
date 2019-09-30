@@ -5,7 +5,7 @@
 			<article class="list-result logo-list-result">
 				<a href="{{.Permalink}}">
 
-						<img class="list-result-pic" src='{{ range first 1 (.Resources.ByType "image") }}{{.Permalink}}{{end}}' alt="{{ .Title }}">
+						<img class="list-result-pic" src='{{ range first 1 (.Resources.Match "logo") }}{{.Permalink}}{{end}}' alt="{{ .Title }}">
 
 					<h1 class="list-title" >
 						<a class="list-title-link" href="{{.Permalink}}">

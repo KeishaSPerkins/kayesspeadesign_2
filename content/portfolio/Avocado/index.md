@@ -11,7 +11,7 @@
 	"resources": [
 	      {
 	         "name": "logo",
-	         "src": "Acocado_Logo.svg"
+	         "src": "Avocado_Logo.svg"
 	      }
 	    ]
 }
