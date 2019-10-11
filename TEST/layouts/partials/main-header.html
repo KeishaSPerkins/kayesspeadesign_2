@@ -1,0 +1,91 @@
+<header class="main-header">
+	{{ partial "main-nav.html" . }}
+	<div class="main-page-info">
+		{{if isset .Params "categories"}}
+			{{ with .Params.categories }}
+				{{ range .}}
+					<a class="taxonomy-link category-name {{.}}"href="/categories/{{ . | urlize }}">{{humanize  .}}</a>
+				{{end}}
+			{{end}}
+		{{end}}
+		
+		<h1 class="main-title">
+			{{ if eq .Type "categories"}}
+				Results for the <span class="addition-to-title">"{{.Title}}"</span> Category
+			{{ else if eq .Type "authors"}}
+				Posts by<br><span class="addition-to-title">{{.Title}}</span>
+			{{ else if eq .Type "tags"}}
+				Posts tagged <span class="addition-to-title">"{{.Title}}"</span>
+			{{else if eq .Kind "home"}}
+				<small class="home-pre">Hi, I'm</small><br>{{.Title}}
+			{{else}}
+				{{.Title}}
+			{{end}}
+		</h1>
+		{{ if eq .Kind "home" }}
+			<p class="main-description">
+				
+				{{ .Site.Params.description }}
+				
+			</p>
+		{{end }}
+
+		{{if isset .Params "description"}}
+			<p class="main-description">
+				{{ .Description }}
+			</p>
+		{{end}}
+		{{if isset .Params "furtherdescription"}}
+			<p class="further-description">
+				{{ .Params.furtherdescription }}
+			</p>	
+		{{end}}
+
+		{{ if eq .Kind "page"}}
+			{{ if .Params.specialpage }}
+				<a href='{{ "./" | relURL }}' class="button-dark button">Go Back Home</a>
+			{{end}}
+			{{ if not .Params.specialpage }}
+				
+		{{ if not .Params.notags }}		
+		<br>	
+						{{if isset .Params "tags"}}
+							{{ with .Params.tags}}
+								{{range . }}
+									<a class="taxonomy-link tag-name" href="/tags/{{ . | urlize }}">{{.}}</a>
+								{{end}}
+							{{end}}
+						{{end}} 
+		{{end}}
+						
+		
+					{{ if not .Params.noauthor }}
+					<br><br><br>
+					<section class="metadata">
+					
+									{{if isset .Params "authors"}}
+										by
+										{{ with .Params.authors }}
+											<span class="authors-list">
+												{{range .}}
+													<a class="taxonomy-link author-name" href="/authors/{{ . | urlize }}">{{.}}</a>
+												{{end}}
+											</span>
+										{{end}}
+									{{end}} 
+								{{end }}
+			{{ if not .Params.nodate }}
+									on
+									
+									<time class="blog-when">{{ .Date.Format "Jan 2, 2006" }}</time>
+									</section>
+									{{end }}
+
+		
+					{{ end }}
+
+		{{end }}
+	</div>
+
+
+</header>

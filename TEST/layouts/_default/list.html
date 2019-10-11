@@ -1,0 +1,56 @@
+{{define "content-block"}}
+
+	{{ range (.Paginator 12).Pages.ByWeight}}
+		{{ if eq .Params.what "logo"}}
+			<article class="list-result logo-list-result">
+				<a href="{{.Permalink}}">
+
+						<img class="list-result-pic" src='{{ range first 1 (.Resources.Match "logo") }}{{.Permalink}}{{end}}' alt="{{ .Title }}">
+
+					<h1 class="list-title" >
+						<a class="list-title-link" href="{{.Permalink}}">
+							{{.Title}}
+						</a>
+					</h1>
+				</a>
+				
+			</article>
+
+		{{else}}
+	 <article class="list-result">
+
+	 	<h1 class="list-title" >
+	 		<a class="list-title-link" href="{{.Permalink}}">
+	 			{{.Title}}
+	 		</a>
+	 	</h1>
+	 	<div class="list-pic-wrapper">
+	 		<img class="list-result-pic" src='{{ range first 1 (.Resources.ByType "image") }}{{.Permalink}}{{end}}' alt="{{ .Title }}">
+	 	</div>
+
+	 	<section class="list-description">{{ .Content | replaceRE "<iframe.*?/iframe>" " " | htmlUnescape | safeHTML | truncate 100 }}</section>
+	 	<section class="list-meta-info">
+	 			 	{{if isset .Params "authors"}}
+	 									by
+	 									{{ with .Params.authors }}
+	 										{{range .}}
+	 											<a class="taxonomy-link author-name" href="/authors/{{ . | urlize }}">{{.}}</a>
+	 										{{end}}
+	 									{{end}}
+	 								{{end}} 			
+	 		{{ if not .Params.nodate }}
+	 								on
+	 								
+	 								<time class="blog-when">{{ .Date.Format "Jan 2, 2006" }}</time>
+	 								{{end }}
+	 	</section>
+
+
+	 </article>
+		{{end}}
+	{{end}}
+	<section class="paginator-wrapper">
+		{{ template "_internal/pagination.html" . }}
+	</section>
+
+{{end}}

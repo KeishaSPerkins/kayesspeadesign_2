@@ -1,0 +1,186 @@
+.main-header
+	display: flex
+	flex-direction: column
+	border-bottom: 1px $light-60 solid
+	border-radius: 2px 2px 0 0
+	background: rgb(74,24,110)
+	background-image: url('/img/Purple_Sprinkles_Pattern.svg')
+	background-size: 250px
+	color: white
+	@media screen and ($medium-screens)
+			padding: 3rem
+	.main-nav
+		display: flex
+		flex-direction: column
+		position: fixed
+		width: 100%
+		background: $purple-80
+		background: rgba($purple-80, .9)
+		margin: 0
+		bottom: -300vh
+		align-items: center
+		margin: 0
+		max-width: 100%
+		transition: bottom .2s ease-in-out
+		z-index: 5
+		right: 0
+		left: 0
+		a.nav-link
+		 color: white
+		&.open
+			bottom: 0
+		@media screen and ($medium-screens)
+			flex-direction: row
+			position: static
+			background: none
+			display: grid
+			grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr
+			margin: 1rem 0
+			width: 100%		
+		.nav-link
+			margin: 1.5rem 0
+			text-transform: uppercase
+			color: white
+			text-decoration: none
+			font-weight: 700
+			transition: background .2s ease, color .2s ease
+			border-radius: 50px
+			text-align: center
+			padding: .5rem
+			@media screen and ($medium-small-screens)
+				// margin: .3rem 1rem
+				font-size: .8rem
+			&:hover
+				background: $teal-90
+			&.home
+				font-size: 1.1rem
+				font-weight: 800
+				text-align: left
+				&:hover
+					background: none
+					color: $teal-80
+			.home-logo
+				use
+				width: auto
+				height: 3.5rem
+				fill: white
+				transition: fill .2s ease-in-out
+				&:hover	
+					fill: $teal-70
+	.nav-toggle
+		align-items: center
+		background: $teal-80
+		border: 1px solid white
+		bottom: 15px
+		color: $dark-80
+		display: flex
+		display: inline
+		outline: 0
+		font-size: .8rem
+		font-weight: 700
+		height: 2.5rem
+		justify-content: center
+		padding: none
+		box-shadow: 1px 1px 5px rgba(black, .2)
+		position: fixed
+		right: 15px
+		text-align: center
+		transition: color .2s ease
+		width: 2.5rem
+		z-index: 10
+		@media screen and ($medium-screens)
+			display: none
+		svg
+			height: 1rem
+			width: 1rem
+			margin: auto
+			fill: white
+	
+	.main-page-info
+		max-width: 700px
+		margin: auto
+		text-align: center
+		margin: 2rem auto
+		@media screen and ($medium-screens)
+			margin: 4rem auto
+		@media screen and ($small-screens)
+				padding: 0 30px
+		.main-title
+			width: 100%
+			margin: 1.2rem 0 0 0
+			font-size: 4rem
+			font-weight: 800
+			.home-pre
+				font-size: 3rem
+			.addition-to-title
+				text-transform: capitalize
+			@media screen and ($small-screens)
+				font-size: 3rem
+		.main-description
+			font-size: 1.5rem
+			font-weight: 600
+			margin: 1rem 0
+			background: rgb(74,24,110)
+			background: rgba(74,24,110,.6)
+			@media screen and ($small-screens)
+				font-size: 1.2rem
+		.further-description
+			line-height: 1.6
+			font-size: 1.1rem
+			font-weight: 500
+			max-width: 500px
+			text-align: center
+			background: rgb(74,24,110)
+			background: rgba(74,24,110,.6)
+			margin: 0
+			@media screen and ($small-screens)
+				font-size: 1rem
+		.taxonomy-link
+			text-decoration: none
+			transition: background .2s ease-in-out
+		.metadata
+			background: rgb(74,24,110)
+			background: rgba(74,24,110,.6)
+		.author-name
+			font-weight: bold
+			color: $teal-70
+			&:hover
+				text-decoration: underline
+			&:not(:last-child):after 
+				content: ','
+		.tag-name, .category-name
+			background: $gold-50
+			margin: 0 4px
+			padding: 5px 10px
+			border-radius: 1px
+			color: white
+			font-weight: 600
+			font-size: .8rem
+			text-transform: uppercase
+			&:hover
+				background: $teal-80
+		.category-name
+			background: $light-80
+			font-size: 1.1rem
+			color: white
+			display: inline-block
+			min-width: 150px
+			font-weight: 700
+			border: 2px solid transparent
+			transition: border .2s ease-in-out
+			&.workshop
+				background: $pink-50
+			&.talk
+				background: $teal-90
+			&.blog-post
+				background: $gold-40
+			&.quicktip
+				background: $green-50
+			&.design
+				background: $orange-60
+			&:hover
+				border: 2px solid white 			
+
+
+		.blog-when
+			font-weight: 500

@@ -1,0 +1,31 @@
+{{ define "content-block" }}
+
+	{{ if eq .Type "portfolio" }}
+
+		{{$pageTitle := .Page.Title }}
+		{{ range first 1 (.Resources.Match "logo") }}
+
+			<img class="project-image" alt="Logo for {{$pageTitle}}" src='{{ .Permalink }}'>
+		{{end}}
+		<br> 
+	{{end}}
+
+	{{.Content}}
+	<br><br><br>
+
+	{{/* 
+
+		{{ if not .Params.noshare }}
+			{{ partial "share-buttons.html"}}
+		{{end}}	
+		
+	 */}}
+	
+	{{ if not .Params.nodisqus }}
+		{{ template "_internal/disqus.html" . }}
+	{{end}}	
+	
+{{end }}
+
+
+

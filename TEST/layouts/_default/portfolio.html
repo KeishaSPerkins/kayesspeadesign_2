@@ -1,0 +1,12 @@
+{{ define "content-block"}}
+
+	{{ range (.Paginator 6).Pages.ByTitle }}
+		{{ partial "portfolio-card.html" .}}
+		
+	{{ end }}
+
+	<section class="paginator-wrapper">
+		{{ template "_internal/pagination.html" . }}
+	</section>
+
+{{ end }}

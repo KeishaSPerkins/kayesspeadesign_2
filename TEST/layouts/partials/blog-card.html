@@ -1,0 +1,18 @@
+<article class='blog-card {{ range .Params.categories  }}{{.}}{{end}}'>
+	<h1 class="blog-title"><a href="{{.Permalink}}">{{.Title}}</a></h1>
+	<section class="blog-description">
+				<!-- Content with iframes removed, htmlUnescaped, HTML tags rendered, and truncated to 150 characters -->
+			{{ .Content | replaceRE "<iframe.*?/iframe>" " " | htmlUnescape | safeHTML | truncate 150 }}
+	</section>
+	<a href="{{.Permalink}}" class="button read-more">Read More</a>
+	<section class="blog-meta-data">
+		<p class="blog-publish-date">
+			<strong>Published</strong><br>
+			<time>{{ .PublishDate.Format "Jan 2, 2006" }}</time>
+		</p>
+		<p class="blog-author">
+			<strong>Author</strong><br>
+			{{ delimit .Params.authors ", " }}
+		</p>
+	</section>
+</article>

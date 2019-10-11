@@ -1,0 +1,50 @@
+.contact
+	.content-wrapper
+		padding-top: 0
+	.form-inner-wrapper
+		display: flex
+		flex-flow: row wrap
+		.form-section
+			width: 100%
+			margin-bottom: 1rem
+			&.name-section, &.email-address, &.phone-number
+				width: 48%
+			&.first-name, &.email-address
+				margin-right: 4%
+		input[type="text"], textarea
+			outline: 2px solid transparent
+			border: 1px solid #888
+			padding: .4rem
+			transition: outline .3s ease-in-out
+			&:focus
+				outline: 2px solid $teal-90
+		label
+			font-size: .8rem
+		input[type="reset"], input[type="submit"]
+			@extend .button
+			color: white !important
+			border: none
+			border: 2px solid transparent
+			a
+				color: white
+		input[type="reset"]
+			background: none
+			border: 2px solid $darkpurple-80
+			color: $darkpurple-80 !important
+			transition: border-color .2s ease-in-out
+			&:hover
+				border: 2px solid transparent
+				color: white !important
+		.form-inner-section
+			width: 48%
+			margin-right: 4%
+		#captcha-wrapper 
+			margin-bottom: 1rem
+			img
+				border: 1px solid #888
+	.required-note
+		font-size: .9rem
+		font-style: italic			
+	
+
+			

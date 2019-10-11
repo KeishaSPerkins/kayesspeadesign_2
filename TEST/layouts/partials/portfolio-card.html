@@ -1,0 +1,9 @@
+<div class="portfolio-card">
+  <a href="{{ .Permalink }}">
+  	<img class="portfolio-pic" src='{{ range first 1 (.Resources.Match "logo") }}{{.Permalink}}{{end}}' alt="Logo for {{ .Title }}">
+  </a>
+  <h2 class="portfolio-title">{{.Title}}</h2>
+</div>
+
+
+

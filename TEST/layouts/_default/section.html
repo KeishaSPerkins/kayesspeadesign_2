@@ -1,0 +1,14 @@
+{{ define "content-block"}}
+
+	{{ $ss := append .CurrentSection.Pages .CurrentSection.Sections}}
+	{{ $pag := .Paginate $ss 6}}
+			{{ range $pag.Pages.ByDate.Reverse }}
+				{{ if not .Params.ignore }}
+					{{ partial "blog-card.html" .}}
+				{{ end }}
+			{{ end }}
+	<section class="paginator-wrapper">
+		{{ template "_internal/pagination.html" . }}
+	</section>
+
+{{ end }}

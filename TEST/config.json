@@ -1,0 +1,23 @@
+{
+	"baseURL": "https://www.keishasperkins.com/",
+	"languageCode": "en-us",
+	"title": "Keisha S Perkins",
+	"disqusShortname": "keishasperkins",
+	"publishDir": "docs",
+	"taxonomies":{
+	  "category": "categories",
+	  "tag": "tags",
+	  "author": "authors"	
+	},
+	"blackfriday": {
+	   
+	},
+	"params": {
+			"preauthor": "Hi, I'm",
+      "author": "Keisha&nbsp;S&nbsp;Perkins",
+      "description": "I make logos. I can make one for you!"
+   }
+}
+
+
+

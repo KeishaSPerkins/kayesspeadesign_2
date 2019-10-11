@@ -1,0 +1,129 @@
+@import normalize
+@import variables
+@import color-pallette
+@import modalcss
+
+.size-debug
+	&:before 
+		background: yellow
+		display: none
+		padding: 3px
+		content: "small"
+		position: fixed
+		top: 30px
+		right: 0
+		@media screen and ($medium-small-screens)
+			content: 'medium-small'
+		@media screen and ($medium-screens)
+			content: 'medium'
+		@media screen and ($large-screens)
+			content: 'large'
+
+body
+	background: #aaa
+	background-image: url('/img/Gray_Confetti_Pattern.svg')
+	background-size: 300px
+	padding: 0
+	font-family: $sans-serif
+	color: $dark-80
+	height: 100vh
+	@media screen and ($medium-small-screens)
+		padding: 50px 20px 0 20px
+a
+	color: $teal-100
+	font-weight: 500
+	&:focus
+		outline: 2px solid #05a8e3
+
+
+a.button
+	color: white
+.button
+	padding: .5rem .7rem
+	border-radius: 20px
+	background: $darkpurple-80
+	width: fit-content
+	font-size: .7rem
+	font-weight: 800
+	text-transform: uppercase
+	display: inline-block
+	text-decoration: none
+	max-width: 10ch
+	transition: background .2s ease-in-out, color .2s ease-in-out
+	&:hover
+		background: $darkpurple-50
+.button-dark
+	@extend .button
+	background: #111
+	&:hover
+		background: #343434		
+.main-wrapper
+	background: white
+	background-image: url('/img/White_Doodles_Pattern.svg') 
+	background-size: 250px
+	width: 100%
+	// height: 100%
+	border-radius: 2px
+	margin: auto
+	display: flex
+	flex-direction: column
+.content-wrapper
+	display: flex
+	flex-flow: row wrap
+	max-width: 900px
+	margin: auto
+	width: 90%
+	justify-content: center
+	display: grid
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+	grid-column-gap: 25px
+	grid-row-gap: 50px
+	padding: 50px 0
+	p,a,li
+		font-weight: 500
+	a:hover
+		color: $pink-60
+	.see-more-wrap
+		grid-column: 1/-1
+		display: flex
+		justify-content: center
+		a.see-more
+			align-self: center
+			grid-column: 1/-1
+			color: white
+			text-align: center
+	.main-title
+		font-size: 2.5rem
+		color: $dark-80
+		text-align: center
+		width: 100%
+		grid-column: 1/-1
+		
+.main-footer
+	text-align: center
+	color: white
+	font-weight: 500
+	width: 100%
+	font-size: .8rem
+	text-transform: uppercase
+	bottom: 0
+	margin: 1.5rem 0 2rem 0 
+	p
+		background: rgb(88,89,91)
+		background: rgba(88,89,91, .6)
+		border-radius: 30px
+
+
+
+@import main-header
+@import portfolio-card
+@import blog-card
+@import paginator
+@import share-style
+@import _404
+@import contact
+@import pricings
+@import about
+@import single
+@import home
+@import list

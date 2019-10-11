@@ -1,0 +1,17 @@
+{{ partial "meta.html" . }}
+<body class='{{.Layout}} {{.Section}} {{.Type}} {{.Kind}}'>
+	<div class="size-debug"><span></span></div>
+	
+		<main class='main-wrapper'>
+	   {{ partial "main-header.html" . }}
+		   {{ if not .Params.specialpage }}
+			   <div class='content-wrapper'>
+			   	{{ block "content-block" . }}
+				 	{{end}}
+			   </div>
+		   {{ end }}
+		</main>
+	{{ partial "main-footer.html" . }}
+	{{ partial "svg-sprite.html" .}}
+	{{ partial "logo.html" .}}
+</body>
