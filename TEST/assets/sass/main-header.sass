@@ -1,7 +1,7 @@
 .main-header
 	display: flex
 	flex-direction: column
-	border-bottom: 1px $light-60 solid
+	// border-bottom: 1px $light-60 solid
 	border-radius: 2px 2px 0 0
 	background: rgb(74,24,110)
 	background-image: url('/img/Purple_Sprinkles_Pattern.svg')
@@ -59,14 +59,6 @@
 				&:hover
 					background: none
 					color: $teal-80
-			.home-logo
-				use
-				width: auto
-				height: 3.5rem
-				fill: white
-				transition: fill .2s ease-in-out
-				&:hover	
-					fill: $teal-70
 	.nav-toggle
 		align-items: center
 		background: $teal-80
@@ -101,10 +93,20 @@
 		margin: auto
 		text-align: center
 		margin: 2rem auto
+		@supports(animation-name: example)
+			-webkit-animation-name: example /* Safari 4.0 - 8.0 */
+			-webkit-animation-duration: 2s /* Safari 4.0 - 8.0 */
+			animation-name: example
+			animation-duration: 2s
 		@media screen and ($medium-screens)
 			margin: 4rem auto
 		@media screen and ($small-screens)
 				padding: 0 30px
+		.home-logo
+			use
+			width: auto
+			fill: white
+			transition: fill .2s ease-in-out
 		.main-title
 			width: 100%
 			margin: 1.2rem 0 0 0

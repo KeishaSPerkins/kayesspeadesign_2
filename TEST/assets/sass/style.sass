@@ -28,7 +28,7 @@ body
 	color: $dark-80
 	height: 100vh
 	@media screen and ($medium-small-screens)
-		padding: 50px 20px 0 20px
+		// padding: 50px 20px 0 20px
 a
 	color: $teal-100
 	font-weight: 500
@@ -38,6 +38,18 @@ a
 
 a.button
 	color: white
+	&.cta.home-cta
+		background: #eee
+		color: #222
+		min-width: 15ch
+		text-align: center
+		margin: 1rem .5rem !important
+		&.highlight
+			background: $teal-100
+			color: white
+		&:hover
+			background: $darkpurple-80
+			color: white
 .button
 	padding: .5rem .7rem
 	border-radius: 20px
@@ -59,14 +71,15 @@ a.button
 		background: #343434		
 .main-wrapper
 	background: white
-	background-image: url('/img/White_Doodles_Pattern.svg') 
-	background-size: 250px
+	background: white
+	background-image: url('/img/BG-White.svg')
+	background-size: cover
 	width: 100%
 	// height: 100%
 	border-radius: 2px
 	margin: auto
 	display: flex
-	flex-direction: column
+	flex-direction: column		 
 .content-wrapper
 	display: flex
 	flex-flow: row wrap
@@ -79,6 +92,11 @@ a.button
 	grid-column-gap: 25px
 	grid-row-gap: 50px
 	padding: 50px 0
+	@supports(animation-name: example)
+		-webkit-animation-name: example /* Safari 4.0 - 8.0 */
+		-webkit-animation-duration: 2s /* Safari 4.0 - 8.0 */
+		animation-name: example
+		animation-duration: 2s
 	p,a,li
 		font-weight: 500
 	a:hover
@@ -113,7 +131,16 @@ a.button
 		background: rgba(88,89,91, .6)
 		border-radius: 30px
 
-
+@-webkit-keyframes example 
+ from 
+ 	opacity: 0
+ to 
+ 	opacity: 1
+@keyframes example 
+ from 
+ 	opacity: 0
+ to 
+ 	opacity: 1
 
 @import main-header
 @import portfolio-card

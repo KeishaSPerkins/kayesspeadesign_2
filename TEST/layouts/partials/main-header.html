@@ -17,17 +17,19 @@
 			{{ else if eq .Type "tags"}}
 				Posts tagged <span class="addition-to-title">"{{.Title}}"</span>
 			{{else if eq .Kind "home"}}
-				<small class="home-pre">Hi, I'm</small><br>{{.Title}}
+				<svg class="home-logo" viewBox="0 0 450 100">
+					<use xlink:href="#KSPD_Logo"></use>
+				</svg>
 			{{else}}
 				{{.Title}}
 			{{end}}
 		</h1>
 		{{ if eq .Kind "home" }}
 			<p class="main-description">
-				
-				{{ .Site.Params.description }}
-				
+				We take your brand identity from yesterday to tomorrow.
 			</p>
+			<a href='{{ "/contact/" | relURL }}' class="home-cta cta highlight button">Start a Project</a>
+			<a href='{{ "/pricing/" | relURL }}' class="home-cta cta button">Learn More</a>
 		{{end }}
 
 		{{if isset .Params "description"}}
