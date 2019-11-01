@@ -2,16 +2,16 @@
 	flex-basis: 200px
 	margin: 25px 10px
 	transition: flex-basis .2s ease-in-out, width .2s ease-in-out
-	padding: 3px
+	padding: 0px
 	overflow: hidden
-	// background: white
+	background: #111
 	transition: padding .2s ease
 	-webkit-transform: translateZ(0) scale(1.0, 1.0)
 	-webkit-backface-visibility: hidden
+	border-radius: 2px
 	&:hover
-		padding: 0px
-		.portfolio-pic
-			// box-shadow: 3px 6px 3px rgba($light-80, .5)
+		padding: 3px
+		.portfolio-title
 	@supports (display: grid)
 		margin: 0
 	@media screen and ($small-screens)
@@ -27,8 +27,12 @@
   object-position: 50% 50%
   // box-shadow: 1px 1px 3px rgba($light-80, .5)
 .portfolio-title
-  margin: 5px 0 0 0
+  margin: 10px 0
+  color: white
+  text-align: center
   font-size: .8rem
   padding: 0
   transition: padding .2s ease
+
+
   // background: white

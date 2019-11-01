@@ -5,10 +5,11 @@
 
 .size-debug
 	&:before 
-		background: yellow
 		display: none
+		background: yellow
 		padding: 3px
 		content: "small"
+		z-index: 100
 		position: fixed
 		top: 30px
 		right: 0
@@ -20,15 +21,15 @@
 			content: 'large'
 
 body
-	background: #aaa
-	background-image: url('/img/Gray_Confetti_Pattern.svg')
+	background: #333
+	// background-image: url('/img/Gray_Confetti_Pattern.svg')
 	background-size: 300px
 	padding: 0
 	font-family: $sans-serif
 	color: $dark-80
 	height: 100vh
 	@media screen and ($medium-small-screens)
-		// padding: 50px 20px 0 20px
+		padding: 50px 20px 0 20px
 a
 	color: $teal-100
 	font-weight: 500
@@ -45,14 +46,13 @@ a.button
 		text-align: center
 		margin: 1rem .5rem !important
 		&.highlight
-			background: $teal-100
+			background: $darkpurple-80
 			color: white
 		&:hover
-			background: $darkpurple-80
+			background: #111
 			color: white
 .button
 	padding: .5rem .7rem
-	border-radius: 20px
 	background: $darkpurple-80
 	width: fit-content
 	font-size: .7rem
@@ -63,7 +63,8 @@ a.button
 	max-width: 10ch
 	transition: background .2s ease-in-out, color .2s ease-in-out
 	&:hover
-		background: $darkpurple-50
+		background: #111
+		color: white
 .button-dark
 	@extend .button
 	background: #111
@@ -75,6 +76,7 @@ a.button
 	background-image: url('/img/BG-White.svg')
 	background-size: cover
 	width: 100%
+	// box-shadow: 1px 1px 7px rgba(black, .15)
 	// height: 100%
 	border-radius: 2px
 	margin: auto
@@ -126,10 +128,6 @@ a.button
 	text-transform: uppercase
 	bottom: 0
 	margin: 1.5rem 0 2rem 0 
-	p
-		background: rgb(88,89,91)
-		background: rgba(88,89,91, .6)
-		border-radius: 30px
 
 @-webkit-keyframes example 
  from 
@@ -154,3 +152,4 @@ a.button
 @import single
 @import home
 @import list
+@import FAQ.sass

@@ -1,13 +1,20 @@
 .home
+	.home-logo
+		@media screen and ($medium-small-screens)
+			max-width: 600px
+			width: 90%
+			margin: auto
 	.content-wrapper
 		width: 100% !important
 		max-width: 100%
 		padding: 0
-		background: none
+		background: black
+		grid-template-columns: 100%
 	section
 		display: flex
-		display: grid
 		padding: 2rem 0
+		max-width: 100%
+		flex-direction: column
 		h1
 			color: white !important
 	.services
@@ -16,27 +23,59 @@
 		background-image: url('/img/BG-Black.svg')
 		background-size: cover
 		.service-wrapper
-			max-width: 900px
-			margin: auto
 			display: flex
+			display: grid
+			flex-flow: row wrap
+			grid-template-rows: 1fr
+			grid-column-gap: 25px
+			grid-row-gap: 50px
+			width: 90%
+			max-width: 900px
+			margin: auto			
+			justify-content: center
+			padding: 50px 0
+			@media screen and ($medium-screens)
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
 			.service 
-				margin: 10px
-				// background: white
-				// background: rgba(white, .5)
-				text-align: left
-				padding: 5px
+				padding: 20px
 				flex-grow: 1
-				flex-basis: 0
+				flex-basis: 25%
+				margin: 10px
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-flow: column
+				text-align: center
+				h1, p
+					margin: 0
+				@supports (display: grid)
+					margin: 0
+				@media screen and ($medium-small-screens)
+					flex-flow: row
+					text-align: left
+				@media screen and ($medium-screens)
+					text-align: center
+					flex-flow: column
+					justify-content: flex-start
 				.service-icon
-					height: 1.5rem
-					width: 1.5rem
+					height: 2rem !important
+					width:  2rem !important
+					margin-right: 1rem
+					fill: white
+					@media screen and ($medium-small-screens)
+						height: 50px
+						width: 50px
+					@media screen and ($medium-screens)
+						height: 2.5rem !important
+						margin: 0
+						width: 2.5rem !important
 				.service-title
 					font-size: 1.1rem
 	.recent-work
 		background: #9e0553
 		background-image: url('/img/BG-Pink.svg')
 		background-size: cover
-		width: 100%
+		// width: 100%
 		.recent-work-wrapper
 			display: flex
 			display: grid
@@ -47,9 +86,5 @@
 			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
 			grid-column-gap: 25px
 			grid-row-gap: 50px
-			.portfolio-card
-				background: white
-				color: #222
-				text-align: center
 			.see-more-wrap
 				width: 100%
