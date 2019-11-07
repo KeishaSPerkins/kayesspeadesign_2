@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Keisha S Perkins</title>
+    <link>https://nifty-almeida-74832f.netlify.com/categories/</link>
+    <description>Recent content in Categories on Keisha S Perkins</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Apr 2018 10:34:10 -0500</lastBuildDate>
+    
+	<atom:link href="https://nifty-almeida-74832f.netlify.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blog Post</title>
+      <link>https://nifty-almeida-74832f.netlify.com/categories/blog-post/</link>
+      <pubDate>Mon, 02 Apr 2018 10:34:10 -0500</pubDate>
+      
+      <guid>https://nifty-almeida-74832f.netlify.com/categories/blog-post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Design</title>
+      <link>https://nifty-almeida-74832f.netlify.com/categories/design/</link>
+      <pubDate>Wed, 08 Aug 2018 11:08:21 -0600</pubDate>
+      
+      <guid>https://nifty-almeida-74832f.netlify.com/categories/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Talk</title>
+      <link>https://nifty-almeida-74832f.netlify.com/categories/talk/</link>
+      <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nifty-almeida-74832f.netlify.com/categories/talk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Workshop</title>
+      <link>https://nifty-almeida-74832f.netlify.com/categories/workshop/</link>
+      <pubDate>Wed, 08 Mar 2017 11:08:21 -0600</pubDate>
+      
+      <guid>https://nifty-almeida-74832f.netlify.com/categories/workshop/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
