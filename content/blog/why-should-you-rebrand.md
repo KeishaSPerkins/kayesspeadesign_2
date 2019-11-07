@@ -19,7 +19,7 @@ The first level of rebrand we'll talk about is a _refresh_. This level of rebran
 
 Refreshes usually include elements like:
 
-* Brand Discovery and Research
+* Research to discover the company's future needs
 * Visual Brand Identity
 * Website
 * Copywriting
