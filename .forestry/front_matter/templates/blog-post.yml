@@ -25,3 +25,5 @@ fields:
   config:
     required: false
   label: Layout
+pages:
+- content/blog/why-should-you-rebrand.md
