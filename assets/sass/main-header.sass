@@ -1,11 +1,12 @@
 .main-header
 	display: flex
 	flex-direction: column
-	border-bottom: 1px $light-60 solid
+	// border-bottom: 1px $light-60 solid
 	border-radius: 2px 2px 0 0
 	background: rgb(74,24,110)
-	background-image: url('/img/Purple_Sprinkles_Pattern.svg')
-	background-size: 250px
+	background-image: url('/img/BG-Gradient.svg')
+	background-size: cover
+	// width: 100%
 	color: white
 	@media screen and ($medium-screens)
 			padding: 3rem
@@ -43,30 +44,24 @@
 			color: white
 			text-decoration: none
 			font-weight: 700
-			transition: background .2s ease, color .2s ease
-			border-radius: 50px
+			transition: background .2s ease, color .2s ease, border .2s ease
 			text-align: center
-			padding: .5rem
+			padding: .5rem 0
 			@media screen and ($medium-small-screens)
 				// margin: .3rem 1rem
 				font-size: .8rem
+				&:hover
+					width: 100%
 			&:hover
-				background: $teal-90
+				background: #111
 			&.home
 				font-size: 1.1rem
 				font-weight: 800
+				padding-left: .5rem
 				text-align: left
 				&:hover
-					background: none
-					color: $teal-80
-			.home-logo
-				use
-				width: auto
-				height: 3.5rem
-				fill: white
-				transition: fill .2s ease-in-out
-				&:hover	
-					fill: $teal-70
+					background: #111
+					color: white
 	.nav-toggle
 		align-items: center
 		background: $teal-80
@@ -101,10 +96,20 @@
 		margin: auto
 		text-align: center
 		margin: 2rem auto
+		@supports(animation-name: example)
+			-webkit-animation-name: example /* Safari 4.0 - 8.0 */
+			-webkit-animation-duration: 2s /* Safari 4.0 - 8.0 */
+			animation-name: example
+			animation-duration: 2s
 		@media screen and ($medium-screens)
 			margin: 4rem auto
 		@media screen and ($small-screens)
 				padding: 0 30px
+		.home-logo
+			use
+			width: auto
+			fill: white
+			transition: fill .2s ease-in-out
 		.main-title
 			width: 100%
 			margin: 1.2rem 0 0 0
@@ -120,8 +125,8 @@
 			font-size: 1.5rem
 			font-weight: 600
 			margin: 1rem 0
-			background: rgb(74,24,110)
-			background: rgba(74,24,110,.6)
+			// background: rgb(74,24,110)
+			// background: rgba(74,24,110,.6)
 			@media screen and ($small-screens)
 				font-size: 1.2rem
 		.further-description
@@ -130,8 +135,8 @@
 			font-weight: 500
 			max-width: 500px
 			text-align: center
-			background: rgb(74,24,110)
-			background: rgba(74,24,110,.6)
+			// background: rgb(74,24,110)
+			// background: rgba(74,24,110,.6)
 			margin: 0
 			@media screen and ($small-screens)
 				font-size: 1rem
@@ -139,17 +144,17 @@
 			text-decoration: none
 			transition: background .2s ease-in-out
 		.metadata
-			background: rgb(74,24,110)
-			background: rgba(74,24,110,.6)
+			// background: rgb(74,24,110)
+			// background: rgba(74,24,110,.6)
 		.author-name
 			font-weight: bold
-			color: $teal-70
+			color: white
 			&:hover
 				text-decoration: underline
 			&:not(:last-child):after 
 				content: ','
 		.tag-name, .category-name
-			background: $gold-50
+			background: #333
 			margin: 0 4px
 			padding: 5px 10px
 			border-radius: 1px
@@ -158,28 +163,29 @@
 			font-size: .8rem
 			text-transform: uppercase
 			&:hover
-				background: $teal-80
+				background: #111
 		.category-name
-			background: $light-80
+			background: #111
 			font-size: 1.1rem
 			color: white
 			display: inline-block
 			min-width: 150px
 			font-weight: 700
 			border: 2px solid transparent
-			transition: border .2s ease-in-out
-			&.workshop
-				background: $pink-50
-			&.talk
-				background: $teal-90
-			&.blog-post
-				background: $gold-40
-			&.quicktip
-				background: $green-50
-			&.design
-				background: $orange-60
+			transition: background .2s ease-in-out, color .2s ease-in-out
+			// &.workshop
+			// 	background: $pink-50
+			// &.talk
+			// 	background: $teal-90
+			// &.blog-post
+			// 	background: $gold-40
+			// &.quicktip
+			// 	background: $green-50
+			// &.design
+			// 	background: $orange-60
 			&:hover
-				border: 2px solid white 			
+				background: #333
+				color: #fff			
 
 
 		.blog-when

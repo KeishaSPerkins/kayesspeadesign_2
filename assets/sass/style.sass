@@ -5,10 +5,11 @@
 
 .size-debug
 	&:before 
-		background: yellow
 		display: none
+		background: yellow
 		padding: 3px
 		content: "small"
+		z-index: 100
 		position: fixed
 		top: 30px
 		right: 0
@@ -20,8 +21,8 @@
 			content: 'large'
 
 body
-	background: #aaa
-	background-image: url('/img/Gray_Confetti_Pattern.svg')
+	background: #333
+	// background-image: url('/img/Gray_Confetti_Pattern.svg')
 	background-size: 300px
 	padding: 0
 	font-family: $sans-serif
@@ -38,9 +39,20 @@ a
 
 a.button
 	color: white
+	&.cta.home-cta
+		background: #eee
+		color: #222
+		min-width: 15ch
+		text-align: center
+		margin: 1rem .5rem !important
+		&.highlight
+			background: $darkpurple-80
+			color: white
+		&:hover
+			background: #111
+			color: white
 .button
 	padding: .5rem .7rem
-	border-radius: 20px
 	background: $darkpurple-80
 	width: fit-content
 	font-size: .7rem
@@ -51,7 +63,8 @@ a.button
 	max-width: 10ch
 	transition: background .2s ease-in-out, color .2s ease-in-out
 	&:hover
-		background: $darkpurple-50
+		background: #111
+		color: white
 .button-dark
 	@extend .button
 	background: #111
@@ -59,14 +72,16 @@ a.button
 		background: #343434		
 .main-wrapper
 	background: white
-	background-image: url('/img/White_Doodles_Pattern.svg') 
-	background-size: 250px
+	background: white
+	background-image: url('/img/BG-White.svg')
+	background-size: cover
 	width: 100%
+	// box-shadow: 1px 1px 7px rgba(black, .15)
 	// height: 100%
 	border-radius: 2px
 	margin: auto
 	display: flex
-	flex-direction: column
+	flex-direction: column		 
 .content-wrapper
 	display: flex
 	flex-flow: row wrap
@@ -79,6 +94,11 @@ a.button
 	grid-column-gap: 25px
 	grid-row-gap: 50px
 	padding: 50px 0
+	@supports(animation-name: example)
+		-webkit-animation-name: example /* Safari 4.0 - 8.0 */
+		-webkit-animation-duration: 2s /* Safari 4.0 - 8.0 */
+		animation-name: example
+		animation-duration: 2s
 	p,a,li
 		font-weight: 500
 	a:hover
@@ -108,12 +128,17 @@ a.button
 	text-transform: uppercase
 	bottom: 0
 	margin: 1.5rem 0 2rem 0 
-	p
-		background: rgb(88,89,91)
-		background: rgba(88,89,91, .6)
-		border-radius: 30px
 
-
+@-webkit-keyframes example 
+ from 
+ 	opacity: 0
+ to 
+ 	opacity: 1
+@keyframes example 
+ from 
+ 	opacity: 0
+ to 
+ 	opacity: 1
 
 @import main-header
 @import portfolio-card
@@ -127,3 +152,4 @@ a.button
 @import single
 @import home
 @import list
+@import FAQ.sass

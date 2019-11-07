@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <link rel="stylesheet" href="https://nifty-almeida-74832f.netlify.com/sass/style.min.css" type="text/css" media="screen">
+  <title>
+  	
+  		An Introduction to P5.js for Game Development | Keisha S Perkins
+  	
+  </title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800|IBM+Plex+Serif:300,500,700" rel="stylesheet">
+</head> 
+<body class='single blog blog section'>
+	<div class="size-debug"><span></span></div>
+	
+		<main class='main-wrapper'>
+	   <header class="main-header">
+	<nav id="main-nav" class="main-nav">
+	<a href='/' class="nav-link home">
+		KayEssPea Design
+	</a>
+	
+	<a href='/about/' class="nav-link about">About</a>
+	<a href='/portfolio/' class="nav-link portfolio">Portfolio</a>
+	<a href='/blog/' class="nav-link blog">Blog</a>
+	<a href='/pricing/' class="nav-link pricing">Pricing</a>
+	<a href='/contact/' class="nav-link contact">Contact</a>
+</nav>
+<button id="nav-toggle" class="nav-toggle">
+	<svg>
+		<use href="#menu" />
+	</svg>
+</button>
+
+	<div class="main-page-info">
+		
+			
+				
+					<a class="taxonomy-link category-name talk"href="/categories/talk">Talk</a>
+				
+			
+		
+		
+		<h1 class="main-title">
+			
+				An Introduction to P5.js for Game Development
+			
+		</h1>
+		
+
+		
+		
+
+		
+	</div>
+
+
+</header>
+		   
+			   <div class='content-wrapper'>
+			   	
+
+	
+
+	
+
+<iframe src="//slides.com/kayesspea/deck-2/embed" style="width: 100%; min-height:500px" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<p>This talk is about using JavaScript to create games on the <a href="https://www.w3schools.com/html/html5_canvas.asp">HTML5 canvas</a>. Though you won’t create the next Halo, you’ll learn so much about JavaScript and programming as a whole when you create games with it. In this talk, I’ll introduce you to a library that’s perfect for beginners and “non-coders” alike called <a href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js">p5.js.</a></p>
+
+<h2 id="why-javascript">Why JavaScript?</h2>
+
+<p>JavaScript is everywhere. If you use the internet, you’ve almost certainly encountered JavaScript. You’ve seen it move objects across the screen, fetch information to a webpage, or maybe drive the logic behind a fun game you’ve played.</p>
+
+<p>With JavaScript’s ubiquity comes career opportunity and a huge community of developers. Rest assured, if you want to learn JavaScript, you’ll be learning a tool that is used across the internet by millions every day.</p>
+
+<h2 id="why-p5-js">Why p5.js</h2>
+
+<p>P5.js is the perfect place to begin your foray into programming with JavaScript as it is designed with the beginner, the artist, the poet, and the educator in mind. If you&rsquo;re anything like me, you want to see a results quickly. P5.js gets you up and running right away. With just a few lines of code, you can have interativity.</p>
+
+<p>With p5, you can add and remove functionality as you need it with p5’s <a href="https://p5js.org/libraries/">extender libraries</a>. Want to make a speech analysis tool? Use <a href="http://abilitylab.nyu.edu/p5.js-speech/">p5.speech</a>. Want to make music in the browser? How about <a href="http://charlie-roberts.com/gibber/p5-gibber/">p5.gibber</a>? Interested in physical computing? Try <a href="https://github.com/sarahgp/p5bots">p5.bots</a>.</p>
+
+<p>And don’t worry if you’re just starting out. You’ll see how easy it can be when the p5 library helps to do some of the work for you!</p>
+
+<h3 id="what-is-p5-js">What is p5.js?</h3>
+
+<p>P5.js is “a JavaScript library that starts with the original goal of <a href="http://processing.org/">Processing</a>, to make coding accessible for artists, designers, educators, and beginners, and reinterprets this for today&rsquo;s web,” according to the <a href="https://p5js.org/">official p5.js website</a>. What this means is that p5 was first developed in order to make it easier to start programming no matter your background or skill level.</p>
+
+<h2 id="using-p5-js">Using P5.js</h2>
+
+<p>The first thing we need to know about p5.js is that there are two main functions built into it: the <code>setup()</code> function and the <code>draw()</code> function. The <code>setup()</code> function is where we want to put things that we only want the computer to do once at the start of our program. The <code>draw()</code> function is where we put things we want the computer to do many time every second. The default is 60 executions every second.</p>
+
+<h3 id="creating-the-canvas">Creating the Canvas</h3>
+
+<p>So let’s start by creating the canvas we want to draw on. We’ll tell the computer we want the canvas to be 800 pixels wide and 300 pixels tall. We’ll also tell it that we want the canvas to be black. Here&rsquo;s the code:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+	<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">800</span>, <span style="color:#ae81ff">300</span>);
+	<span style="color:#a6e22e">background</span>(<span style="color:#e6db74">&#39;black&#39;</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+
+}
+</code></pre></div></p>
+
+<p><a href="./blankcanvas">Here&rsquo;s the result</a></p>
+
+<h3 id="adding-some-interest">Adding Some Interest</h3>
+
+<p>Not terribly impressive. But let’s draw on that canvas. In the draw function, let’s add an ellipse that is 80 pixels in from the left and 50 pixels down from the top. We’ll also make it 20 pixels wide and 60 pixels tall.</p>
+
+<p>Here&rsquo;s the code:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+	<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">800</span>, <span style="color:#ae81ff">300</span>);
+	<span style="color:#a6e22e">background</span>(<span style="color:#e6db74">&#39;black&#39;</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+	<span style="color:#a6e22e">ellipse</span>(<span style="color:#ae81ff">80</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">60</span>)
+
+}
+</code></pre></div></p>
+
+<p><a href="./blankcanvaswithellipse">Here&rsquo;s the result</a></p>
+
+<p>Though this ellipse appears to be still, it is being drawn 60 times each second. Let&rsquo;s add some movement so we can see why the <code>draw()</code> function is so important.</p>
+
+<h3 id="adding-more-interactivity">Adding More Interactivity</h3>
+
+<p>Now let’s add some movement. We can use a set of p5.js variables called <code>mouseX</code> and <code>mouseY</code> to make the ellipse follow our mouse instead of telling the computer a specific location. At the start of every draw function, the computer will look to see where our mouse cursor is and draw our ellipse right underneath.</p>
+
+<p>Here&rsquo;s the code:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+	<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">800</span>, <span style="color:#ae81ff">300</span>);
+	<span style="color:#a6e22e">background</span>(<span style="color:#e6db74">&#39;black&#39;</span>);
+}
+
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+	<span style="color:#a6e22e">ellipse</span>(<span style="color:#a6e22e">mouseX</span>, <span style="color:#a6e22e">mouseY</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">50</span>);
+}
+</code></pre></div></p>
+
+<p><a href="./ellipsefollowsmousewithpath">Here&rsquo;s the result</a></p>
+
+<h3 id="get-rid-of-that-tail">Get Rid of that Tail</h3>
+
+<p>Remember that we said things in the <code>setup()</code> function only happen once? What if we put our instructions for our background in the <code>draw()</code> function so that it is draw at the start of every frame?</p>
+
+<p>The result is that the ellipse’s “tail” has gone away because the background is draw at the start of each frame, covering the ellipse from the last frame. This simple loop allows us to simulate the real-world look of movement on our 2D canvas</p>
+
+<p>Here&rsquo;s the code:<br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+	<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">800</span>, <span style="color:#ae81ff">300</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+	<span style="color:#a6e22e">background</span>(<span style="color:#e6db74">&#39;black&#39;</span>);
+	<span style="color:#a6e22e">ellipse</span>(<span style="color:#a6e22e">mouseX</span>, <span style="color:#a6e22e">mouseY</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">50</span>);
+}
+</code></pre></div></p>
+
+<p><a href="./ellipsefollowsmousenopath">Here&rsquo;s the result</a></p>
+
+<p>This is just a small introduction to the library, but have a look at some of the things others have built with p5.js! Perhaps it will inspire to you build something, too.</p>
+
+<ul>
+<li><a href="https://codepen.io/noisefactor/pen/rezrQW">Noisefactor’s Pen “Simple paint program”</a></li>
+<li><a href="https://codepen.io/pizza3/pen/rjaPNY">Yugam’s Pen “Card’s Rotation”</a></li>
+<li><a href="https://p5js.org/interaction-reach-1">P5.js Example: Reach 1</a></li>
+<li><a href="https://codepen.io/sha99y8oy/pen/KrbPzx">shaggy’s Pen “Wave Gen – p5.js”</a></li>
+</ul>
+
+<h2 id="but-where-are-the-games">But Where Are the Games?!</h2>
+
+<p>P5.js is great for building games all by itself. But with the help of extender libraries, making games is even easier. Let’s have a look at the <a href="http://p5play.molleindustria.org/">p5.play</a> and <a href="https://p5js.org/reference/#/libraries/p5.sound">p5.sound</a> extender libraries.</p>
+
+<h3 id="p5-play">P5.play</h3>
+
+<p>P5.play is a library “for the creation of games and playthings” written Paolo Pedercini. P5.play provides sprites, animations, input and collision functions for games and game-like applications. It’s built for accessibility over performance.</p>
+
+<h4 id="what-is-a-sprite">What Is a Sprite?</h4>
+
+<p>The main building block of p5.play, a sprite is an element able to store images or animations with a set of properties such as position and visibility. Sprites can have a collider that defines the active area to detect collisions or overlappings with other sprites and mouse interactions. This means that you use sprites to represent things in your game environment and p5.play will keep up with where they are, what they overlap, and how they should be moving.</p>
+
+<h4 id="let-s-add-a-sprite">Let’s Add a Sprite!</h4>
+
+<p>Adding a sprite is pretty simple, we just need a variable for our sprite to live in. We use the <code>CreateSprite()</code> function to make a sprite that is 150 pixels down from the top and 150 pixels down from the bottom. The sprite will be 50 pixels wide and 160 pixels tall. In our <code>draw()</code> function, we use <code>drawSprites()</code> to let the computer know that we want to see our sprites.</p>
+
+<p>Here&rsquo;s the code:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">robot</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+	<span style="color:#a6e22e">robot</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createSprite</span>(<span style="color:#ae81ff">150</span>,<span style="color:#ae81ff">150</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">160</span>);
+	<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">800</span>, <span style="color:#ae81ff">300</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+	<span style="color:#a6e22e">background</span>(<span style="color:#e6db74">&#39;black&#39;</span>);
+	<span style="color:#a6e22e">drawSprites</span>();
+}
+</code></pre></div></p>
+
+<p><a href="./addourfirstsprite">Here&rsquo;s the result</a></p>
+
+<p>Though it may not look like it, that rectangle has velocity, space, depth, collision, and lots of other properties already built in. It’s ready for us to start manipulating it. First, let’s add an animation to the sprite!</p>
+
+<h4 id="adding-an-animation-to-our-sprite">Adding an Animation to Our Sprite</h4>
+
+<p>Sprites can take on several animations, and animations can be in the form of a series of pictures or a spritesheet. Here, we’ll tell the computer that our sprite should have an animation that we’ll call “idle” and that the animation should consist of all images from “idle01.png” to “idle09.png” from our files.</p>
+
+<p>P5.play very conveniently keeps track of these for us. We just need to name the images according to the order they appear in our animation. P5.play will read the titles and do the rest.</p>
+
+<p><strong>Note:</strong> The files referenced here are saved in the same folder as the p5.js sketch. In order for your animations to work, you will need images to assign. A great place to find free sprites is <a href="http://opengameart.org">opengameart.com</a></p>
+
+<p>Here&rsquo;s the code:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">robot</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+	<span style="color:#a6e22e">robot</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createSprite</span>(<span style="color:#ae81ff">150</span>,<span style="color:#ae81ff">150</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">160</span>);
+	<span style="color:#a6e22e">robot</span>.<span style="color:#a6e22e">addAnimation</span>(<span style="color:#e6db74">&#34;idle&#34;</span>, <span style="color:#e6db74">&#34;../images/Idle02.png&#34;</span>, <span style="color:#e6db74">&#34;../images/Idle09.png&#34;</span>);
+	<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">800</span>, <span style="color:#ae81ff">300</span>);
+}    
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+	<span style="color:#a6e22e">background</span>(<span style="color:#e6db74">&#39;black&#39;</span>);
+	<span style="color:#a6e22e">drawSprites</span>();
+}
+</code></pre></div></p>
+
+<p><a href="./animateoursprite">Here&rsquo;s the result</a></p>
+
+<p>And there she is! Our little robot!</p>
+
+<h4 id="adding-interactivity-to-our-sprite">Adding Interactivity to our sprite</h4>
+
+<p>What if we want to add some interaction? Let’s give the computer some instructions on what to do when we press a certain key. In our setup function we’ll add another animation called “run” with similar syntax as before.</p>
+
+<p>Then, in our draw function, we’ll put a bit of logic that first checks to see if someone is pressing the right arrow key, and then changes the robot’s velocity so that she moves to the right. The robot will also change animations when the key is pressed, creating the effect of running.</p>
+
+<p>Here&rsquo;s the code:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">robot</span>;
+
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+	<span style="color:#a6e22e">robot</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createSprite</span>(<span style="color:#ae81ff">150</span>,<span style="color:#ae81ff">150</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">160</span>);
+	<span style="color:#a6e22e">robot</span>.<span style="color:#a6e22e">addAnimation</span>(<span style="color:#e6db74">&#34;idle&#34;</span>, <span style="color:#e6db74">&#34;../images/Idle01.png&#34;</span>, <span style="color:#e6db74">&#34;../images/Idle09.png&#34;</span>);
+	<span style="color:#a6e22e">robot</span>.<span style="color:#a6e22e">addAnimation</span>(<span style="color:#e6db74">&#34;run&#34;</span>, <span style="color:#e6db74">&#34;images/Run01.png&#34;</span>, <span style="color:#e6db74">&#34;images/Run08.png&#34;</span>);
+	<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">800</span>, <span style="color:#ae81ff">300</span>);			
+}
+
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+	<span style="color:#a6e22e">background</span>(<span style="color:#e6db74">&#39;black&#39;</span>);			
+	<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">keyIsDown</span>(<span style="color:#ae81ff">32</span>)){
+		<span style="color:#a6e22e">robot</span>.<span style="color:#a6e22e">changeAnimation</span>(<span style="color:#e6db74">&#34;run&#34;</span>);
+		<span style="color:#a6e22e">robot</span>.<span style="color:#a6e22e">velocity</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+	} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">keyIsDown</span>(<span style="color:#ae81ff">32</span>)) {
+		<span style="color:#a6e22e">robot</span>.<span style="color:#a6e22e">changeAnimation</span>(<span style="color:#e6db74">&#34;idle&#34;</span>);
+		<span style="color:#a6e22e">robot</span>.<span style="color:#a6e22e">velocity</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	}
+	<span style="color:#a6e22e">drawSprites</span>();
+}
+</code></pre></div></p>
+
+<p><a href="./keypressspriteaction">Here&rsquo;s the result</a></p>
+
+<p>Using functions like the ones we’ve used above, we can make games that are simple and fun to play. <a href="./gameexamplesilent">This game</a> was built with less than 200 lines of code using these libraries.</p>
+
+<p><strong>Note:</strong> A great little resource I like to use is <a href="http://keycode.info">Keycode.info</a> by Wes Bos. This nifty little website gives you keycodes for the keys on your keyboard. It&rsquo;s very helpful when writing in keyboard event handlers.</p>
+
+<p>Check out some of these other things built with this wonderful library:</p>
+
+<ul>
+<li><a href="https://codepen.io/seil/pen/LxzZxM">Yuki Kayashima’s Pen “p5.js_breakout”</a></li>
+<li><a href="https://codepen.io/matedemorphy/pen/bREMZJ">Joseph Palmezano’s Pen “Angry PacMan p5.js”</a></li>
+<li><a href="https://codepen.io/SetupDraw/pen/yoXZbR">Setup Draw’s Pen “ASTEROIDS”</a></li>
+</ul>
+
+<h3 id="but-where-is-the-sound">But Where Is the Sound?</h3>
+
+<p>Notice how all of these examples have been silent. To add sound to our game, we will use the p5.sound extender library. p5.sound extends p5 with Web Audio functionality including audio input, playback, analysis and synthesis.</p>
+
+<p>It will allow us to trigger songs and sounds at certain parts in the game. For instance, let’s add a song at the start of the game we saw earlier.</p>
+
+<p>We&rsquo;ll add this code into our <code>setup()</code> function and introduce a new function, <code>preload()</code>.</p>
+
+<p>Here&rsquo;s the code:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">gameMusic</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">preload</span>(){
+	<span style="color:#a6e22e">gameMusic</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadSound</span>(<span style="color:#e6db74">&#39;gameMusic.mp3&#39;</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>(){
+	<span style="color:#a6e22e">gameMusic</span>.<span style="color:#a6e22e">play</span>();
+}
+</code></pre></div></p>
+
+<p><a href="./gameexample">Here&rsquo;s the result</a></p>
+
+<p>The <code>preload()</code> function allows us to load all of our assets before the program begins. This is very useful for when we have large files or have many files to load. In the <code>preload()</code> function, we will load our sound to a variable called “gameMusic”. At the start of the <code>setup()</code> function, we can play the song.</p>
+
+<p>We don&rsquo;t want to put our <code>play()</code> call in the <code>draw()</code> function because that would cause a new instance of our song to start playing, overlapping 60 times in one second!</p>
+
+<p>With a bit more coding, we can trigger sounds for when the game is being played, when the game is over and even when a certain action occurs in the game.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I hope this quick introduction to p5.js and its extender libraries p5.play and p5.sound helped to inspire your creativity. I encourage you to continue learning about the libraries. There is so much you can do with them.</p>
+
+<p>Here is a list of resources that may help you in learning a bit more</p>
+
+<ul>
+<li><a href="http://p5js.org">p5.js Website</a></li>
+<li><a href="http://p5play.molleindustria.org/">p5.play Website</a></li>
+<li><a href="https://www.youtube.com/watch?v=8j0UDiN7my4">Daniel Shiffman: The Coding Train</a></li>
+<li><a href="http://www.amazon.com/Make-Interactive-Graphics-JavaScript-Processing/dp/1457186772">Book: <em>Getting Started with P5.js</em></a></li>
+</ul>
+
+<p>Here is a list of resources that may help you in creating games.</p>
+
+<ul>
+<li><a href="http://opengameart.org">Open Game Art</a></li>
+<li><a href="http://keycode.info">KeyCode.info</a></li>
+<li><a href="https://codepen.io">CodePen</a></li>
+<li><a href="http://freesound.org">Free Sound</a></li>
+</ul>
+
+<p>The <a href="../slides">slides for this talk</a> are also available. If you like that robot game. You can see how it&rsquo;s built on <a href="https://la-wit.github.io/build-an-infinite-runner">its accompanying tutorial site</a>.</p>
+
+<p>If you&rsquo;d like to jump right into making with p5.js, you can fork <a href="https://codepen.io/KeishaSPerkins/pen/eQdzJb">this pen</a> start right away. The pen already has p5.js, p5.play, p5.sound, and another extender library, <a href="https://p5js.org/reference/#/libraries/p5.dom">p5.dom</a> linked.</p>
+
+<p>Have fun!</p>
+
+	<br><br><br>
+
+	
+	
+	
+		<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "keishasperkins" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+	
+
+			   </div>
+		   
+		</main>
+	
+
+<script src="https://nifty-almeida-74832f.netlify.com/js/bundle.min.js" type="text/javascript"></script>
+
+
+
+<footer class="main-footer">
+	<p class="copyright">Copyright&nbsp;&copy;&nbsp;Keisha S Perkins 2019</p>
+
+</footer>
+
+
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="menu" viewBox="0 0 92.833 92.833">
+    <title>menu</title>
+    <path d="M89.834,1.75H3c-1.654,0-3,1.346-3,3v13.334c0,1.654,1.346,3,3,3h86.833c1.653,0,3-1.346,3-3V4.75 C92.834,3.096,91.488,1.75,89.834,1.75z"/>
+    <path d="M89.834,36.75H3c-1.654,0-3,1.346-3,3v13.334c0,1.654,1.346,3,3,3h86.833c1.653,0,3-1.346,3-3V39.75 C92.834,38.096,91.488,36.75,89.834,36.75z"/>
+    <path d="M89.834,71.75H3c-1.654,0-3,1.346-3,3v13.334c0,1.654,1.346,3,3,3h86.833c1.653,0,3-1.346,3-3V74.75 C92.834,73.095,91.488,71.75,89.834,71.75z"/>
+  </symbol>
+  <symbol id="cross" viewBox="0 0 95.939 95.939">
+    <title>cross</title>
+    <path d="M62.819,47.97l32.533-32.534c0.781-0.781,0.781-2.047,0-2.828L83.333,0.586C82.958,0.211,82.448,0,81.919,0 c-0.53,0-1.039,0.211-1.414,0.586L47.97,33.121L15.435,0.586c-0.75-0.75-2.078-0.75-2.828,0L0.587,12.608 c-0.781,0.781-0.781,2.047,0,2.828L33.121,47.97L0.587,80.504c-0.781,0.781-0.781,2.047,0,2.828l12.02,12.021 c0.375,0.375,0.884,0.586,1.414,0.586c0.53,0,1.039-0.211,1.414-0.586L47.97,62.818l32.535,32.535 c0.375,0.375,0.884,0.586,1.414,0.586c0.529,0,1.039-0.211,1.414-0.586l12.02-12.021c0.781-0.781,0.781-2.048,0-2.828L62.819,47.97 z"/>
+  </symbol>
+  <symbol id="window" viewBox="0 0 48 48">
+    <title>window</title>
+    <g transform="matrix(-1 0 0 -1 48 48)">
+      <g transform="matrix(-1 0 0 1 48 0)">
+        <g> 
+          <path d="M42.185,15H34.5V5.453C34.5,2.676,32.52,0,29.743,0H5.971C3.194,0,0.5,2.676,0.5,5.453v22.901 C0.5,31.131,3.194,33,5.971,33H13.5v10.059c0,2.777,2.137,4.941,4.914,4.941h23.772c2.776,0,5.314-2.164,5.314-4.941V20.158 C47.5,17.381,44.962,15,42.185,15z M44.5,36h-28v-3h13.243c2.777,0,4.757-1.869,4.757-4.646V18h7.685 c1.125,0,2.315,1.033,2.315,2.158V36z M5.971,3H29.5h0.243C30.867,3,31.5,4.328,31.5,5.453V15v2v1v2H16.514h-1.96h-1.039H3.5V5.453 C3.5,4.328,4.847,3,5.971,3z"/> 
+        </g>
+      </g>
+    </g>
+  </symbol>
+  
+</svg>
+	<svg style="display: none;">
+	
+	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452.28 95.99">
+	   <g id="KSPD_Logo" data-name="Layer 2">
+	      <g id="Layer_1-2" data-name="Layer 1">
+	         <path class="cls-1" d="M0,.19V47.5H47.32V.19ZM37.08,41.88a1.09,1.09,0,0,1-.6.4,5.61,5.61,0,0,1-1.22.25,17.9,17.9,0,0,1-2,.08,18.3,18.3,0,0,1-2.68-.14A2.73,2.73,0,0,1,29.44,42a2,2,0,0,1-.56-.69L17.64,23.7V41.35a.94.94,0,0,1-.17.55,1.31,1.31,0,0,1-.61.38,4.88,4.88,0,0,1-1.15.25,15.42,15.42,0,0,1-1.83.08,15.75,15.75,0,0,1-1.83-.08,5.21,5.21,0,0,1-1.17-.25,1.36,1.36,0,0,1-.61-.38.84.84,0,0,1-.19-.55v-35a.82.82,0,0,1,.19-.55,1.36,1.36,0,0,1,.61-.38,7,7,0,0,1,1.17-.22,15.47,15.47,0,0,1,1.83-.09,15.12,15.12,0,0,1,1.83.09,6.53,6.53,0,0,1,1.15.22,1.31,1.31,0,0,1,.61.38.92.92,0,0,1,.17.55V22.15L28.53,6.34A2.16,2.16,0,0,1,29,5.73a1.9,1.9,0,0,1,.75-.39,5.42,5.42,0,0,1,1.17-.2c.49,0,1.1-.06,1.85-.06a16.35,16.35,0,0,1,1.89.09,6.29,6.29,0,0,1,1.2.24,1.19,1.19,0,0,1,.61.39.82.82,0,0,1,.18.52,2.26,2.26,0,0,1-.26,1c-.18.35-.5.89-1,1.64L25.23,22.33l11.12,16.8a12.54,12.54,0,0,1,.76,1.57,2,2,0,0,1,.13.62A1,1,0,0,1,37.08,41.88Z"/>
+	         <path class="cls-1" d="M16.57,71.18a.52.52,0,0,1-.07.25.51.51,0,0,1-.28.19,3.51,3.51,0,0,1-.55.11c-.24,0-.53,0-.89,0a8.23,8.23,0,0,1-1.22-.07,1.15,1.15,0,0,1-.54-.2.84.84,0,0,1-.25-.31l-5.11-8v8a.41.41,0,0,1-.08.25.58.58,0,0,1-.27.18,3.43,3.43,0,0,1-.53.11c-.21,0-.49,0-.83,0s-.61,0-.83,0a3.43,3.43,0,0,1-.53-.11.62.62,0,0,1-.28-.18.37.37,0,0,1-.09-.25V55.27A.37.37,0,0,1,4.31,55a.54.54,0,0,1,.28-.17,2.55,2.55,0,0,1,.53-.11c.22,0,.5,0,.83,0s.62,0,.83,0a2.55,2.55,0,0,1,.53.11.5.5,0,0,1,.27.17.41.41,0,0,1,.08.25v7.2l4.95-7.19a1.05,1.05,0,0,1,.22-.28,1.2,1.2,0,0,1,.34-.18,3,3,0,0,1,.54-.09c.21,0,.49,0,.83,0s.64,0,.87,0a2.75,2.75,0,0,1,.54.12.54.54,0,0,1,.28.17.41.41,0,0,1,.08.24,1,1,0,0,1-.12.45c-.08.16-.23.41-.44.75l-4.64,6.07,5.05,7.65a5.94,5.94,0,0,1,.35.71A.88.88,0,0,1,16.57,71.18Z"/>
+	         <path class="cls-1" d="M32.7,70.41a4.44,4.44,0,0,1,.2.74.45.45,0,0,1-.11.41.82.82,0,0,1-.51.17,8.83,8.83,0,0,1-1,0l-1,0a3,3,0,0,1-.57-.08.5.5,0,0,1-.27-.17.62.62,0,0,1-.13-.27l-1.14-3.4H21.78l-1.07,3.31a1.26,1.26,0,0,1-.14.31.57.57,0,0,1-.27.19,2.08,2.08,0,0,1-.54.1c-.23,0-.53,0-.91,0s-.71,0-.94,0a.76.76,0,0,1-.47-.19.57.57,0,0,1-.09-.43,4.38,4.38,0,0,1,.2-.73l5.21-15a1.27,1.27,0,0,1,.18-.35.56.56,0,0,1,.34-.21,2.76,2.76,0,0,1,.63-.1h2.3a3.53,3.53,0,0,1,.71.1.7.7,0,0,1,.37.21,1.77,1.77,0,0,1,.19.39ZM24.94,58h0L22.54,65.2h4.79Z"/>
+	         <path class="cls-1" d="M39.72,65.27v6a.35.35,0,0,1-.09.23.58.58,0,0,1-.28.17,2.55,2.55,0,0,1-.53.11c-.22,0-.5,0-.83,0s-.62,0-.83,0a2.55,2.55,0,0,1-.53-.11.5.5,0,0,1-.28-.17.34.34,0,0,1-.08-.23v-6l-4.63-9.21a4.68,4.68,0,0,1-.32-.75.38.38,0,0,1,.08-.4,1,1,0,0,1,.56-.17c.27,0,.64,0,1.12,0s.72,0,1,0a2.36,2.36,0,0,1,.57.1.71.71,0,0,1,.31.19,3.23,3.23,0,0,1,.19.3L37,59.47c.18.4.36.83.54,1.27s.36.91.54,1.4h0c.16-.47.33-.93.51-1.37s.34-.87.51-1.27L41,55.37a1,1,0,0,1,.16-.33.75.75,0,0,1,.3-.2,1.69,1.69,0,0,1,.53-.11c.23,0,.53,0,.9,0s.89,0,1.16,0a1,1,0,0,1,.56.17.36.36,0,0,1,.07.41,4.1,4.1,0,0,1-.31.74Z"/>
+	         <path class="cls-1" d="M52.46.08V47.39H99.78V.08ZM87.17,36.32a10.76,10.76,0,0,1-3,3.7,13,13,0,0,1-4.37,2.22A18.48,18.48,0,0,1,74.5,43a19.1,19.1,0,0,1-3.58-.31A21.12,21.12,0,0,1,68,41.91,11.81,11.81,0,0,1,65.89,41a6,6,0,0,1-1.22-.86A2.11,2.11,0,0,1,64.14,39,9.5,9.5,0,0,1,64,37c0-.59,0-1.09.06-1.49a4.31,4.31,0,0,1,.18-1,1.09,1.09,0,0,1,.35-.53.85.85,0,0,1,.5-.16,2.38,2.38,0,0,1,1.13.47,20.44,20.44,0,0,0,1.89,1.06,17.52,17.52,0,0,0,2.74,1,13.18,13.18,0,0,0,3.69.47A8.61,8.61,0,0,0,77,36.57a5.54,5.54,0,0,0,1.85-.93A4,4,0,0,0,80,34.14a4.77,4.77,0,0,0,.4-2A3.47,3.47,0,0,0,79.73,30a6.73,6.73,0,0,0-1.8-1.61,18.94,18.94,0,0,0-2.51-1.32l-2.91-1.31a28.05,28.05,0,0,1-2.9-1.57,11.49,11.49,0,0,1-2.51-2.09,10,10,0,0,1-1.8-2.89,10.45,10.45,0,0,1-.69-4,10.59,10.59,0,0,1,1-4.7,9.62,9.62,0,0,1,2.67-3.36,11.51,11.51,0,0,1,4-2,17.36,17.36,0,0,1,4.84-.66,18.18,18.18,0,0,1,2.65.2,19.11,19.11,0,0,1,2.47.55,13.61,13.61,0,0,1,2,.78,4.7,4.7,0,0,1,1.18.71,2.55,2.55,0,0,1,.39.49,2.67,2.67,0,0,1,.17.54,6.55,6.55,0,0,1,.1.82q0,.51,0,1.26c0,.55,0,1,0,1.41a5,5,0,0,1-.14.94,1.14,1.14,0,0,1-.29.55.68.68,0,0,1-.5.17,2.38,2.38,0,0,1-1-.4c-.45-.27-1-.56-1.69-.88a17.16,17.16,0,0,0-2.33-.86,10.22,10.22,0,0,0-2.9-.39,7,7,0,0,0-2.16.3,4.64,4.64,0,0,0-1.54.84,3.36,3.36,0,0,0-.92,1.28,4.15,4.15,0,0,0-.3,1.58A3.5,3.5,0,0,0,73,16.51a6.5,6.5,0,0,0,1.81,1.61,19.22,19.22,0,0,0,2.57,1.32c1,.41,1.94.85,2.93,1.31a29.62,29.62,0,0,1,2.94,1.56,12,12,0,0,1,2.55,2.1,9.67,9.67,0,0,1,1.81,2.87,10.14,10.14,0,0,1,.69,3.9A11.44,11.44,0,0,1,87.17,36.32Z"/>
+	         <path class="cls-1" d="M68.94,70.23a5.85,5.85,0,0,1,0,.64,1.37,1.37,0,0,1-.1.41.59.59,0,0,1-.16.23.44.44,0,0,1-.22.07H59.94a1,1,0,0,1-.72-.26,1,1,0,0,1-.3-.83V55.76a1,1,0,0,1,.3-.83,1,1,0,0,1,.72-.26h8.44a.31.31,0,0,1,.21.07.54.54,0,0,1,.16.23,1.93,1.93,0,0,1,.09.41,4,4,0,0,1,0,.65,3.64,3.64,0,0,1,0,.62,1.68,1.68,0,0,1-.09.41.62.62,0,0,1-.16.23.31.31,0,0,1-.21.07h-6v4.13h5.1a.44.44,0,0,1,.22.07.59.59,0,0,1,.16.23,1.22,1.22,0,0,1,.1.4,5.46,5.46,0,0,1,0,.62,5.53,5.53,0,0,1,0,.63,1.3,1.3,0,0,1-.1.4.45.45,0,0,1-.16.21.36.36,0,0,1-.22.07h-5.1v4.77h6.08a.36.36,0,0,1,.22.07.52.52,0,0,1,.16.23,1.29,1.29,0,0,1,.1.41A5.53,5.53,0,0,1,68.94,70.23Z"/>
+	         <path class="cls-1" d="M81.73,66.51a5.23,5.23,0,0,1-.49,2.34,4.94,4.94,0,0,1-1.35,1.68,6.12,6.12,0,0,1-2,1,8.6,8.6,0,0,1-2.43.34,8.26,8.26,0,0,1-1.62-.15,9.5,9.5,0,0,1-1.33-.34,6.31,6.31,0,0,1-1-.43,3.07,3.07,0,0,1-.55-.39.84.84,0,0,1-.24-.49,4.21,4.21,0,0,1-.08-.92,6.39,6.39,0,0,1,0-.68A3,3,0,0,1,70.8,68,.46.46,0,0,1,71,67.8a.38.38,0,0,1,.23-.08,1.2,1.2,0,0,1,.52.22c.22.14.5.3.85.48a8,8,0,0,0,1.25.47,5.66,5.66,0,0,0,1.68.22A3.84,3.84,0,0,0,76.61,69a2.38,2.38,0,0,0,.84-.43,1.77,1.77,0,0,0,.53-.68,2.2,2.2,0,0,0,.19-.9,1.56,1.56,0,0,0-.32-1,3.22,3.22,0,0,0-.81-.74,9.44,9.44,0,0,0-1.15-.6L74.57,64a14,14,0,0,1-1.32-.71,5.81,5.81,0,0,1-1.14-1,4.55,4.55,0,0,1-.82-1.31A4.69,4.69,0,0,1,71,59.25a4.82,4.82,0,0,1,.45-2.14,4.47,4.47,0,0,1,1.22-1.53,5.27,5.27,0,0,1,1.8-.91,7.85,7.85,0,0,1,2.2-.3,8.08,8.08,0,0,1,1.2.09,11.14,11.14,0,0,1,1.13.25,7.4,7.4,0,0,1,.92.35,2.5,2.5,0,0,1,.54.33,1.19,1.19,0,0,1,.17.22.82.82,0,0,1,.08.25,2.78,2.78,0,0,1,0,.37c0,.16,0,.35,0,.57a6,6,0,0,1,0,.64,2.11,2.11,0,0,1-.06.43.53.53,0,0,1-.13.25.36.36,0,0,1-.23.08,1.09,1.09,0,0,1-.46-.18,7.66,7.66,0,0,0-.77-.4A6.2,6.2,0,0,0,78,57.23a4.58,4.58,0,0,0-1.32-.18,3.22,3.22,0,0,0-1,.14,2,2,0,0,0-.7.38,1.5,1.5,0,0,0-.41.58,1.71,1.71,0,0,0-.14.72,1.6,1.6,0,0,0,.3,1,3,3,0,0,0,.83.73,8,8,0,0,0,1.17.6l1.33.6a10.66,10.66,0,0,1,1.33.71,5.13,5.13,0,0,1,1.17,1,4.69,4.69,0,0,1,.82,1.31A4.55,4.55,0,0,1,81.73,66.51Z"/>
+	         <path class="cls-1" d="M94.38,66.51a5.24,5.24,0,0,1-.5,2.34,4.83,4.83,0,0,1-1.35,1.68,6,6,0,0,1-2,1,8.7,8.7,0,0,1-2.43.34,8.37,8.37,0,0,1-1.63-.15,9,9,0,0,1-1.32-.34,5.53,5.53,0,0,1-1-.43,3.22,3.22,0,0,1-.56-.39,1,1,0,0,1-.24-.49,4.33,4.33,0,0,1-.07-.92c0-.27,0-.5,0-.68a2,2,0,0,1,.09-.44.41.41,0,0,1,.16-.24.35.35,0,0,1,.22-.08,1.11,1.11,0,0,1,.52.22c.22.14.51.3.86.48a7.53,7.53,0,0,0,1.24.47,5.75,5.75,0,0,0,1.68.22A3.91,3.91,0,0,0,89.26,69a2.38,2.38,0,0,0,.84-.43,1.77,1.77,0,0,0,.53-.68,2.19,2.19,0,0,0,.18-.9,1.55,1.55,0,0,0-.31-1,3.11,3.11,0,0,0-.82-.74,9.28,9.28,0,0,0-1.14-.6c-.43-.18-.87-.38-1.32-.59a14,14,0,0,1-1.32-.71,5.28,5.28,0,0,1-1.14-1,4.35,4.35,0,0,1-.82-1.31,4.69,4.69,0,0,1-.31-1.81,4.82,4.82,0,0,1,.45-2.14,4.45,4.45,0,0,1,1.21-1.53,5.27,5.27,0,0,1,1.8-.91,8,8,0,0,1,2.2-.3,8.11,8.11,0,0,1,1.21.09,10.93,10.93,0,0,1,1.12.25,7,7,0,0,1,.93.35,2.14,2.14,0,0,1,.53.33,1,1,0,0,1,.18.22,1.23,1.23,0,0,1,.08.25,1.82,1.82,0,0,1,0,.37c0,.16,0,.35,0,.57s0,.47,0,.64a3,3,0,0,1-.07.43.45.45,0,0,1-.13.25.34.34,0,0,1-.23.08A1.07,1.07,0,0,1,92.5,58a6.94,6.94,0,0,0-.78-.4,5.78,5.78,0,0,0-1-.39,4.58,4.58,0,0,0-1.32-.18,3.17,3.17,0,0,0-1,.14,2,2,0,0,0-.7.38,1.42,1.42,0,0,0-.42.58,1.89,1.89,0,0,0-.14.72,1.6,1.6,0,0,0,.31,1,3.08,3.08,0,0,0,.82.73,9.12,9.12,0,0,0,1.17.6l1.34.6a11.41,11.41,0,0,1,1.33.71,5.3,5.3,0,0,1,1.16,1,4.48,4.48,0,0,1,.82,1.31A4.55,4.55,0,0,1,94.38,66.51Z"/>
+	         <path class="cls-1" d="M104.92.19V47.51h47.32v-9c-3.94-3.08-7.32-7.24-7.8-13-.66-8.08,3.31-13.67,7.8-17.35v-8ZM140.33,22a10.73,10.73,0,0,1-2.84,4.07,12.48,12.48,0,0,1-4.59,2.51,21,21,0,0,1-6.39.86h-3.1V41.32a.76.76,0,0,1-.19.52,1.27,1.27,0,0,1-.62.38,6.06,6.06,0,0,1-1.14.22,15.6,15.6,0,0,1-1.85.09,15.4,15.4,0,0,1-1.82-.09,5.85,5.85,0,0,1-1.16-.22,1.19,1.19,0,0,1-.61-.38.85.85,0,0,1-.17-.52V7.87a2.7,2.7,0,0,1,.7-2,2.57,2.57,0,0,1,1.85-.67h8.77c.88,0,1.72,0,2.52.1a27.34,27.34,0,0,1,2.85.43,13,13,0,0,1,3.38,1.22,10.25,10.25,0,0,1,2.92,2.26,9.52,9.52,0,0,1,1.84,3.19,12.51,12.51,0,0,1,.63,4.1A14.72,14.72,0,0,1,140.33,22Zm6.87,2.88a15,15,0,0,0,5,10V11.82A16.94,16.94,0,0,0,147.2,24.89Z"/>
+	         <path class="cls-1" d="M133.41,17a8.47,8.47,0,0,1-.4,2.66,6,6,0,0,1-1.18,2.09,5.24,5.24,0,0,1-2,1.37,8.32,8.32,0,0,1-3,.49h-3.39V11h3.22a15.49,15.49,0,0,1,2.28.16,5.54,5.54,0,0,1,2.11.76,4.72,4.72,0,0,1,1.7,1.87A6.65,6.65,0,0,1,133.41,17Z"/>
+	         <path class="cls-1" d="M120.24,59.92a6.59,6.59,0,0,1-.45,2.52,4.76,4.76,0,0,1-1.29,1.85,5.73,5.73,0,0,1-2.08,1.14,9.76,9.76,0,0,1-2.91.39H112.1v5.4a.35.35,0,0,1-.09.23.54.54,0,0,1-.28.17,2.44,2.44,0,0,1-.52.11c-.22,0-.49,0-.83,0s-.61,0-.83,0a2.41,2.41,0,0,1-.53-.11.54.54,0,0,1-.28-.17.4.4,0,0,1-.08-.23V56a1.24,1.24,0,0,1,.32-.92,1.22,1.22,0,0,1,.85-.31h4c.4,0,.78,0,1.14,0a11.6,11.6,0,0,1,1.3.2,5.71,5.71,0,0,1,1.54.55,4.35,4.35,0,0,1,1.32,1,4.1,4.1,0,0,1,.84,1.45A5.67,5.67,0,0,1,120.24,59.92Zm-3.59.25a3,3,0,0,0-.32-1.47,2.21,2.21,0,0,0-.77-.85,2.41,2.41,0,0,0-1-.34,7,7,0,0,0-1-.07H112.1v5.73h1.54A3.7,3.7,0,0,0,115,63a2.49,2.49,0,0,0,.91-.62,2.8,2.8,0,0,0,.53-1A3.87,3.87,0,0,0,116.65,60.17Z"/>
+	         <path class="cls-1" d="M132.92,70.34a5.85,5.85,0,0,1,0,.64,1.75,1.75,0,0,1-.1.41.59.59,0,0,1-.16.23.44.44,0,0,1-.22.07h-8.49a1,1,0,0,1-.72-.26,1,1,0,0,1-.3-.83V55.87a1,1,0,0,1,.3-.83,1,1,0,0,1,.72-.26h8.44a.31.31,0,0,1,.21.07.54.54,0,0,1,.16.23,1.9,1.9,0,0,1,.09.42,3.82,3.82,0,0,1,0,.64,3.64,3.64,0,0,1,0,.62,1.68,1.68,0,0,1-.09.41.54.54,0,0,1-.16.23.31.31,0,0,1-.21.07h-6V61.6h5.1a.44.44,0,0,1,.22.07.59.59,0,0,1,.16.23,1.54,1.54,0,0,1,.1.4,5.46,5.46,0,0,1,0,.62,5.41,5.41,0,0,1,0,.63,1.54,1.54,0,0,1-.1.4.45.45,0,0,1-.16.21.36.36,0,0,1-.22.07h-5.1V69h6.08a.36.36,0,0,1,.22.07.52.52,0,0,1,.16.23,1.63,1.63,0,0,1,.1.41A5.53,5.53,0,0,1,132.92,70.34Z"/>
+	         <path class="cls-1" d="M149.47,70.41a4.44,4.44,0,0,1,.2.74.43.43,0,0,1-.11.41.81.81,0,0,1-.5.17,9,9,0,0,1-1,0l-1,0a3,3,0,0,1-.57-.08.5.5,0,0,1-.27-.17.76.76,0,0,1-.13-.27l-1.14-3.4h-6.35l-1.07,3.31a1,1,0,0,1-.14.31.52.52,0,0,1-.27.19,2.08,2.08,0,0,1-.54.1q-.34,0-.9,0c-.4,0-.72,0-.94,0a.71.71,0,0,1-.47-.19.53.53,0,0,1-.1-.43,5.65,5.65,0,0,1,.2-.73l5.21-15a1.62,1.62,0,0,1,.18-.35.62.62,0,0,1,.34-.21,2.76,2.76,0,0,1,.63-.1H143a3.42,3.42,0,0,1,.71.1.66.66,0,0,1,.37.21,1.42,1.42,0,0,1,.19.39ZM141.71,58h0l-2.39,7.19h4.79Z"/>
+	         <path class="cls-1" d="M451.64,30.62c-1.23-.74-3.8,1.57-4.81,2.15a47.61,47.61,0,0,1-16.49,5.94,48.62,48.62,0,0,1-19.87-1.43,25,25,0,0,1-5.42-2.05c-1.13-.71-1.66-2.21-2.87-2.66-2.77-1-5.18.9-6.65,2.15-3.63,3.06-7.54,5.91-10.86,8.5,1.62-4.64,3.25-13.64-1.74-15.57-3.5-1.34-7.2,1-9.43,2.46-5.76,3.74-9.84,10.46-13.71,15.26-1.9-2.69-7-3.71-11.06-2.66,1.75-1.69,5.91-5.83,4.5-9.42-1.63-4.18-8.77-1.74-11.78-.41a31.21,31.21,0,0,0-11.36,8.29C328,43.8,325.87,49,330,50.39c-3.64,1.63-7.66,4-12.07,4.3-4.11.29-5.94-1.25-5.94-5,0-4.3,1.92-9.21,3.38-12.6.52-1.22,1.17-3.32-.62-3.37-1.05,0-1.56,1.27-2,2.25a15.84,15.84,0,0,1-6.26,7c-1.17.65-2.49,1.05-3.68,1.64-3.64,1.8-7.25,3.6-10.75,5.12.63-3.62,1.34-12.36-1.95-13.52-1.73-.6-4.35.6-5.94,1.44a46.44,46.44,0,0,0-4.7,2.86c-6.23,4.26-11.74,8.67-18.34,12.19-3.31,1.77-7.45,3.83-11.16,4.1-5.14.36-6.16-2.62-6.25-7.48,6.23-1.25,12.18-2.79,17.62-5.53,4.49-2.26,10.81-5.86,10-13.21a10,10,0,0,0-4.7-7.37,9.26,9.26,0,0,0-5-.82c-6.38.43-11.12,4.11-14.44,8.19C243.54,35,241.58,40.59,240.9,47c-1.47.13-2.7.51-4.19.61.83-9-2.39-15.67-6.05-21.09a59.86,59.86,0,0,0-13.61-14A62.53,62.53,0,0,0,174.44.21c-8.42.68-15.28,2.92-20.79,6.86q-.71.51-1.41,1.08v3.67a23.2,23.2,0,0,1,3.87-3.21c5.09-3.36,12.2-5.37,19.87-5.74A59.92,59.92,0,0,1,215.71,15,55.7,55.7,0,0,1,228.4,28.17c3.39,5.07,6.57,11.5,5.43,19.86-17.21,2.25-38.18,1.29-54-1.53,2.33-10.39,4.92-20.95,7.47-31.44.25-1,1.12-3.67-.61-3.89S185,13,184.58,14.65c-2.4,10.23-5.11,21-7.48,31.23-7.22-1.58-13.24-3.51-18.84-6.65a30.81,30.81,0,0,1-6-4.3v3.59a38.39,38.39,0,0,0,4.08,2.75c5.92,3.52,12.75,5.56,20.17,7.48-1.62,7.26-3.52,14.84-5,22.32-.36,1.84-1.84,6.85.61,6.86,1.67,0,2.64-3.93,3.18-5a59.19,59.19,0,0,1,8.5-12c.62-.71,1.08-1.67,1.94-2a36.08,36.08,0,0,0,6.86,8.6c2.55,2.41,6.07,4.92,10.65,4.91A25.07,25.07,0,0,0,209,71.28c12.63-3.22,23.7-9.16,27.24-20.79a47.44,47.44,0,0,0,4.71-.72c.15,5.36,2,9.28,6.87,9.73,5.43.51,9.58-2,13.4-3.89,6.57-3.28,12.49-7.55,18.13-11.57,3-2.14,5.94-4.45,9.62-5.22,1.4,3.37.94,9.44-.3,12.59-2,.84-3.81,1.81-5.83,2.87-1.47.77-5,1.83-4.62,4.09.43,2.81,6.1.91,7.47.21a11.28,11.28,0,0,0,5.12-5.12c6.25-3.29,13.46-6.15,19.26-9.52-1.54,5-1,10.76,2.77,12.69,4.18,2.16,10,0,13.81-1.53,2.9-1.21,5.66-2.82,8.21-4.1a79.35,79.35,0,0,1,8.49-3.79c4.65-1.69,12.12-4,14.75.62-4.76,6.56-9.26,13.12-13.62,20.37a78.15,78.15,0,0,0-5.94,11.06c-1.58,3.92-2.67,10.14-.2,14a6,6,0,0,0,6.44,2.56c4.11-.83,7.5-4.48,9.84-7.37a36,36,0,0,0,5.83-11.37c2.8-8.15,5.07-20.66,1-29.18,4.21-5.21,7.7-11.64,13.41-15.46,2-1.34,7.15-4,8.39-.72,1.14,3-.26,7.35-1.22,10.65-.49,1.66-.95,3.1-1.54,4.71-.5,1.37-1.78,3.76-.92,4.61,1.71,1.69,2.69-1.61,3.18-2.36a21.22,21.22,0,0,1,4-4c2.92-2.6,5.88-4.69,9-7.17,1.26-1,3.19-3.34,5-3.07,1.19.17,1.72,1.72,2.66,2.35,1.49,1,3.82,1.59,5.94,2.26a50.58,50.58,0,0,0,6.34,1.53,47.69,47.69,0,0,0,34.72-7.47C451.52,33,453.22,31.58,451.64,30.62ZM249.19,32.36c2.86-3.55,7.1-6.85,12.49-7.27,4.3-.33,7.35,3,6.86,7.48a6.89,6.89,0,0,1-.51,1.94c-1.63,3.78-5.88,5.91-10.24,7.79a71.75,71.75,0,0,1-13.92,4.09A26,26,0,0,1,249.19,32.36ZM213.66,67a45.45,45.45,0,0,1-9.22,2.56c-5.41.58-9.34-3.08-11.88-5.84a44.41,44.41,0,0,1-3.38-4.3c-.85-1.23-1.94-4.26-3.27-4.3s-2.43,1.93-3.18,2.76a116.42,116.42,0,0,0-7.68,9.73c1-4.4,2-9.09,3.08-13.62a25.23,25.23,0,0,1,1.23-4.71A202,202,0,0,0,233.12,51C229.74,59.43,222.62,63.9,213.66,67ZM337.15,46.8c-1.94.81-4.73,1.84-6.75.41-.17-2,1.27-3.63,2.56-5,3.42-3.68,9.07-7.69,14.94-8.39.69-.08,2.16-.26,2.67.51.17,2.31-1.49,4.18-2.86,5.63A29.55,29.55,0,0,1,337.15,46.8Zm20.28,30.52c-2,5.48-4.92,10.43-9.53,13.92-1.23.94-3.69,2.45-5.73,1.85-3.89-1.16-2.49-9-1.22-12.29,3-7.76,7.4-14.06,11.77-20.38,2.31-3.33,4.33-6.76,6.76-9.73,0-.12.11-.06.11,0C362.34,59.15,360.06,70.18,357.43,77.32Z"/>
+	         <path class="cls-1" d="M324.77,5.74c2.46-.54,2.34,3,.4,3.07A1.56,1.56,0,0,1,324.77,5.74Z"/>
+	      </g>
+	   </g>
+	</symbol>
+
+</svg>
+</body>

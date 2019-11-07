@@ -12,12 +12,15 @@
 			&.first-name, &.email-address
 				margin-right: 4%
 		input[type="text"], textarea
-			outline: 2px solid transparent
-			border: 1px solid #888
+
+			box-shadow: 0px 0px 7px rgba(black, .15)
+			border: 0
 			padding: .4rem
 			transition: outline .3s ease-in-out
 			&:focus
-				outline: 2px solid $teal-90
+				// outline-color: $darkpurple-80
+				box-shadow: 0px 0px 10px $darkpurple-80
+				outline: 1px solid transparent		
 		label
 			font-size: .8rem
 		input[type="reset"], input[type="submit"]
@@ -41,7 +44,8 @@
 		#captcha-wrapper 
 			margin-bottom: 1rem
 			img
-				border: 1px solid #888
+				box-shadow: 0px 0px 10px rgba(black, .15)
+				outline: 1px solid transparent
 	.required-note
 		font-size: .9rem
 		font-style: italic			

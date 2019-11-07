@@ -1,13 +1,50 @@
 {{ define "content-block"}}
-
-	{{ $portfolioPage := .Site.GetPage "/portfolio"}}
+	<section class="services">
+		<h1 style="margin: 0;" class="main-title">Our Services</h1>
+		<div class="service-wrapper">
+			<article class="service">
+			<svg class="service-icon">
+				<use xlink:href="#window"></use>
+			</svg>
+			<section class="service-info">
+				<h1 class="service-title">Visual Identity</h1>
+				<p class="service-blurb">We work with you to create a cohesive suite of symbols that customers can connect to your brand.</p>
+			</section>
+			
+		</article>
+		<article class="service">
+			<svg class="service-icon">
+				<use xlink:href="#window"></use>
+			</svg>
+			<section class="service-info">
+				<h1 class="service-title">Creative Strategy</h1>
+				<p class="service-blurb">We identify a game plan that keeps your business' unique strengths and challenges in mind.</p>
+			</section>
+			
+		</article>
+		<article class="service">
+			<svg class="service-icon">
+				<use xlink:href="#window"></use>
+			</svg>
+			<section class="service-info">
+				<h1 class="service-title">Online Marketing and&nbsp;SEO</h1>
+				<p class="service-blurb">We implement tools that help customers find you, not the other way around.</p>
+			</section>
+		</article>
+		</div>
+	</section>
+	<section class="recent-work">
+		<div class="recent-work-wrapper">
+			{{ $portfolioPage := .Site.GetPage "/portfolio"}}
 	{{ $logos := $portfolioPage.Pages}}
-	<h2 style="margin: 0;" class="main-title">Recent Work</h2>
+	<h1 style="margin: 0;" class="main-title">Recent Work</h1>
 	
 	{{ range first 6 $portfolioPage.Pages.ByDate }}
 		{{ partial "portfolio-card.html" .}}
 	{{ end }}
 	<div class="see-more-wrap"><a href='{{ "/portfolio/" | relURL }}' class="button see-more">See More</a></div>
+		</div>
+	</section>
 
 
 
