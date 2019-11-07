@@ -46,7 +46,7 @@ Reboots usually include elements like:
 * Copywriting
 * Photography
 
-One major difference between a refresh and a reboot is the amount of research that will be necessary to assess where your company stands and what needs to be done to get it where it needs to be. 
+One major difference between a refresh and a reboot is the amount of research that will be necessary to assess where your company stands and what needs to be done to get it where it needs to be. This will often come in the form of an internal and external audit of the company and its perceptions.
 
 You'll need to get a handle on what your customers are already saying about the company and what you _want_ them to be saying about the company. Information like where your business fits into the competitive landscape and how purposeful positioning can give you the edge you need to sustain growth will be important aspects of your company's research results.
 
