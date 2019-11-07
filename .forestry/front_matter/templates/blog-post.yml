@@ -20,3 +20,8 @@ fields:
 - type: list
   name: authors
   label: authors
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
