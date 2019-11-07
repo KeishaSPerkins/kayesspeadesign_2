@@ -5,7 +5,7 @@ date = 2019-11-14T14:00:00Z
 draft = true
 layout = "page"
 tags = ["strategy", "rebrand"]
-title = "Why Should You Rebrand?"
+title = "What is a Rebrand?"
 weight = 2
 
 +++
