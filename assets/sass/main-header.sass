@@ -2,21 +2,21 @@
 	display: flex
 	flex-direction: column
 	// border-bottom: 1px $light-60 solid
-	border-radius: 2px 2px 0 0
+	border-radius: 10px 10px 0 0
 	background: rgb(74,24,110)
 	background-image: url('/img/BG-Gradient.svg')
 	background-size: cover
 	// width: 100%
 	color: white
 	@media screen and ($medium-screens)
-			padding: 3rem
+		padding: 3rem
 	.main-nav
 		display: flex
 		flex-direction: column
 		position: fixed
 		width: 100%
 		background: $purple-80
-		background: rgba($purple-80, .9)
+		background: rgba($darkpurple-100, .9)
 		margin: 0
 		bottom: -300vh
 		align-items: center
@@ -28,49 +28,49 @@
 		left: 0
 		a.nav-link
 		 color: white
+		 margin: 5px auto
+		 padding: 20px 0
+		 text-transform: uppercase
+		 color: white
+		 text-decoration: none
+		 border-radius: 3px
+		 font-weight: 700
+		 transition: background .2s ease, color .2s ease, border .2s ease
+		 text-align: center
+		 padding: .5rem 
+		 @media screen and ($medium-small-screens)
+		 	margin: .3rem 1rem
+		 	font-size: .8rem
+		 	&:hover
+		 		background: $purple-100
+		 &:hover
+		 	background: $darkpurple-80
+		 &.home
+		 	font-size: 1.1rem
+		 	font-weight: 800
+		 	text-align: left
+		 	width: 18ch
+		 	text-align: center
+		 	&:hover
+		 		color: white
 		&.open
 			bottom: 0
-		@media screen and ($medium-screens)
+		@media screen and ($large-screens)
 			flex-direction: row
 			position: static
 			background: none
 			display: grid
 			grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr
-			margin: 1rem 0
 			width: 100%		
 		.nav-link
-			margin: 1.5rem 0
-			text-transform: uppercase
-			color: white
-			text-decoration: none
-			border-radius: 3px
-			font-weight: 700
-			transition: background .2s ease, color .2s ease, border .2s ease
-			text-align: center
-			padding: .5rem 0
-			@media screen and ($medium-small-screens)
-				// margin: .3rem 1rem
-				font-size: .8rem
-				&:hover
-					width: 100%
-			&:hover
-				background: $darkpurple-90
-			&.home
-				font-size: 1.1rem
-				font-weight: 800
-				text-align: left
-				width: 18ch
-				text-align: center
-				&:hover
-					background: $darkpurple-90
-					color: white
+			
 	.nav-toggle
 		align-items: center
 		background: $teal-80
-		border: 1px solid white
 		bottom: 15px
 		color: $dark-80
 		display: flex
+		border: none
 		display: inline
 		outline: 0
 		font-size: .8rem
@@ -78,15 +78,33 @@
 		height: 2.5rem
 		justify-content: center
 		padding: none
-		box-shadow: 1px 1px 5px rgba(black, .2)
+		box-shadow: rgba(60, 66, 87, 0.1) 0px 10px 14px 0px, rgba(0, 0, 0, 0.1) 0px 6px 6px 0px;
 		position: fixed
 		right: 15px
 		text-align: center
 		transition: color .2s ease
 		width: 2.5rem
+		border-radius: 5px
 		z-index: 10
+
+		@media screen and ($medium-small-screens)
+			right: 30px
+			top: initial
+			bottom: 30px
+
 		@media screen and ($medium-screens)
+			position: absolute
+			background: none
+			box-shadow: none
+			top: 70px
+			bottom: initial
+			right: 40px
+		
+
+		@media screen and ($large-screens)
 			display: none
+			&:hover
+				width: intial
 		svg
 			height: 1rem
 			width: 1rem
