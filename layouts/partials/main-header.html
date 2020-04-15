@@ -45,13 +45,16 @@
 
 		{{ if eq .Kind "page"}}
 			{{ if .Params.specialpage }}
+				{{ if .Params.gohome}}
 				<a href='{{ "./" | relURL }}' class="button-dark button">Go Back Home</a>
-			{{end}}
+				{{end}}
+				{{end}}
 			{{ if not .Params.specialpage }}
 				
 		{{ if not .Params.notags }}		
-		<br>	
+			
 						{{if isset .Params "tags"}}
+						<br>
 							{{ with .Params.tags}}
 								{{range . }}
 									<a class="taxonomy-link tag-name" href="/tags/{{ . | urlize }}">{{.}}</a>
@@ -62,9 +65,9 @@
 						
 		
 					{{ if not .Params.noauthor }}
-					<br><br><br>
+				
 					<section class="metadata">
-					
+					<br><br>
 									{{if isset .Params "authors"}}
 										by
 										{{ with .Params.authors }}

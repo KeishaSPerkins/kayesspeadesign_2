@@ -2,7 +2,7 @@
 	"authors": ["Keisha S Perkins"],
 	"title": "Bonton Associates",
 	"what": "logo",
-	"categories": ["design"],
+	"categories": ["design", "web-development"],
 	"tags": ["branding","logo","identity"],
 	"what": "logo",
 	"weight": "1",
@@ -15,3 +15,8 @@
 	      }
 	    ]
 }
+
+{{< image figureWrapper="false" resize="false"  class="project-image" name="bontonAssociates_Screenshot.png" alt="Screenshot of Bonton Associates Website" >}}
+
+{{< image figureWrapper="false" resize="false"  class="project-image" name="bontonAssociates_Polo.png" alt="Bonton Associates employee wearing company polo shirt" >}}
+

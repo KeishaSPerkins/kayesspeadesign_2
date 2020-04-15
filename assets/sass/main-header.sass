@@ -43,6 +43,7 @@
 			text-transform: uppercase
 			color: white
 			text-decoration: none
+			border-radius: 3px
 			font-weight: 700
 			transition: background .2s ease, color .2s ease, border .2s ease
 			text-align: center
@@ -53,7 +54,7 @@
 				&:hover
 					width: 100%
 			&:hover
-				background: #111
+				background: $darkpurple-90
 			&.home
 				font-size: 1.1rem
 				font-weight: 800
@@ -154,18 +155,19 @@
 			&:not(:last-child):after 
 				content: ','
 		.tag-name, .category-name
-			background: #333
+			background: $darkpurple-80
 			margin: 0 4px
 			padding: 5px 10px
-			border-radius: 1px
+			border-radius: 3px
+			box-shadow: rgba(60, 66, 87, 0.1) 0px 10px 14px 0px, rgba(0, 0, 0, 0.1) 0px 6px 6px 0px;
 			color: white
 			font-weight: 600
 			font-size: .8rem
 			text-transform: uppercase
 			&:hover
-				background: #111
+				background: #222
 		.category-name
-			background: #111
+			background: $darkpurple-80
 			font-size: 1.1rem
 			color: white
 			display: inline-block
@@ -184,7 +186,7 @@
 			// &.design
 			// 	background: $orange-60
 			&:hover
-				background: #333
+				background: #222
 				color: #fff			
 
 

@@ -15,3 +15,5 @@
 	      }
 	    ]
 }
+
+{{< image figureWrapper="false" resize="false"  class="project-image" name="ZeroCopy_PoloShirt.png" alt="Zero Copy employee wearing company shirt">}}

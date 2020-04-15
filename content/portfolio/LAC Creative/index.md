@@ -17,3 +17,6 @@
 }
 
 
+{{< image figureWrapper="false" resize="false"  class="project-image" name="LAC_Hoodie.png" alt="LAC Creative member wearing hoodie">}}
+
+{{< image figureWrapper="false" resize="false"  class="project-image" name="LAC_Tshirt.png" alt="LAC Creative member wearing tshirt">}}

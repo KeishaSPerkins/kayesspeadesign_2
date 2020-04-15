@@ -2,7 +2,7 @@
 	"authors": ["Keisha S Perkins"],
 	"title": "Open Mic Tech",
 	"what": "logo",
-	"categories": ["design"],
+	"categories": ["design", "web-development"],
 	"tags": ["branding","logo","identity"],
 	"layout": "logo",
 	"weight": "1",
@@ -16,4 +16,6 @@
 	    ]
 }
 
-{{< image figureWrapper="false" resize="false"  class="project-image" name="OMT_BrandBoard.svg" alt="Brandboard for Buoveo" >}}
+{{< image figureWrapper="false" resize="false"  class="project-image" name="OMT_Banner.png" alt="Open Mic Tech convention banner">}}
+
+{{< image figureWrapper="false" resize="false"  class="project-image" name="OMT_Screenshot.png" alt="Screenshot of Open Mic Tech Website">}}

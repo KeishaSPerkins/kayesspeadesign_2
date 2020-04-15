@@ -15,3 +15,8 @@
 	      }
 	    ]
 }
+
+{{< image figureWrapper="false" resize="false"  class="project-image" name="HopSkipJump_Billboard.png" alt="Billboard for Hop Skip Jump app" >}}
+
+{{< image figureWrapper="false" resize="false"  class="project-image" name="HopSkipJump_UI.png" alt="User Interface for Hop Skip Jump app" >}}
+

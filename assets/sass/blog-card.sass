@@ -5,17 +5,17 @@
 	display: grid
 .blog-card
 	background: black
-	background-image: linear-gradient(to bottom right, #222, black)
+	background-image: linear-gradient(to bottom right, #eee, #fff)
 	padding: 20px
-	color: white
-	border-radius: 2px
+	color: #333
+	border-radius: 5px
 	flex-grow: 1
 	flex-basis: 25%
 	margin: 10px
 	display: flex
 	flex-flow: column
 	justify-content: space-between
-	box-shadow: 0px 1px 2px rgba($dark-5, .5)
+	box-shadow: rgba(60, 66, 87, 0.2) 0px 10px 14px 0px, rgba(0, 0, 0, 0.2) 0px 6px 6px 0px
 	// &.workshop
 	// 	background: $pink-50
 	// 	.read-more
@@ -27,7 +27,6 @@
 	// &.blog-post
 	// 	background: $gold-40
 	// 	.read-more
-	// 		color: $gold-40
 	// &.quicktip
 	// 	background: $green-50
 	// 	.read-more
@@ -36,7 +35,7 @@
 		margin: 0
 	a 
 		font-weight: 700
-		color: white
+		color: $darkpurple-70
 		text-decoration: none
 	.blog-title
 		font-size: 1.1rem
@@ -44,20 +43,24 @@
 		opacity: .8
 		&:hover
 			opacity: 1
+
 	.blog-description
 		font-size: .85rem
 		line-height: 1.5
 		letter-spacing: .3px
 		font-weight: 500
 		margin: 0
+		border-bottom: 1px solid #ccc
+		p
+			margin-top: 0
 	.read-more
 		font-weight: 900
 		margin: .5rem 0 1rem 0
-		background: rgba(white, .75)
-		color: black
+		background: rgba($darkpurple-90, .8)
+		color: white
 		&:hover
-			background: rgba(white, 1)
-			color: black !important
+			background: rgba($darkpurple-90, 1)
+			color: white !important
 	.blog-meta-data
 		font-size: .7rem
 		display: flex

@@ -15,3 +15,5 @@
 	      }
 	    ]
 }
+
+{{< image figureWrapper="false" resize="false"  class="project-image" name="KTI_Video.png" alt="Screenshot of KTI user interface" >}}
