@@ -16,7 +16,7 @@
 	    ]
 }
 
-{{< image figureWrapper="false" resize="false"  class="project-image" name="bontonAssociates_Screenshot.png" alt="Screenshot of Bonton Associates Website" >}}
+{{< image figureWrapper="false" resize="true"  class="project-image" name="bontonAssociates_Screenshot.png" alt="Screenshot of Bonton Associates Website" >}}
 
-{{< image figureWrapper="false" resize="false"  class="project-image" name="bontonAssociates_Polo.png" alt="Bonton Associates employee wearing company polo shirt" >}}
+{{< image figureWrapper="false" resize="true"  class="project-image" name="bontonAssociates_Polo.png" alt="Bonton Associates employee wearing company polo shirt" >}}
 

@@ -25,8 +25,14 @@
 	 		</a>
 	 	</h1>
 	 	<div class="list-pic-wrapper">
-	 		<img class="list-result-pic" src='{{ range first 1 (.Resources.ByType "image") }}{{.Permalink}}{{end}}' alt="{{ .Title }}">
+	 		{{if .Resources.ByType "image" }}
+	 			<img class="list-result-pic" src='{{ range first 1 (.Resources.ByType "image") }}{{.Permalink}}{{end}}' alt="{{ .Title }}">
+	 		{{else}}
+	 			<img class="list-result-pic-placeholder" src="/img/no-image.png" alt="image coming soon!">
+	 		{{end}}
 	 	</div>
+
+	 	
 
 	 	<section class="list-description">{{ .Content | replaceRE "<iframe.*?/iframe>" " " | htmlUnescape | safeHTML | truncate 100 }}</section>
 	 	<section class="list-meta-info">

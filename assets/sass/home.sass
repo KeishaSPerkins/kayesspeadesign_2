@@ -1,14 +1,15 @@
 .home
 	.home-logo
 		@media screen and ($medium-small-screens)
-			max-width: 600px
+			max-width: 500px
 			width: 90%
 			margin: auto
 	.content-wrapper
 		width: 100% !important
 		max-width: 100%
 		padding: 0
-		background: black
+		// background: black
+		border-radius: 10px
 		grid-template-columns: 100%
 	section
 		display: flex
@@ -17,6 +18,8 @@
 		flex-direction: column
 		h1
 			color: white !important
+		&:last-child
+			border-radius: 0 0 10px 10px
 	.services
 		color: white
 		background: white

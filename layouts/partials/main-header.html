@@ -44,12 +44,12 @@
 		{{end}}
 
 		{{ if eq .Kind "page"}}
-			{{ if .Params.specialpage }}
+			{{ if .Params.removecontent }}
 				{{ if .Params.gohome}}
 				<a href='{{ "./" | relURL }}' class="button-dark button">Go Back Home</a>
 				{{end}}
 				{{end}}
-			{{ if not .Params.specialpage }}
+			{{ if not .Params.removecontent }}
 				
 		{{ if not .Params.notags }}		
 			

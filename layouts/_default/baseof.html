@@ -1,10 +1,10 @@
 {{ partial "meta.html" . }}
-<body class='{{.Layout}} {{.Section}} {{.Type}} {{.Kind}}'>
+<body class='{{.Layout}} {{.Section}} {{.Type}} {{.Kind}} {{if .Params.removecontent}}removecontent{{end}}'>
 	<div class="size-debug"><span></span></div>
 	
 		<main class='main-wrapper'>
 	   {{ partial "main-header.html" . }}
-		   {{ if not .Params.specialpage }}
+		   {{ if not .Params.removecontent }}
 			   <div class='content-wrapper'>
 			   	{{ block "content-block" . }}
 				 	{{end}}

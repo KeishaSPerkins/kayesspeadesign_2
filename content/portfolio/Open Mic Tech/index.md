@@ -16,6 +16,6 @@
 	    ]
 }
 
-{{< image figureWrapper="false" resize="false"  class="project-image" name="OMT_Banner.png" alt="Open Mic Tech convention banner">}}
+{{< image figureWrapper="false" resize="true"  class="project-image" name="OMT_Banner.png" alt="Open Mic Tech convention banner">}}
 
-{{< image figureWrapper="false" resize="false"  class="project-image" name="OMT_Screenshot.png" alt="Screenshot of Open Mic Tech Website">}}
+{{< image figureWrapper="false" resize="true"  class="project-image" name="OMT_Screenshot.png" alt="Screenshot of Open Mic Tech Website">}}

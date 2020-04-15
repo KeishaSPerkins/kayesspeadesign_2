@@ -42,11 +42,11 @@ Considering Instagram, I wasn't worried. They've gotten rid of the forced 1:1 ra
 
 I set about making my first aspect ratio, doubling the size of the artboard from 1600 x 800 pixels to 3200 x 1600 pixels. This allowed me to be sure all of the images I create are high enough resolution for all of the necessary sizes and uses. Here's my new design base.
 
-{{< image figureWrapper="true"  class="post-image" name="base_template.png" alt="Image of the base template used for creating designs." caption="Base Template" >}}
+{{< image figureWrapper="true" resize="true" class="post-image" name="base_template.png" alt="Image of the base template used for creating designs." caption="Base Template" >}}
 
 And here's what that looks like with a design underneath.
 
-{{< image figureWrapper="true"  class="post-image" name="base_with_guide.png" alt="Image showing how the various guides are placed on the base template." caption="How the various guides are placed on the base template." >}}
+{{< image figureWrapper="true" resize="true" class="post-image" name="base_with_guide.png" alt="Image showing how the various guides are placed on the base template." caption="How the various guides are placed on the base template." >}}
 
 This image would allow me to design something that keeps the must-see information in the center green zone. Objects that are of pretty good visual interest, but do not add to the information at hand are allowed into the yellow zone. The red zone is a no-man's land for info and should hold nothing that cannot be cut away. Sometimes I treat both the yellow and red zones as no-man's land. This makes for a good image on all social media, even if we begin using Twitter and Google+.
 
@@ -59,7 +59,7 @@ My main consideration when cropping and resizing was that the entire artboard be
 
 For instance, when making the 16:9 ratio artboard I made sure that the height of 1080 pixels was exact and that the Smart Object kept its ratio. I then centered the design horizontally on the artboard, getting this:
 
-{{< image figureWrapper="true"  class="post-image" name="16_9template.png" alt="Image showing that all artboards were resized to one dimension and centered on the other." caption="All artboards were resized to one dimension and centered on the other." >}}
+{{< image figureWrapper="true" resize="true" class="post-image" name="16_9template.png" alt="Image showing that all artboards were resized to one dimension and centered on the other." caption="All artboards were resized to one dimension and centered on the other." >}}
 
 
 The result is that 16:9 artboard shaves just a bit of the red zone away while the 1:1 artboard only holds on to the very center and most important part. 
@@ -69,7 +69,7 @@ The result is that 16:9 artboard shaves just a bit of the red zone away while th
 The great thing about employing a Smart Object referenced on each artboard is that updates to the base artboard's Smart Object change them all. The finished artboard looks something like this. I even include an artboard with a 1600 x 800 pixel size so that the social media posts we push aren't quite so big.
 
 
-{{< image figureWrapper="true"  class="post-image" name="sized-artboards.jpg" alt="Image showing how all five necessary sizes are included automatically." caption="All five necessary sizes are included automatically." >}}
+{{< image figureWrapper="true" resize="true" class="post-image" name="sized-artboards.jpg" alt="Image showing how all five necessary sizes are included automatically." caption="All five necessary sizes are included automatically." >}}
 
 
 

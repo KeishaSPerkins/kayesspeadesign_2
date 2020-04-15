@@ -13,7 +13,7 @@ I think it's fair to say that all of us have at one time or another needed to ge
 
 ## Pexels: Free Stock Photos and Video
 
-{{< image figureWrapper="true"  class="post-image" name="pexels.PNG" alt="Screenshot of Pexels.com" caption="Pexels" >}}
+{{< image figureWrapper="true" resize="true" class="post-image" name="pexels.PNG" alt="Screenshot of Pexels.com" caption="Pexels" >}}
 
 Though the free stock <a href="http://pexels.com" target="_blank">images</a> are what brought me to Pexels in the first place, you can also find quality stock <a href="https://videos.pexels.com/" target="_blank">videos</a> there. Pexels' simple, clean interface makes searching for the image you want easy. Pexels is always a go-to and often has just what I need.
 
@@ -22,7 +22,7 @@ All of the videos and photos come with a Creative Commons Zero (CC0) license, wh
 ## Creative Market: Free Goodies Weekly
 
 
-{{< image figureWrapper="true"  class="post-image" name="creative-market.PNG" alt="Screenshot of Weekly Free Goods from Creative Market" caption="Creative Market" >}}
+{{< image figureWrapper="true" resize="true" class="post-image" name="creative-market.PNG" alt="Screenshot of Weekly Free Goods from Creative Market" caption="Creative Market" >}}
 
 I can hear you now, "But Creative Market is a _marketplace!_" you say. And while it's true that <a href="http://creativemarket.com" target="_blank">Creative Market</a> is a place for artists to buy and sell their creations, it's also a source of some quality freebies. 
 
@@ -32,7 +32,7 @@ And don't worry about filling up your precious storage space with assets you don
 
 ## Mockup World: Free Mockups of All Kinds
 
-{{< image figureWrapper="true"  class="post-image" name="mockup-world.PNG" alt="Screenshot of Mockup World" caption="Mockup World" >}}
+{{< image figureWrapper="true" resize="true" class="post-image" name="mockup-world.PNG" alt="Screenshot of Mockup World" caption="Mockup World" >}}
 
 
 <a href="https://www.mockupworld.co/">Mockup World</a> was one of the resources I was amazed to find for the first time. Looking for a good mockup can be challenging. Perhaps it's not the right size. Perhaps it's an awkward angle. Mockup World brings tons of free mockups to one place and takes some of that hassle away.
@@ -41,7 +41,7 @@ A design looks just that much more polished and possible when mocked up well. I 
 
 ## Icon Finder: Icons and Symbols
 
-{{< image figureWrapper="true"  class="post-image" name="icon-finder.PNG" alt="Screenshot of Icon Finder" caption="Icon Finder" >}}
+{{< image figureWrapper="true" resize="true" class="post-image" name="icon-finder.PNG" alt="Screenshot of Icon Finder" caption="Icon Finder" >}}
 
 Sometimes you're just looking for a set of icons to give your project a cohesive feel. It's hard to go from this place to that place piecing a set of icons together from different designers with different styles. <a href="https://www.iconfinder.com/">Icon Finder</a> allows you to search it's database of 2,200,000+ SVG icons by keyword and filter for free icons, and even free icons for personal use.
 
@@ -49,7 +49,7 @@ My favorite feature of the site is it's collection of icon sets. They, too can b
 
 ## Speckyboy: The One-Stop Shop
 
-{{< image figureWrapper="true"  class="post-image" name="speckyboy.PNG" alt="Screenshot of Speckyboy" caption="Speckyboy" >}}
+{{< image figureWrapper="true" resize="true" class="post-image" name="speckyboy.PNG" alt="Screenshot of Speckyboy" caption="Speckyboy" >}}
 
 
 Speckyboy is an online web design magazine. I just love Speckyboy as a source for inspiration and information on new web technologies and techniques, but one of the great things I go there for is free assets. 

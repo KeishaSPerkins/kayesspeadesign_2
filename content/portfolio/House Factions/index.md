@@ -16,4 +16,4 @@
 	    ]
 }
 
-{{< image figureWrapper="false" resize="false"  class="project-image" name="HouseFactions_Icon.png" alt="App icon for House Factions app" >}}
+{{< image figureWrapper="false" resize="true"  class="project-image" name="HouseFactions_Icon.png" alt="App icon for House Factions app" >}}

@@ -16,7 +16,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quidem aliqua
 Eos vitae eius quasi saepe fugiat dignissimos unde quas dolorem ducimus, fugit quisquam. Obcaecati modi consequatur velit sit ipsum! Error quisquam modi impedit illo dolore accusantium laboriosam asperiores magni sit? Quaerat harum modi ducimus iusto nobis. Repellat qui, maiores quos commodi ex quia voluptates obcaecati hic odio magni ullam dolorum!
 
 
-{{< image figureWrapper="true"  class="post-image" name="audience.jpg" alt="Description for screen readers." caption="Some caption" >}}
+{{< image figureWrapper="true" resize="true" class="post-image" name="audience.jpg" alt="Description for screen readers." caption="Some caption" >}}
 
 Iure inventore debitis recusandae corporis numquam eveniet vero ad atque eligendi, pariatur quibusdam autem cupiditate natus corrupti aliquid culpa velit cum, repellendus provident. Voluptatem dolorem culpa ut expedita modi doloremque assumenda animi atque voluptatum ipsa neque ad consequatur numquam sapiente blanditiis pariatur repudiandae distinctio itaque rerum ex corporis, provident soluta!
 
