@@ -1,6 +1,6 @@
 {{ define "content-block"}}
 
-	{{ range (.Paginator 6).Pages.ByTitle }}
+	{{ range (.Paginator 6).Pages.ByWeight }}
 		{{ partial "portfolio-card.html" .}}
 		
 	{{ end }}

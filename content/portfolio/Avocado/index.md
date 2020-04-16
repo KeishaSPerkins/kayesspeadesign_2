@@ -8,6 +8,7 @@
 	"weight": "1",
 	"layout": "logo",
 	"date": "2018-07-08T11:08:21-06:00",
+	"draft": "true",
 	"resources": [
 	      {
 	         "name": "logo",

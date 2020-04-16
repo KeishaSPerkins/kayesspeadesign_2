@@ -5,7 +5,7 @@
 	"categories": ["design", "web-development"],
 	"tags": ["branding","logo","identity"],
 	"layout": "logo",
-	"weight": "1",
+	"weight": "2",
 	"what": "logo",
 	"date": "2018-08-08T11:08:21-06:00",
 	"resources": [
