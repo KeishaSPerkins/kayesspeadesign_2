@@ -17,9 +17,9 @@
 	    ]
 }
 
-{{< image figureWrapper="false" resize="true"  class="project-image" name="Buoveo_Leggings.png" alt="Activewear by Buoveo Brand" >}}
+{{< image figureWrapper="false" resize="false"  class="project-image" name="Buoveo_Leggings.png" alt="Activewear by Buoveo Brand" >}}
 
-{{< image figureWrapper="false" resize="true"  class="project-image" name="Buoveo_TankTop.png" alt="Activewear by Buoveo Brand" >}}
+{{< image figureWrapper="false" resize="false"  class="project-image" name="Buoveo_TankTop.png" alt="Activewear by Buoveo Brand" >}}
 
-{{< image figureWrapper="false" resize="true"  class="project-image" name="Buoveo_Swimsuit.png" alt="Swimsuit by Buoveo Brand" >}}
+{{< image figureWrapper="false" resize="false"  class="project-image" name="Buoveo_Swimsuit.png" alt="Swimsuit by Buoveo Brand" >}}
 

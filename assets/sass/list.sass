@@ -1,13 +1,13 @@
 .taxonomy
 	.content-wrapper
 		grid-template-columns: 1fr
-		// grid-gap: 20px
+		grid-gap: 10px 10px
 		@media screen and ($medium-small-screens)
 			grid-template-columns: 1fr 1fr
 		@media screen and ($medium-screens)
 			grid-template-columns: 1fr 1fr 1fr 1fr
 		.list-result
-			box-shadow: $mediumdarkshadow
+			border: 1px solid $darkpurple-50
 			padding: 10px
 			box-sizing: border-box
 			grid-column: span 1
@@ -16,8 +16,6 @@
 			flex-flow: column
 			display: grid
 			grid-gap: 5px 10px
-			border-radius: 10px
-			border: 2px solid transparent
 			width: 100%
 			grid-template-columns: 4rem 1fr
 			grid-template-rows: min-content min-content
@@ -27,32 +25,29 @@
 				grid-column: span 2
 
 			&:hover, &:focus
-				border: 2px soild $darkpurple-50
-				box-shadow: $darkshadow
+				outline-color: $darkpurple-50
 			&.logo-list-result
 				grid-column: span 1
 				justify-items: center
 				align-items: center	
 				grid-template-columns: 1fr
-				padding: 3px
 				a
 					width: 100%
 				.list-result-pic
-					width: 100%
-					height: auto
-					margin: auto
-					display: inline
-					vertical-align: bottom
-					object-fit: cover
-					// object-position: 50% 50%
-					border-radius: 5px 5px 0 0
+					  width: 100%
+					  height: auto
+					  margin: auto
+					  display: inline
+					  vertical-align: bottom
+					  object-fit: cover
+					  object-position: 50% 50%
 				.list-title
 					grid-row: 2/-1
 					font-size: 1rem
 		.list-title
 			grid-column: 1 / -1
 			grid-row: 1 / 2
-			margin: 0 0 10px 0
+			margin: 0
 			font-size: 1.1rem
 			text-decoration: none
 			&:hover
@@ -67,19 +62,16 @@
 			height: 4rem
 			width: 4rem
 			overflow: hidden
-			border-radius: 3px
-			.list-result-pic, .list-result-pic-placeholder
+			.list-result-pic
 				height: 100%
-				object-fit: cover
-				// object-position: 50% 50%
-				// border-radius: 3px
+				width: 100%
+				object-fit: scale-down
 		.list-description
 			grid-column: 2 / -1
 			grid-row: 2 /-1
 			p
-				margin: 0 5px
+				margin: 5px 0
 		.list-meta-info
 			grid-column: 1/-1
 			font-size: .8rem
 			place-self: center end
-			margin-top: .5rem

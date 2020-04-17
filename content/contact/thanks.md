@@ -1,8 +1,8 @@
 {
-	"title": "Thanks for contacting us!",
+	"title": "Thanks for contacting me!",
 	"type": "contact",
-	"description": "We'll get back to you as soon as possible.",
-	"removecontent": true,
+	"description": "I'll get back to you as soon as possible.",
+	"specialpage": true,
 	"gohome": true
 }
 
