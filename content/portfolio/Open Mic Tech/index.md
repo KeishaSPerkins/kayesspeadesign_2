@@ -6,6 +6,7 @@
 	"tags": ["branding","logo","identity"],
 	"layout": "logo",
 	"weight": "2",
+	"draft": "false",
 	"what": "logo",
 	"date": "2018-08-08T11:08:21-06:00",
 	"resources": [
