@@ -11,11 +11,11 @@
   {{ end }}
   {{ if ne $resize "false"}}
       <img class="{{ $class }}"
-        srcset="
+        srcset='
           {{ (.Resize "320x").RelPermalink }} 320w,
           {{ (.Resize "600x").RelPermalink }} 600w,
-          {{ (.Resize "1200x").RelPermalink }} 2x"
-        src="{{ (.Resize "600x").RelPermalink }}" alt="{{$altText}}"/>
+          {{ (.Resize "1200x").RelPermalink }} 2x'
+        src='{{ (.Resize "600x").RelPermalink }}" alt="{{$altText}}'/>
   {{ else }}
       <img src="{{.RelPermalink}}" alt="{{$altText}}" class="{{ $class }}">
   {{ end }}
