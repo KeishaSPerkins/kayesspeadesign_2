@@ -7,8 +7,9 @@
 {{ with $.Page.Resources.GetMatch (.Get "name") }}
   {{ if eq $figureWrapper "true"}}
     <figure class="post-image-figure">
+      {{ end }}
       <a href="{{.RelPermalink}}">
-  {{ end }}
+  
   {{ if eq $resize "false"}}
       <img src="{{.RelPermalink}}" alt="{{$altText}}" class="{{ $class }}">
   {{ else }}
@@ -26,3 +27,6 @@
     </figure>
   {{ end }}
 {{end }}
+
+
+{{< image figureWrapper="false" resize="true" class="project-image" name="OMT_Banner.png" alt="Open Mic Tech convention banner">}}
