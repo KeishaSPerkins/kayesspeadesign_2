@@ -4,6 +4,7 @@
 	"what": "logo",
 	"categories": ["design"],
 	"weight": "2",
+	"draft": "true",
 	"what": "logo",
 	"tags": ["branding","logo","identity"],
 	"date": "2018-03-08T11:08:21-06:00",
