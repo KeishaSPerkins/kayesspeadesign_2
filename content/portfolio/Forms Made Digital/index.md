@@ -7,6 +7,7 @@
 	"layout": "page",
 	"weight": "2",
 	"what": "logo",
+	"draft": "false",
 	"date": "2018-01-08T11:08:21-06:00",
 	"resources": [
 	      {
